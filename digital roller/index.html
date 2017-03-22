@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>数字滚动</title>
+    <style>
+    .digital {
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background: url(http://sandbox.runjs.cn/uploads/rs/399/weuqdlo1/numbers.png) 0 -189px no-repeat #078;
+        background-size: 21px 210px;
+        transition: background-position 1s ease .1s;
+    }
+    
+    .run-transition .digital[data-num='1'] {
+        background-position: 0 -168px;
+    }
+    
+    .run-transition .digital[data-num='2'] {
+        background-position: 0 -147px;
+    }
+    
+    .run-transition .digital[data-num='3'] {
+        background-position: 0 -126px;
+    }
+    
+    .run-transition .digital[data-num='4'] {
+        background-position: 0 -105px;
+    }
+    
+    .run-transition .digital[data-num='5'] {
+        background-position: 0 -84px;
+    }
+    
+    .run-transition .digital[data-num='6'] {
+        background-position: 0 -63px;
+    }
+    
+    .run-transition .digital[data-num='7'] {
+        background-position: 0 -42px;
+    }
+    
+    .run-transition .digital[data-num='8'] {
+        background-position: 0 -21px;
+    }
+    
+    .run-transition .digital[data-num='9'] {
+        background-position: 0 0;
+    }
+    </style>
+</head>
+
+<body onload="document.body.className ='run-transition';">
+    <span class="digital" data-num="8" onclick="var n = this.getAttribute('data-num');this.setAttribute('data-num',n ? '':8)"></span>
+    <div id="divDisplay">
+        <span class="digital" data-num="0"></span>
+        <span class="digital" data-num="1"></span>
+        <span class="digital" data-num="2"></span>
+        <span class="digital" data-num="3"></span>
+        <span class="digital" data-num="4"></span>
+        <span class="digital" data-num="5"></span>
+        <span class="digital" data-num="6"></span>
+        <span class="digital" data-num="7"></span>
+        <span class="digital" data-num="8"></span>
+        <span class="digital" data-num="9"></span>
+    </div>
+    <input type="text" onkeyup="" />
+</body>
+
+</html>
