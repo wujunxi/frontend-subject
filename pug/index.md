@@ -10,11 +10,8 @@ Pug原名Jade，由于Jade是个注册商标，所以改名了。
 GitHub:[https://github.com/pugjs/pug](https://github.com/pugjs/pug)
 
 ## 导读
-1. 安装&运行
-2. 语法
-3. 特点缺点
-4. 比较
-5. 其他
+
+[TOC]
 
 ## 安装&运行
 
@@ -133,7 +130,24 @@ ul
 
 ### 标签
 
-+ 在标签后面带个冒号，可以直接嵌套下一层标签。（注意，冒号后面有空格）
++ 内联
+
+```jade
+div
+	p
+		a
+			span test
+```
+
+```html
+<div>
+  <p><a><span>test</span></a></p>
+</div>
+```
+
++ 块展开
+
+在标签后面带个冒号，可以直接嵌套下一层标签。（注意，冒号后面有空格）
 
 ```jade
 div: p: a: span test
@@ -160,7 +174,9 @@ foo/
 ```html
 <foo/>
 ```
+
 [doctype对照表](https://pugjs.org/language/doctype.html)
+
 <table>
 	<tr>
 		<td>doctype html</td><td>&lt;!DOCTYPE html&gt;</td>
@@ -178,7 +194,7 @@ foo/
 
 ### 文本
 
-标签名用空格隔开的内容当作标签文本。
+标签名用空格隔开的内容当作标签文本。用管道符号（|）定义一段文本，也可以用点（.）定义一个文本块。
 
 ```jade
 p 测试文本
@@ -518,9 +534,45 @@ case friends
 
 ```
 
-
-
 ### 混入（Mixin）
+
+相当于函数，定义一些重复的动作以达到代码复用的效果。
+
+```jade
+//- 声明
+mixin list
+  ul
+    li foo
+    li bar
+    li baz
+//- 使用
++list
++list
+```
+
+```html
+<ul>
+  <li>foo</li>
+  <li>bar</li>
+  <li>baz</li>
+</ul>
+<ul>
+  <li>foo</li>
+  <li>bar</li>
+  <li>baz</li>
+</ul>
+```
+
+### 过滤器
+
+过滤器前缀 :, 比如 :markdown 会把下面块里的文本交给专门的函数进行处理。
+
+```jade
+body
+  :markdown
+    Woah! jade _and_ markdown, very **cool**
+    we can even link to [stuff](http://google.com)
+```
 
 ### 包含（Include）
 
