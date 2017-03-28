@@ -1,6 +1,6 @@
 # Pug模板
 
-![](pug.png)
+![pug.png](images/pug.png)
 
 
 Pug原名Jade，由于Jade是个注册商标，所以改名了。
