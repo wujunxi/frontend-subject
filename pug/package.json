@@ -4,6 +4,9 @@
   "description": "",
   "main": "test_pug.js",
   "dependencies": {
+    "express": "^4.15.2",
+    "jstransformer-coffee-script": "^1.1.0",
+    "jstransformer-markdown-it": "^2.0.0",
     "pug": "^2.0.0-beta11"
   },
   "devDependencies": {},
