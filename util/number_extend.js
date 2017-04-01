@@ -7,13 +7,15 @@
         define(["exports"], factory);
     } else if (typeof define === "function" && define.cmd) {
         define(function(require, exports, module) {
-            factory(exports);
+            return factory(exports);
         });
     } else {
         factory();
     }
 }(function(exports) {
 
+    'use strict';
+    
     exports.add = function(arg1, arg2) {
         var m = 0,
             temp, r1, r2,
