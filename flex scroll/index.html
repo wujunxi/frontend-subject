@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+    html,
+    body,
+    ul,
+    li,
+    div {
+        margin: 0;
+        padding: 0;
+        border-style: none;
+        outline: none;
+    }
+    
+	html,body {height:100%;}
+
+    .wrap {
+        background: #f0f0f0;
+        height: 100%;
+        overflow-y: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .item-list {
+        padding: 0 20px;
+        list-style: none;
+    }
+    
+    .item-list li {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: solid 1px #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="item-list" id="ulMenu">
+            <li>Item one</li>
+            <li>Item two</li>
+            <li>Item three</li>
+            <li>Item four</li>
+            <li>Item five</li>
+            <li>Item six</li>
+            <li>Item seven</li>
+            <li>Item eight</li>
+            <li>Item nine</li>
+            <li>Item ten</li>
+            <li>Item eleven</li>
+            <li>Item twelve</li>
+            <li>Item thirteen</li>
+            <li>Item fourteen</li>
+            <li>Item fifteen</li>
+            <li>Item sixteen</li>
+        </ul>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/flex_scroll.js"></script>
+    <script>
+    $("#ulMenu").flexScroll();
+    </script>
+</body>
+
+</html>
