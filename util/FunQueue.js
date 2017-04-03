@@ -40,7 +40,7 @@
         return this;
     };
 
-    FunQueue.prototype.next = function() {
+    FunQueue.prototype.next = function(data) {
         //console.log(this.ar.length);
         if (this.ar.length > 0) {
             // 判断并行项是否完成
@@ -49,14 +49,14 @@
             }
             var item = this.ar.pop();
             // 判断是否为并行项
-            if (item.length && item.callee) { // arguments，function都有length属性，需要用callee区分
+            if (item.length && typeof item !== "function") {
                 this.parraleNum = item.length;
                 var i, len;
                 for (i = 0, len = item.length; i < len; i++) {
-                    item[i](this);
+                    item[i](this,data);
                 }
             } else {
-                item(this);
+                item(this,data);
             }
         }
         return this;
