@@ -1,5 +1,7 @@
 (function(factory) {
-    if (typeof define === "function" && define.amd) {
+    if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+        factory(module.exports);
+    } else if (typeof define === "function" && define.amd) {
         define(["exports"], factory);
     } else if (typeof define === "function" && define.cmd) {
         define(function(require, exports, module) {
@@ -53,10 +55,10 @@
                 this.parraleNum = item.length;
                 var i, len;
                 for (i = 0, len = item.length; i < len; i++) {
-                    item[i](this,data);
+                    item[i](this, data);
                 }
             } else {
-                item(this,data);
+                item(this, data);
             }
         }
         return this;

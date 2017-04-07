@@ -1,5 +1,7 @@
 (function(factory) {
-    if (typeof define === "function" && define.amd) {
+    if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+        factory(module.exports);
+    } else if (typeof define === "function" && define.amd) {
         define(["exports"], factory);
     } else if (typeof define === "function" && define.cmd) {
         define(function(require, exports, module) {
