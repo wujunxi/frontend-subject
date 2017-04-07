@@ -54,11 +54,13 @@
     exports.div = function(arg1, arg2) {
         var t1 = 0,
             t2 = 0,
+            s1 = arg1.toString(),
+            s2 = arg2.toString(),
             r1, r2, temp;
         temp = s1.split(".");
-        m += temp.length > 1 ? temp[1].length : 0;
+        t1 = temp.length > 1 ? temp[1].length : 0;
         temp = s2.split(".");
-        m += temp.length > 1 ? temp[1].length : 0;
+        t2 = temp.length > 1 ? temp[1].length : 0;
         r1 = Number(arg1.toString().replace(".", ""));
         r2 = Number(arg2.toString().replace(".", ""));
         return (r1 / r2) * Math.pow(10, t2 - t1);
