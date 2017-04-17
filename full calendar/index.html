@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    .content {
+        width: 980px;
+        margin: 0 auto;
+    }
+    
+    .fcal {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        color:#646464;
+        font-family:Arial,sans-serif;
+    }
+    .fcal-head {
+    	height: 30px;
+    	line-height: 30px;
+    	text-align:center;
+    }
+    .fcal-head th {
+    	font-weight:normal;
+    }
+    .fcal-head-left {
+    	float:left;
+    }
+    .fcal-head-right {
+    	float:right;
+    }
+    .fcal-title {
+    	font-size:18px;
+    }
+    .fcal-body {
+
+    }
+    .fcal td {
+    	border:solid 1px #ddd;
+    }
+    .fcal-row td {
+    	height:128px;
+    	vertical-align: top;
+    	padding: 10px;
+    }
+    .fcal-week-title td {text-align:center;font-weight:bold;height:28px;line-height: 28px;background: #f3f3f3;}
+    .fcal-btn {height:30px;line-height: 30px;padding:0 20px;text-align:center;background:#f3f3f3;float:left;border-left:solid 1px #ddd;}
+    .fcal-btn.first {border-left:none;}
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <table class="fcal">
+            <thead class="fcal-head">
+                <tr>
+                    <th colspan="7">
+                        <span class="fcal-head-right">
+							<span class="fcal-btn first">◄</span>
+                        	<span class="fcal-btn">►</span>
+                        </span>
+                        <span class="fcal-head-left fcal-title">April 2017</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="fcal-body">
+                <tr class="fcal-week-title">
+                    <td>日</td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                </tr>
+                <tr class="fcal-row">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr class="fcal-row">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr class="fcal-row">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr class="fcal-row">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr class="fcal-row">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+    <script src="../scripts/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function() {
+        // alert(1);
+    });
+    </script>
+</body>
+
+</html>
