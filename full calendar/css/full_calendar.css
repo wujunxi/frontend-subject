@@ -1,0 +1,81 @@
+.fcal {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: #646464;
+    font-family: Arial, sans-serif;
+}
+
+.fcal-head {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.fcal-head th {
+    padding: 10px 0;
+    font-weight: normal;
+}
+
+.fcal-head-left {
+    float: left;
+}
+
+.fcal-head-right {
+    float: right;
+}
+
+.fcal-title {
+    font-size: 18px;
+}
+
+.fcal-body {}
+
+.fcal td {
+    border: solid 1px #ddd;
+}
+
+.fcal-row td {
+    height: 128px;
+    vertical-align: top;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.fcal-week-title td {
+    text-align: center;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    background: #f3f3f3;
+}
+
+.fcal-btn {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-align: center;
+    background: #f3f3f3;
+    float: left;
+    border-left: solid 1px #ddd;
+    cursor: pointer;
+}
+
+.fcal-btn.first {
+    border-left: none;
+}
+
+.fcal-btn.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.fcal-body .checked {
+    background: url(../images/right.png) right bottom no-repeat;
+}
+
+.fcal-body .disabled {
+    opacity: .3;
+    cursor: default;
+}
