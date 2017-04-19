@@ -39,7 +39,8 @@
 
     var defaults = $.fn.fullCalendar.defaults = {
         date: null,
-        onClickDay:$.noop
+        onClickDay:$.noop,
+        onChangeDate:$.noop
     };
 
     var methods = {
@@ -138,6 +139,7 @@
         refreshDayList();
         // 更新完保存当前参数
         $this.data(NAMESPACE, cSetting);
+        cSetting.onChangeDate(cSetting.cYear,cSetting.cMonth);
     }
 
     function refreshHead() {
