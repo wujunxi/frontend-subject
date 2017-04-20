@@ -39,8 +39,8 @@
 
     var defaults = $.fn.fullCalendar.defaults = {
         date: null,
-        onClickDay:$.noop,
-        onChangeDate:$.noop
+        onClickDay: $.noop,
+        onChangeDate: $.noop
     };
 
     var methods = {
@@ -108,10 +108,20 @@
             cSetting.cYear = temp.getFullYear();
             cSetting.cMonth = temp.getMonth() + 1;
             cSetting.cDay = temp.getDay();
-            cSetting.cDate = [cSetting.cYear, cSetting.cMonth, cSetting.cDay].join("-");
+            cSetting.cDate = formateDateStr(cSetting.cYear,cSetting.cMonth,cSetting.cDay);
         } else {
             cSetting = $.extend({}, settings, options);
         }
+    }
+
+    function formateDateStr(year, month, day) {
+        var temp,ar = [];
+        ar.push(year);
+        temp = "0"+month;
+        ar.push(temp.substr(temp.length -2,2));
+        temp = "0"+day;
+        ar.push(temp.substr(temp.length -2,2));
+        return ar.join("-");
     }
 
     function bindEvent() {
@@ -119,10 +129,10 @@
             methods.prevMonth.call($container);
         }).on("click", "._next", function() {
             methods.nextMonth.call($container);
-        }).on("click",".fcal-day",function(){
+        }).on("click", ".fcal-day", function() {
             var $this = $(this),
-            dateStr = $this.attr("data-date");
-            if($this.hasClass("disabled")){
+                dateStr = $this.attr("data-date");
+            if ($this.hasClass("disabled")) {
                 return;
             }
             getSetting.call($container);
@@ -139,7 +149,7 @@
         refreshDayList();
         // 更新完保存当前参数
         $this.data(NAMESPACE, cSetting);
-        cSetting.onChangeDate(cSetting.cYear,cSetting.cMonth);
+        cSetting.onChangeDate(cSetting.cYear, cSetting.cMonth);
     }
 
     function refreshHead() {
@@ -152,8 +162,8 @@
             cDay = cSetting.cDay, // 当前年月日
             lYear = cMonth == 1 ? cYear - 1 : cYear,
             lMonth = cMonth == 1 ? 12 : cMonth - 1,
-            nYear = cMonth == 12 ? cYear+1: cYear,
-            nMonth = cMonth == 12 ? 1 : cMonth+1;
+            nYear = cMonth == 12 ? cYear + 1 : cYear,
+            nMonth = cMonth == 12 ? 1 : cMonth + 1;
         var len = (new Date(cYear, cMonth, 0)).getDate(), // 取下个月的第0天日期，即本月的天数
             first = (new Date(cYear, cMonth - 1, 1)).getDay(), // 取本月第一天所在星期的星期几，作为显示天数的起点
             last = first + len, // 显示天数的终点
@@ -167,15 +177,15 @@
                 text = "";
             if (i < first) { // 上个月的日期
                 text = lastMonthDays - first + i + 1;
-                dataStr = [lYear, lMonth, text].join("-");
+                dataStr = formateDateStr(lYear, lMonth, text);
                 className += " disabled";
             } else if (i >= first && i < last) { // 这个月的日期
                 text = date;
-                dataStr = [cYear, cMonth, text].join("-");
+                dataStr = formateDateStr(cYear, cMonth, text);
                 date++;
             } else if (i >= last) { // 下个月的日期
                 text = index++;
-                dataStr = [nYear, nMonth, text].join("-");
+                dataStr = formateDateStr(nYear, nMonth, text);
                 className += " disabled";
             }
             $e.text(text).attr("class", className).attr("data-date", dataStr);

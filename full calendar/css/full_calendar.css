@@ -36,7 +36,7 @@
 }
 
 .fcal-row td {
-    height: 128px;
+    height: 60px;
     vertical-align: top;
     text-align: right;
     padding: 10px;
@@ -73,6 +73,7 @@
 
 .fcal-body .checked {
     background: url(../images/right.png) right bottom no-repeat;
+    background-size:45px 40px;
 }
 
 .fcal-body .disabled {
