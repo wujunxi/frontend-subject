@@ -33,6 +33,7 @@
 
 .fcal td {
     border: solid 1px #ddd;
+    position:relative;
 }
 
 .fcal-row td {
@@ -49,6 +50,10 @@
     height: 28px;
     line-height: 28px;
     background: #f3f3f3;
+}
+
+.fcal-today {
+    background-color:#faffbd;
 }
 
 .fcal-btn {
@@ -71,9 +76,15 @@
     cursor: default;
 }
 
-.fcal-body .checked {
-    background: url(../images/right.png) right bottom no-repeat;
-    background-size:45px 40px;
+.fcal-body .checked:after {
+    content:"";
+    display: inline-block;
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:45px;
+    height: 40px;
+    background: url(../images/right@x1.png) right bottom no-repeat;
 }
 
 .fcal-body .disabled {

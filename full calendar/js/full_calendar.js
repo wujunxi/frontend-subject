@@ -168,27 +168,33 @@
             first = (new Date(cYear, cMonth - 1, 1)).getDay(), // 取本月第一天所在星期的星期几，作为显示天数的起点
             last = first + len, // 显示天数的终点
             lastMonthDays = (new Date(lYear, lMonth, 0)).getDate(), // 上个月天数
+            now = new Date(),
+            today = formateDateStr(now.getFullYear(),now.getMonth()+1,now.getDate()),
             date = 1,
             index = 1,
-            dataStr = "";
+            dateStr = "";
         $days.each(function(i, e) {
             var $e = $(e),
                 className = "fcal-day",
                 text = "";
             if (i < first) { // 上个月的日期
                 text = lastMonthDays - first + i + 1;
-                dataStr = formateDateStr(lYear, lMonth, text);
+                dateStr = formateDateStr(lYear, lMonth, text);
                 className += " disabled";
             } else if (i >= first && i < last) { // 这个月的日期
                 text = date;
-                dataStr = formateDateStr(cYear, cMonth, text);
+                dateStr = formateDateStr(cYear, cMonth, text);
                 date++;
             } else if (i >= last) { // 下个月的日期
                 text = index++;
-                dataStr = formateDateStr(nYear, nMonth, text);
+                dateStr = formateDateStr(nYear, nMonth, text);
                 className += " disabled";
             }
-            $e.text(text).attr("class", className).attr("data-date", dataStr);
+            // 今天
+            if(dateStr == today){
+                className += " fcal-today";
+            }
+            $e.text(text).attr("class", className).attr("data-date", dateStr);
         });
     }
 
