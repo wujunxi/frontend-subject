@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+* {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .content {
+        padding: 50px 0 0 0;
+        margin: 0 auto;
+        max-width: 980px;
+    }
+    
+    .part {
+        margin: 20px 0 0 0;
+    }
+}
+    </style>
+</head>
+
+<body onload="main();">
+    <div class="content">
+        <div class="form">
+            <label for="tbWidth">设计宽度（px）：</label>
+            <input type="text" id="tbWidth" value="640">
+            <label for="tbFontSize">基准字体大小（px）：</label>
+            <input type="text" id="tbFontSize" value="14">
+            <button onclick="calc();">计算</button>
+        </div>
+        <section class="part">
+            <h3 class="part_title">参考适配字体大小</h3>
+            <div class="part_content">
+                <ul id="ulList">
+                    <li><span>0 ≦ x ≦ 320</span><span>14</span></li>
+                </ul>
+            </div>
+        </section>
+        <section class="part">
+            <h3 class="part_title">REM参考（max-width:320px font-size:14.2222px 1rem）</h3>
+            <div class="part_content">
+                <ul id="ulRemList">
+                    <li><span></span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+    var exports = {};
+    exports.add = function(arg1, arg2) {
+        var m = 0,
+            temp, r1, r2,
+            s1 = arg1.toString(),
+            s2 = arg2.toString();
+        temp = s1.split(".");
+        r1 = temp.length > 1 ? temp[1].length : 0;
+        temp = s2.split(".");
+        r2 = temp.length > 1 ? temp[1].length : 0;
+        m = Math.pow(10, Math.max(r1, r2));
+        return (arg1 * m + arg2 * m) / m;
+    };
+
+    Number.prototype.add = function(arg) {
+        return exports.add(arg, this);
+    };
+
+    exports.mul = function(arg1, arg2) {
+        var m = 0,
+            temp,
+            s1 = arg1.toString(),
+            s2 = arg2.toString();
+        temp = s1.split(".");
+        m += temp.length > 1 ? temp[1].length : 0;
+        temp = s2.split(".");
+        m += temp.length > 1 ? temp[1].length : 0;
+        return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
+    };
+
+    Number.prototype.mul = function(arg) {
+        return exports.mul(arg, this);
+    };
+
+    exports.div = function(arg1, arg2) {
+        var t1 = 0,
+            t2 = 0,
+            s1 = arg1.toString(),
+            s2 = arg2.toString(),
+            r1, r2, temp;
+        temp = s1.split(".");
+        t1 = temp.length > 1 ? temp[1].length : 0;
+        temp = s2.split(".");
+        t2 = temp.length > 1 ? temp[1].length : 0;
+        r1 = Number(arg1.toString().replace(".", ""));
+        r2 = Number(arg2.toString().replace(".", ""));
+        return (r1 / r2) * Math.pow(10, t2 - t1);
+    };
+
+    Number.prototype.div = function(arg) {
+        return exports.div(arg, this);
+    };
+
+    Number.prototype.divBy = function(arg) {
+        return exports.div(this, arg);
+    };
+    </script>
+    <script>
+    var list = [320, 360, 375, 384, 414, 435, 460, 500, 541, 601, 640, 721, 769, 801, 1281, 1441, 1601, 1921, 9999];
+
+    function main(){
+      var i = 10,
+          r = new Number(320).mul(16).divBy(360);
+          ulRemList = document.getElementById("ulRemList"),
+          htmlStr = "";
+      while(i < 101){
+        htmlStr += getRemLiHtml(i,r.div(i).toFixed(4));
+        i++;
+      }
+      ulRemList.innerHTML = htmlStr;
+    }
+
+    function getRemLiHtml(x,y){
+      return '<li><span>' + x + ' px</span> => <span>' + y + ' rem</span></li>';
+    }
+
+
+    function calc() {
+        var tbWidth = document.getElementById("tbWidth"),
+            tbFontSize = document.getElementById("tbFontSize"),
+            ulList = document.getElementById("ulList"),
+            w = parseFloat(tbWidth.value).divBy(2),
+            s = parseFloat(tbFontSize.value),
+            i, len, item, htmlStr = "",
+            val;
+        for (i = 0, len = list.length; i < len; i++) {
+            val = s.mul(list[i]).divBy(w);
+            htmlStr += getLiHtml(i == 0 ? 0 : list[i - 1], list[i], new Number(val.toFixed(4)));
+        }
+        ulList.innerHTML = htmlStr;
+    }
+
+    function getLiHtml(min, max, val) {
+        return '<li><span>' + min + '≦ x ≦ ' + max + '</span> <span>' + val + '</span></li>';
+    }
+
+    function getCssStr(min,max,val){
+      return ;
+    }
+
+    </script>
+</body>
+
+</html>
