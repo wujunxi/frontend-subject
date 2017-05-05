@@ -115,11 +115,11 @@
     var list = [320, 360, 375, 384, 414, 435, 460, 500, 541, 601, 640, 721, 769, 801, 1281, 1441, 1601, 1921, 9999];
 
     function main(){
-      var i = 10,
+      var i = 1,
           r = new Number(320).mul(16).divBy(360);
           ulRemList = document.getElementById("ulRemList"),
           htmlStr = "";
-      while(i < 101){
+      while(i < 1001){
         htmlStr += getRemLiHtml(i,r.div(i).toFixed(4));
         i++;
       }
@@ -127,7 +127,7 @@
     }
 
     function getRemLiHtml(x,y){
-      return '<li><span>' + x + ' px</span> => <span>' + y + 'rem</span></li>';
+      return '<li><span>' + x + 'px</span> => <span>' + y + 'rem</span></li>';
     }
 
 
