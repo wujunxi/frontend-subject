@@ -8,32 +8,37 @@ ol {
     list-style: none;
 }
 
+body {
+    background: #cbd5e4;
+}
+
 .container {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    border: solid 1px #999;
 }
 
 .page-title {
     height: 45px;
-    line-height:45px;
+    line-height: 45px;
     text-align: center;
 }
 
 .page-title h1 {
     display: inline-block;
-    padding:0 10px;
-    border-bottom:solid 1px #4682b4;
+    padding: 0 10px;
+    border-bottom: solid 1px #4682b4;
 }
 
 .canv {
-    
+    user-select: none;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 10px 10px 10px;
 }
 
 .menu {
     overflow: hidden;
-    margin:12px 0;
+    margin: 12px 0;
 }
 
 .menu-item {
@@ -44,15 +49,15 @@ ol {
     cursor: pointer;
 }
 
-.menu-item:hover h3{
+.menu-item:hover h3 {
     /*border-bottom:solid 1px #f00;*/
-    color:#fff;
-    background:#4682b4;
+    color: #fff;
+    background: #4682b4;
 }
 
 .menu-item h3 {
     box-sizing: border-box;
-    border-right:solid 1px #999;
+    border-right: solid 1px #999;
     width: 80px;
     height: 26px;
     line-height: 26px;
@@ -69,11 +74,11 @@ ol {
     display: none;
     position: absolute;
     /*border:solid 1px #999;*/
-    border-top:none;
-    box-sizing:border-box;
-    color:#fff;
+    border-top: none;
+    box-sizing: border-box;
+    color: #fff;
     /*background:#4682b4;*/
-    background: rgba(70,130,180,.6);
+    background: rgba(70, 130, 180, .6);
 }
 
 .menu .menu-sub li {
@@ -81,6 +86,7 @@ ol {
     height: 26px;
     line-height: 26px;
     text-align: center;
+    position: relative;
 }
 
 .menu-item:hover .menu-sub {
@@ -88,12 +94,53 @@ ol {
 }
 
 .status-bar {
+    padding: 0 10px;
     height: 16px;
     line-height: 16px;
-    border:solid 1px #999;
-    border-left:none;
-    border-right:none;
-    font-size:12px;
-    text-indent: 10px;
-    color:#aaa;
+    border: solid 1px #999;
+    border-left: none;
+    border-right: none;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.color-block {
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+
+/*short*/
+
+.fr {
+    float: right;
 }

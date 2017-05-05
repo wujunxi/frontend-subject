@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body onload="main();">
+    <div class="container">
+        <div class="page-title">
+            <h1>Canvas Demo</h1>
+        </div>
+        <dd class="menu">
+            <dl class="menu-item">
+                <h3>移动</h3>
+            </dl>
+            <dl class="menu-item">
+                <h3>画笔</h3>
+            </dl>
+            <dl class="menu-item">
+                <h3>橡皮擦</h3>
+            </dl>
+            <dl class="menu-item">
+                <h3>颜色</h3>
+                <ul class="menu-sub">
+                    <li><span class="color-block bg-black" data-oper="pick_color" data-val="black"><span></li>
+                    <li><span class="color-block bg-orange" data-oper="pick_color" data-val="orange"><span></li>
+                    <li><span class="color-block bg-blue" data-oper="pick_color" data-val="blue"><span></li>
+                    <li><span class="color-block bg-red" data-oper="pick_color" data-val="red"><span></li>
+                    <li><span class="color-block bg-white" data-oper="pick_color" data-val="white"><span></li>
+                    <li><span class="color-block bg-green" data-oper="pick_color" data-val="green"><span></li>
+                </ul>
+            </dl>
+            <dl class="menu-item">
+                <h3>图形</h3>
+                <ul class="menu-sub">
+                    <li data-oper="draw_shape" data-val="circle">圆形</li>
+                    <li data-oper="draw_shape" data-val="rectangle">矩形</li>
+                </ul>
+            </dl>
+            <dl class="menu-item">
+                <h3 data-oper="clear">清空</h3>
+            </dl>
+        </dd>
+        <div class="status-bar">
+            <span data-name="type">画笔</span>
+                        <span class="fr" data-name="position"></span>
+    </div>
+    <canvas class="canv" id="canvasMain" width="600px" height="450px">当前浏览器不支持Canvas，请更换最新的Chrome或Firefox浏览器。</canvas>
+    <div class="">
+        <label class="key">x:<input type="text" value="0" data-name="x" /></label>
+        <label class="key">y:<input type="text" value="0" data-name="y" /></label>
+    </div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+
+</html>
