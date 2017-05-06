@@ -16,11 +16,25 @@ Action.prototype.COLOR = new KV(3, "颜色");
 Action.prototype.SHAPE = new KV(4, "形状");
 
 
+var colorClassMap = {
+    "black":"bg-black",
+    "orange":"bg-orange",
+    "blue":"bg-blue",
+    "red":"bg-red",
+    "white":"bg-white",
+    "green":"bg-green"
+};
+
+var shapeMap = {
+    circle:"圆形",
+    rectangle:"矩形"
+};
+
 function main() {
     var cvs = document.getElementById("canvasMain");
     if (!cvs.getContext) return;
     var ctx = cvs.getContext("2d");
-    drawTest(ctx);
+    // drawTest(ctx);
     var isMouseDown = false;
     $("#canvasMain").on("mousemove", function(e) {
         // log(e.offsetX, e.offsetY);
@@ -43,16 +57,59 @@ function main() {
     $("body").on("click", "[data-oper]", function() {
         var $this = $(this),
             operName = $this.attr("data-oper");
+        var $type = $("[data-name=type]");
         if (operName == "clear") {
             ctx.clearRect(0, 0, cvs.width, cvs.height);
+            // cvs.height = cvs.height;
+            // drawRectangle.call(ctx,{x:0,y:0,width:cvs.width,height:cvs.height,color:"#fff"});
         } else if (operName == "pick_color") {
             var color = $this.attr("data-val");
             ctx.fillStyle = color;
             ctx.strokeStyle = color;
+            var $color = $("[data-name=color]");
+            var newClass = $color.attr("class").replace(/bg-[a-z]+/,colorClassMap[color]);
+            $color.attr("class",newClass);
         } else if (operName == "draw_shape") {
-
+            var shape = $this.attr("data-val");
+            var paramObj = getParam(shape);
+            drawShape.call(ctx,paramObj);
+            $type.text(shapeMap[shape]);
         }
     });
+}
+
+function getParam(shape){
+    var $shape = $("[data-name="+shape+"-param]"),
+    paramObj = {shape:shape};
+    $("[data-name]",$shape).each(function(){
+        var $this = $(this),
+        key = $this.attr("data-name"),
+        val = $this.val();
+        paramObj[key] = val;
+    });
+    return paramObj;
+}
+
+function drawShape(paramObj){
+    var shapeName =  paramObj.shape.replace(/^./,function(m){
+        return m.toUpperCase();
+    });
+    eval("draw"+ shapeName +".call(this,paramObj)");
+}
+
+function drawCircle(paramObj){
+    var temp = this.fillStyle;
+    this.fillStyle = paramObj.color;
+    this.arc(paramObj.x, paramObj.y, paramObj.r,0,Math.PI*2);
+    this.fill();
+    this.fillStyle = temp;
+}
+
+function drawRectangle(paramObj){
+    var temp = this.fillStyle;
+    this.fillStyle = paramObj.color;
+    this.fillRect(paramObj.x, paramObj.y, paramObj.width, paramObj.height);
+    this.fillStyle = temp;
 }
 
 function drawTest(ctx) {

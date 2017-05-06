@@ -31,7 +31,7 @@ body {
 }
 
 .canv {
-    user-select: none;
+    margin: 20px;
     background: #fff;
     box-shadow: rgba(0, 0, 0, .5) 10px 10px 10px;
 }
@@ -101,7 +101,32 @@ body {
     border-left: none;
     border-right: none;
     font-size: 12px;
-    color: #aaa;
+}
+
+.status-bar .position {
+    min-width: 70px;
+    text-align: right;
+}
+
+.status-bar .color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 4px 0;
+}
+
+.param-bar .key {
+    display: inline-block;
+    width:60px;
+    text-align: right;
+}
+
+.param-bar .input {
+    margin:0 0 0 10px;
+    width:40px;
+    height:24px;
+    line-height: 24px;
+    padding:0 10px;
 }
 
 .color-block {
