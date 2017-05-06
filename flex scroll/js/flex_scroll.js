@@ -14,16 +14,19 @@
 
     $.fn.flexScroll = function() {
         var $this = this;
-        this._x = 0;
-        this._y = 0;
-        this.on("touchstart", function(e) {
-            $this._y = Math.floor(e.changedTouches[0].clientY);
-        }).on("touchmove", function(e) {
-            var y = Math.floor(e.changedTouches[0].clientY);
+        this._y = null;
+        this.on("touchstart mousedown", function(e) {
+            // console.log(e);
+            var y = e.type === "mousedown" ? e.clientY : e.changedTouches[0].clientY;
+            $this._y = Math.floor(y);
+        }).on("touchmove mousemove", function(e) {
+            if($this._y === null) return;
+            var y = e.type === "mousemove" ? e.clientY : e.changedTouches[0].clientY;
+            y = Math.floor(y);
             moveY.call($this, y - $this._y);
             $this._y = y;
             e.preventDefault();
-        }).on("touchend", function(e) {
+        }).on("touchend mouseup", function(e) {
             var parentH = $this.parent().height(),
                 elemH = $this.height(),
                 tranY = getTranY.call($this);
@@ -34,6 +37,7 @@
             } else if (tranY < 0 && (elemH + tranY < parentH)) { // 上边框移出上边界，且下边框移入下边界
                 resetTo.call($this, parentH - elemH);
             }
+            $this._y = null;
         });
         return this;
     };

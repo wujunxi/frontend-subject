@@ -17,6 +17,10 @@ define(function(require, exports, module) {
     console.log(new Number(0.1).add(-0.1));
     console.log(number_extend.add(0.1, -0.1));
 
+    console.log(0.47/100);
+    console.log(new Number(0.47).divBy(100));
+    console.log(number_extend.div(0.47, 100));
+
     // string_extend
     console.log("   sdf adf  ".trim());
 
