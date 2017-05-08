@@ -17,17 +17,17 @@ Action.prototype.SHAPE = new KV(4, "形状");
 
 
 var colorClassMap = {
-    "black":"bg-black",
-    "orange":"bg-orange",
-    "blue":"bg-blue",
-    "red":"bg-red",
-    "white":"bg-white",
-    "green":"bg-green"
+    "black": "bg-black",
+    "orange": "bg-orange",
+    "blue": "bg-blue",
+    "red": "bg-red",
+    "white": "bg-white",
+    "green": "bg-green"
 };
 
 var shapeMap = {
-    circle:"圆形",
-    rectangle:"矩形"
+    circle: "圆形",
+    rectangle: "矩形"
 };
 
 function main() {
@@ -59,6 +59,7 @@ function main() {
             operName = $this.attr("data-oper");
         var $type = $("[data-name=type]");
         if (operName == "clear") {
+            // 清除图形有三种方式
             ctx.clearRect(0, 0, cvs.width, cvs.height);
             // cvs.height = cvs.height;
             // drawRectangle.call(ctx,{x:0,y:0,width:cvs.width,height:cvs.height,color:"#fff"});
@@ -67,49 +68,45 @@ function main() {
             ctx.fillStyle = color;
             ctx.strokeStyle = color;
             var $color = $("[data-name=color]");
-            var newClass = $color.attr("class").replace(/bg-[a-z]+/,colorClassMap[color]);
-            $color.attr("class",newClass);
+            var newClass = $color.attr("class").replace(/bg-[a-z]+/, colorClassMap[color]);
+            $color.attr("class", newClass);
         } else if (operName == "draw_shape") {
             var shape = $this.attr("data-val");
             var paramObj = getParam(shape);
-            drawShape.call(ctx,paramObj);
+            drawShape.call(ctx, paramObj);
             $type.text(shapeMap[shape]);
         }
     });
 }
 
-function getParam(shape){
-    var $shape = $("[data-name="+shape+"-param]"),
-    paramObj = {shape:shape};
-    $("[data-name]",$shape).each(function(){
+function getParam(shape) {
+    var $shape = $("[data-name=" + shape + "-param]"),
+        paramObj = { shape: shape };
+    $("[data-name]", $shape).each(function() {
         var $this = $(this),
-        key = $this.attr("data-name"),
-        val = $this.val();
+            key = $this.attr("data-name"),
+            val = $this.val();
         paramObj[key] = val;
     });
     return paramObj;
 }
 
-function drawShape(paramObj){
-    var shapeName =  paramObj.shape.replace(/^./,function(m){
+function drawShape(paramObj) {
+    // 把第一个字母大写
+    var shapeName = paramObj.shape.replace(/^./, function(m) {
         return m.toUpperCase();
     });
-    eval("draw"+ shapeName +".call(this,paramObj)");
+    eval("draw" + shapeName + ".call(this,paramObj)");
 }
 
-function drawCircle(paramObj){
-    var temp = this.fillStyle;
-    this.fillStyle = paramObj.color;
-    this.arc(paramObj.x, paramObj.y, paramObj.r,0,Math.PI*2);
+function drawCircle(paramObj) {
+    this.beginPath();
+    this.arc(paramObj.x, paramObj.y, paramObj.r, 0, Math.PI * 2);
     this.fill();
-    this.fillStyle = temp;
 }
 
-function drawRectangle(paramObj){
-    var temp = this.fillStyle;
-    this.fillStyle = paramObj.color;
+function drawRectangle(paramObj) {
     this.fillRect(paramObj.x, paramObj.y, paramObj.width, paramObj.height);
-    this.fillStyle = temp;
 }
 
 function drawTest(ctx) {
@@ -138,4 +135,15 @@ fillStyle = color
 设置图形的填充颜色。
 strokeStyle = color
 设置图形轮廓的颜色。
+
+3.路径绘制
+beginPath()
+新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。
+closePath()
+闭合路径之后图形绘制命令又重新指向到上下文中。
+stroke()
+通过线条来绘制图形轮廓。
+fill()
+通过填充路径的内容区域生成实心的图形。
+
 */

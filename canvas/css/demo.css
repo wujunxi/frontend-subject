@@ -115,18 +115,22 @@ body {
     margin: 4px 0;
 }
 
+.param-bar {
+    font-size: 12px;
+}
+
 .param-bar .key {
     display: inline-block;
-    width:60px;
+    width: 60px;
     text-align: right;
 }
 
 .param-bar .input {
-    margin:0 0 0 10px;
-    width:40px;
-    height:24px;
-    line-height: 24px;
-    padding:0 10px;
+    margin: 0 0 0 10px;
+    width: 40px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 10px;
 }
 
 .color-block {

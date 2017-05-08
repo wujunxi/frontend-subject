@@ -12,6 +12,7 @@
         <div class="page-title">
             <h1>Canvas Demo</h1>
         </div>
+        <!--菜单-->
         <dl class="menu">
             <dd class="menu-item">
                 <h3>移动</h3>
@@ -43,25 +44,26 @@
             <dd class="menu-item">
                 <h3 data-oper="clear">清空</h3>
             </dd>
-        </dl>
+        </dl> 
+        <!--参数 -->
+        <div class="param-bar">
+            <div data-name="rectangle-param">
+                <label class="key">x:</label><input class="input" type="text" value="0" data-name="x" />
+                <label class="key">y:</label><input class="input" type="text" value="0" data-name="y" />
+                <label class="key">width:</label><input class="input" type="text" value="0" data-name="width" />
+                <label class="key">height:</label><input class="input" type="text" value="0" data-name="height" />
+            </div>
+            <div data-name="circle-param">
+                <label class="key">x:</label><input class="input" type="text" value="0" data-name="x" />
+                <label class="key">y:</label><input class="input" type="text" value="0" data-name="y" />
+                <label class="key">r:</label><input class="input" type="text" value="0" data-name="r" />
+            </div>
+        </div>
+        <canvas class="canv" id="canvasMain" width="600px" height="450px">当前浏览器不支持Canvas，请更换最新的Chrome或Firefox浏览器。</canvas>
         <div class="status-bar">
             <span data-name="type">画笔</span>
                         <span class="fr position" data-name="position">0,0</span>
                         <span class="fr color bg-black" data-name="color"></span>
-    </div>
-    <canvas class="canv" id="canvasMain" width="600px" height="450px">当前浏览器不支持Canvas，请更换最新的Chrome或Firefox浏览器。</canvas>
-    <div class="param-bar">
-        <div data-name="rectangle-param">
-            <label class="key">x:</label><input class="input" type="text" value="0" data-name="x" />
-            <label class="key">y:</label><input class="input" type="text" value="0" data-name="y" />
-            <label class="key">width:</label><input class="input" type="text" value="0" data-name="width" />
-            <label class="key">height:</label><input class="input" type="text" value="0" data-name="height" />
-        </div>
-        <div data-name="circle-param">
-            <label class="key">x:</label><input class="input" type="text" value="0" data-name="x" />
-            <label class="key">y:</label><input class="input" type="text" value="0" data-name="y" />
-            <label class="key">r:</label><input class="input" type="text" value="0" data-name="r" />
-        </div>
     </div>
     </div>
     <script src="js/jquery-1.12.4.min.js"></script>
