@@ -13,17 +13,17 @@
             <h1>Canvas Demo</h1>
         </div>
         <!--菜单-->
-        <dl class="menu">
-            <dd class="menu-item">
+        <ul class="menu">
+            <li class="menu-item">
                 <h3>移动</h3>
-            </dd>
-            <dd class="menu-item">
+            </li>
+            <li class="menu-item">
                 <h3>画笔</h3>
-            </dd>
-            <dd class="menu-item">
+            </li>
+            <li class="menu-item">
                 <h3>橡皮擦</h3>
-            </dd>
-            <dd class="menu-item">
+            </li>
+            <li class="menu-item">
                 <h3>颜色</h3>
                 <ul class="menu-sub">
                     <li><span class="color-block bg-black" data-oper="pick_color" data-val="black"><span></li>
@@ -33,18 +33,18 @@
                     <li><span class="color-block bg-white" data-oper="pick_color" data-val="white"><span></li>
                     <li><span class="color-block bg-green" data-oper="pick_color" data-val="green"><span></li>
                 </ul>
-            </dd>
-            <dd class="menu-item">
+            </li>
+            <li class="menu-item">
                 <h3>图形</h3>
                 <ul class="menu-sub">
                     <li data-oper="draw_shape" data-val="circle">圆形</li>
                     <li data-oper="draw_shape" data-val="rectangle">矩形</li>
                 </ul>
-            </dd>
-            <dd class="menu-item">
+            </li>
+            <li class="menu-item">
                 <h3 data-oper="clear">清空</h3>
-            </dd>
-        </dl> 
+            </li>
+        </ul> 
         <!--参数 -->
         <div class="param-bar">
             <div data-name="rectangle-param">
@@ -60,6 +60,7 @@
             </div>
         </div>
         <canvas class="canv" id="canvasMain" width="600px" height="450px">当前浏览器不支持Canvas，请更换最新的Chrome或Firefox浏览器。</canvas>
+        <!--状态栏-->
         <div class="status-bar">
             <span data-name="type">画笔</span>
                         <span class="fr position" data-name="position">0,0</span>
