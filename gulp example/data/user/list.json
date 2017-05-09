@@ -1,0 +1,35 @@
+{
+    "retCode":"00",
+    "retMsg":"success",
+    "data":{
+        "totalNum":98,
+        "pageNum":1,
+        "pageSize":10,
+        "list":[
+            {
+                "id":"001",
+                "name":"Jim"
+            },
+            {
+                "id":"002",
+                "name":"Tom"
+            },
+            {
+                "id":"003",
+                "name":"Pug"
+            },
+            {
+                "id":"004",
+                "name":"Jerry"
+            },
+            {
+                "id":"005",
+                "name":"Bob"
+            },
+            {
+                "id":"006",
+                "name":"Gray"
+            }
+        ]
+    }
+}
