@@ -63,18 +63,20 @@ function main() {
             ctx.clearRect(0, 0, cvs.width, cvs.height);
             // cvs.height = cvs.height;
             // drawRectangle.call(ctx,{x:0,y:0,width:cvs.width,height:cvs.height,color:"#fff"});
-        } else if (operName == "pick_color") {
+        } else if (operName == "pick_color") { // 选择颜色
             var color = $this.attr("data-val");
             ctx.fillStyle = color;
             ctx.strokeStyle = color;
             var $color = $("[data-name=color]");
             var newClass = $color.attr("class").replace(/bg-[a-z]+/, colorClassMap[color]);
             $color.attr("class", newClass);
-        } else if (operName == "draw_shape") {
+        } else if (operName == "draw_shape") { // 图形
             var shape = $this.attr("data-val");
-            var paramObj = getParam(shape);
-            drawShape.call(ctx, paramObj);
+            // var paramObj = getParam(shape);
+            // drawShape.call(ctx, paramObj);
             $type.text(shapeMap[shape]);
+            $(".param-bar").children().hide();
+            $("[data-name='"+ shape +"-param']").show();
         }
     });
 }

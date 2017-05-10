@@ -18,12 +18,24 @@ var configObj = {
 var target = configObj.src + "/" + configObj.module;
 
 var requestMap = [
-    {reg:/service\/([^\.]+.json)$/,local:"data/$1"}
+    {reg:/service\/([^\.]+.json)(\?.*)?/,local:"data/$1"}
 ];
 
+/**
+ * 代理json请求到本地文件
+ * 
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ * @returns 
+ * 
+ */
 function handleJsonRequrest(req, res, next){
-    var i,len,item,url = req.url,pathStr;
-    console.log(url);
+    var i,len,item,
+    url = req.url,
+    pathStr,
+    fullPath;
+    // console.log(url);
     for(i = 0,len = requestMap.length; i < len; i++){
         item = requestMap[i];
         if(item.reg.test(url)){
@@ -32,8 +44,21 @@ function handleJsonRequrest(req, res, next){
             }else{
                 pathStr = item.local;
             }
-            console.log(__dirname,pathStr,path.join(__dirname,pathStr));
+            fullPath = path.join(__dirname,pathStr);
+            // console.log(__dirname,pathStr,fullPath);
+            if(fs.existsSync(fullPath)){
+                console.log("catch ",url," -> ",fullPath);
+                var stat = fs.statSync(fullPath);
+                res.writeHead(200, {
+                    'Content-Type': 'application/json',
+                    'Content-Length': stat.size
+                });
 
+                var readStream = fs.createReadStream(fullPath);
+                // We replaced all the event handlers with a simple call to readStream.pipe()
+                readStream.pipe(res);
+                return;
+            }
         }
     }
     next();
