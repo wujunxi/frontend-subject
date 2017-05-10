@@ -18,7 +18,15 @@ var configObj = {
 var target = configObj.src + "/" + configObj.module;
 
 var requestMap = [
-    {reg:/service\/([^\.]+.json)(\?.*)?/,local:"data/$1"}
+    {reg:/^service\/time.json/,local:function(){ // 动态返回响应
+        return JSON.stringify({dateTime:Date.now()});
+    }},
+    {reg:/^service\/to.json/,local:function(param){ // 根据参数动态返回响应
+        return JSON.stringify(param);
+    }},
+    {reg:/^service\/weather.json/,proxy:"www.baidu.com"}, // 代理
+    {reg:/^service\/something\/wrong/,redirect:"/"}, // 跳转
+    {reg:/service\/([^\.]+.json)(\?.*)?/,local:"data/$1"} // 响应本地json文件
 ];
 
 /**
