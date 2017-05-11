@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        @keyframes fade {
+            from {
+                opacity: 0.3;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .loading-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 45px;
+            color: #fff;
+            animation:fade .6s ease infinite;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="loading" id="divLoading">
+        <div class="loading-info">Loading...</div>
+    </div>
+    <h1>Gulp Example Demo</h1>
     <ul id="ulNameList">
 
     </ul>
+    <h3 id="hServiceTime"></h3>
     <script inline src="js/index.bundle.js"></script>
 </body>
+
 </html>

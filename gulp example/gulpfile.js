@@ -16,28 +16,27 @@ var configObj = {
 
 var target = configObj.src + "/" + configObj.module;
 
-gulp.task("clean", function() {
+gulp.task("build-clean", function() {
     return gulp.src(configObj.dest + "/" + configObj.module).pipe(clean());
 });
 
-gulp.task("js", function() {
+gulp.task("build-js", function() {
     return gulp.src(["!" + target + "/js/*.bundle.js", target + "/js/*.js"])
         .pipe(browserify())
         .pipe(rename({ suffix: ".bundle" }))
         .pipe(gulp.dest(target + "/js"));
 });
 
-gulp.task("html", ["js"], function() {
+gulp.task("build-html", ["build-js"], function() {
     return gulp.src(target + "/*.html")
         .pipe(inlinesource())
-        .pipe(gulp.dest(configObj.dest))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(configObj.dest));
 });
 
 
 gulp.task('connect', function() {
     connect.server({
-        root: configObj.dest,
+        root: target,
         livereload: true,
         middleware: function(connect, opt) {
             return [autoresponse];
@@ -45,10 +44,25 @@ gulp.task('connect', function() {
     });
 });
 
-gulp.task('watch', function() {
-    gulp.watch([target + "/js/" + configObj.entry + ".js"], ['html']);
+gulp.task("connect-html", function() {
+    return gulp.src(target + "/*.html")
+        .pipe(connect.reload());
+});
+gulp.task("connect-js", function() {
+    return gulp.src(["!" + target + "/js/*.bundle.js", target + "/js/*.js"])
+        .pipe(browserify())
+        .pipe(rename({ suffix: ".bundle" }))
+        .pipe(gulp.dest(target + "/js"))
+        .pipe(connect.reload());
 });
 
-gulp.task("default", ["clean"], function() {
-    gulp.start(["html", "connect", "watch"]);
+gulp.task('watch', function() {
+    gulp.watch([target + "/" + configObj.entry + ".html"], ["connect-html"]);
+    gulp.watch([target + "/js/" + configObj.entry + ".js"], ["connect-js"]);
 });
+
+gulp.task("build", ["build-clean"], function() {
+    gulp.start(["build-html"]);
+});
+
+gulp.task("default", ["connect", "watch"]);
