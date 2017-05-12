@@ -5,7 +5,7 @@ $(function() {
         $hServiceTime = $("#hServiceTime");
 
     // 测试映射本地文件
-    ajax("service/user/list.json", {}, function(data) {
+    var listAjax = ajax("service/user/list.json", {}, function(data) {
         var i, len, item, htmlStr = "";
         for (i = 0, len = data.list.length; i < len; i++) {
             item = data.list[i];
@@ -14,12 +14,14 @@ $(function() {
         $("#ulNameList").html(htmlStr);
     });
     // 测试动态返回数据
-    ajax("service/time.json",{},function(data){
+    var timeAjax = ajax("service/time.json",{},function(data){
         $hServiceTime.text("服务器时间："+ new Date(data.dateTime));
-        $divLoading.hide();
     });
-    ajax("service/to.json?name=Lily",{},function(data){
+    var toAjax = ajax("service/to.json?name=Lily",{},function(data){
         
+    });
+    $.when(listAjax,timeAjax,toAjax).done(function(){
+        $divLoading.hide();
     });
 });
 
@@ -45,7 +47,7 @@ function ajax(url, data, callback, _opt) {
             if (retData && retData.retCode == "00") {
                 callback(retData.data);
             } else {
-                console.warn(retData.retMsg || "unexcepted result!");
+                console.warn(retData.retMsg || "not excepted result!");
             }
         }
     }, _opt);

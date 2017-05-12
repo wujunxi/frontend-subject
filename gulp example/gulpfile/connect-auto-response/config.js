@@ -27,6 +27,6 @@ module.exports = [{
         }
     },
     { reg: /^\/service\/weather.json/, action: "proxy:www.baidu.com" }, // 代理
-    { reg: /^\/service\/something\/wrong/, action: "redirect:/" }, // 跳转
+    { reg: /^\/service\/something\/wrong/, action: "redirect:/error.html" }, // 跳转
     { reg: /^\/service\/([^\.]+.json)(\?.*)?/, action: "local:../../data/$1" } // 响应本地json文件
 ];
