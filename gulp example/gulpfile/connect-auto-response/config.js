@@ -19,14 +19,14 @@ module.exports = [{
     {
         reg: /^\/service\/to.json/,
         action: function(param) { // 根据参数动态返回响应
-            if(param.type){
+            if (param.type) {
                 return new Success(param);
-            }else{
+            } else {
                 return new Fail("require param 'type'");
             }
         }
     },
-    { reg: /^\/service\/weather.json/, action: "proxy:www.baidu.com" }, // 代理
+    { reg: /^\/service\/weather.json/, action: "proxy:http://www.weather.com.cn/data/cityinfo/101280601.html", charset: "gbk2312" }, // 代理
     { reg: /^\/service\/something\/wrong/, action: "redirect:/error.html" }, // 跳转
     { reg: /^\/service\/([^\.]+.json)(\?.*)?/, action: "local:../../data/$1" } // 响应本地json文件
 ];

@@ -10258,7 +10258,8 @@ var $ = require("jquery");
 
 $(function() {
     var $divLoading = $("#divLoading"),
-        $hServiceTime = $("#hServiceTime");
+        $hServiceTime = $("#hServiceTime"),
+        $hWeather = $("#hWeather");
 
     // 测试映射本地文件
     var listAjax = ajax("service/user/list.json", {}, function(data) {
@@ -10276,7 +10277,10 @@ $(function() {
     var toAjax = ajax("service/to.json?name=Lily&type=3", {}, function(data) {
         console.log(data);
     });
-    $.when(listAjax, timeAjax, toAjax).done(function() {
+    var weatherAjax = ajax("service/weather.json", {}, function(data) {
+        $hWeather.text(JSON.stringify(data));
+    });
+    $.when(listAjax, timeAjax, toAjax, weatherAjax).done(function() {
         $divLoading.hide();
     });
 });

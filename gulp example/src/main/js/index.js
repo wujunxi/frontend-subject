@@ -2,7 +2,8 @@ var $ = require("jquery");
 
 $(function() {
     var $divLoading = $("#divLoading"),
-        $hServiceTime = $("#hServiceTime");
+        $hServiceTime = $("#hServiceTime"),
+        $hWeather = $("#hWeather");
 
     // 测试映射本地文件
     var listAjax = ajax("service/user/list.json", {}, function(data) {
@@ -20,7 +21,12 @@ $(function() {
     var toAjax = ajax("service/to.json?name=Lily&type=3", {}, function(data) {
         console.log(data);
     });
-    $.when(listAjax, timeAjax, toAjax).done(function() {
+    var weatherAjax = ajax("service/weather.json", {}, function(data) {
+        $hWeather.text(JSON.stringify(data));
+    }, {
+        autoReturn: false
+    });
+    $.when(listAjax, timeAjax, toAjax, weatherAjax).done(function() {
         $divLoading.hide();
     });
 });
@@ -39,11 +45,15 @@ function ajax(url, data, callback, _opt) {
         dataType: "json",
         error: function() {
             console.error("ajax fail!", arguments);
-        }
+        },
+        autoReturn: true
     }, {
         url: url,
         data: data,
         success: function(retData) {
+            if (!opt.autoReturn) {
+                callback(retData);
+            }
             if (retData && retData.retCode == "00") {
                 callback(retData.data);
             } else {

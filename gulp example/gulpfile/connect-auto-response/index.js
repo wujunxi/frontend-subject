@@ -1,9 +1,14 @@
 const path = require("path");
 const fs = require("fs");
 const querystring = require('querystring');
+const url = require('url');
 const log = require('../my-log').logger;
+const http = require('http');
+const StringDecoder = require('string_decoder').StringDecoder;
+
 // 获取映射配置
 const requestMap = require('./config');
+
 // 自定义表达式头
 const EXPRESS_HEAD = {
     PROXY: "proxy:",
@@ -95,7 +100,11 @@ function handleRedirect(req, res, item, queryObj) {
         return false;
     }
     log.debug('handleRedirect', queryObj);
-
+    var express = item.action.replace(EXPRESS_HEAD_REG.REDIRECT, "");
+    res.writeHead(302, {
+        'Location': express
+    });
+    res.end();
     return true;
 }
 
@@ -113,6 +122,33 @@ function handleProxy(req, res, item, queryObj) {
         return false;
     }
     log.debug('handleProxy', queryObj);
+    var express = item.action.replace(EXPRESS_HEAD_REG.PROXY, "");
+    var charset = item.charset || "utf8";
+    try {
+        // var decoder = new StringDecoder(charset);
+        var urlObj = url.parse(express);
+        log.debug(urlObj);
+        var innerReq = http.request({
+            host: urlObj.host,
+            port: urlObj.port,
+            method: req.method,
+            path: urlObj.path
+        }, function(innerRes) {
+            innerRes.on('data', function(data) {
+                // res.write(decoder.write(data));
+                res.writeHead(200, {
+                    Charset: charset
+                })
+                res.write(data);
+                res.end();
+            });
+        });
+        innerReq.end();
+    } catch (e) {
+        log.error(e);
+        res.writeHead(500);
+        res.end("service error!");
+    }
     return true;
 }
 
