@@ -95,6 +95,7 @@ function handleRedirect(req, res, item, queryObj) {
         return false;
     }
     log.debug('handleRedirect', queryObj);
+
     return true;
 }
 

@@ -10270,13 +10270,13 @@ $(function() {
         $("#ulNameList").html(htmlStr);
     });
     // 测试动态返回数据
-    var timeAjax = ajax("service/time.json",{},function(data){
-        $hServiceTime.text("服务器时间："+ new Date(data.dateTime));
+    var timeAjax = ajax("service/time.json", {}, function(data) {
+        $hServiceTime.text("服务器时间：" + new Date(data.dateTime));
     });
-    var toAjax = ajax("service/to.json?name=Lily",{},function(data){
-        
+    var toAjax = ajax("service/to.json?name=Lily&type=3", {}, function(data) {
+        console.log(data);
     });
-    $.when(listAjax,timeAjax,toAjax).done(function(){
+    $.when(listAjax, timeAjax, toAjax).done(function() {
         $divLoading.hide();
     });
 });
