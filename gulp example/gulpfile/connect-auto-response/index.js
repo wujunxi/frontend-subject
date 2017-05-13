@@ -4,7 +4,6 @@ const querystring = require('querystring');
 const url = require('url');
 const log = require('../my-log').logger;
 const http = require('http');
-const StringDecoder = require('string_decoder').StringDecoder;
 
 // 获取映射配置
 const requestMap = require('./config');
@@ -40,7 +39,7 @@ function handleFun(req, res, item, queryObj) {
         result = JSON.stringify(result);
     }
     res.writeHead(200, {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json;charset=utf-8',
         'Content-Length': result.length
     });
     res.write(result);
@@ -75,7 +74,7 @@ function handleLocal(req, res, item, queryObj) {
         log.info("local ", url, " -> ", fullPath);
         var stat = fs.statSync(fullPath);
         res.writeHead(200, {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json;charset=utf-8',
             'Content-Length': stat.size
         });
 
@@ -123,9 +122,8 @@ function handleProxy(req, res, item, queryObj) {
     }
     log.debug('handleProxy', queryObj);
     var express = item.action.replace(EXPRESS_HEAD_REG.PROXY, "");
-    var charset = item.charset || "utf8";
+    var charset = item.charset || "utf-8";
     try {
-        // var decoder = new StringDecoder(charset);
         var urlObj = url.parse(express);
         log.debug(urlObj);
         var innerReq = http.request({
@@ -137,7 +135,7 @@ function handleProxy(req, res, item, queryObj) {
             innerRes.on('data', function(data) {
                 // res.write(decoder.write(data));
                 res.writeHead(200, {
-                    Charset: charset
+                    "Content-Type":"application/json; charset="+charset
                 })
                 res.write(data);
                 res.end();

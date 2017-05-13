@@ -26,7 +26,7 @@ module.exports = [{
             }
         }
     },
-    { reg: /^\/service\/weather.json/, action: "proxy:http://www.weather.com.cn/data/cityinfo/101280601.html", charset: "gbk2312" }, // 代理
+    { reg: /^\/service\/weather.json/, action: "proxy:http://api.seniverse.com/v3/weather/now.json?key=p9rbvhrs3aqcxt55&location=guangdongshenzhen&language=zh-Hans&unit=c" }, // 代理
     { reg: /^\/service\/something\/wrong/, action: "redirect:/error.html" }, // 跳转
     { reg: /^\/service\/([^\.]+.json)(\?.*)?/, action: "local:../../data/$1" } // 响应本地json文件
 ];

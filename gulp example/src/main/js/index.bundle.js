@@ -10278,7 +10278,12 @@ $(function() {
         console.log(data);
     });
     var weatherAjax = ajax("service/weather.json", {}, function(data) {
-        $hWeather.text(JSON.stringify(data));
+        var location = data.results[0].location,
+        weather = data.results[0].now,
+        info = location.name + "天气："+weather.text + "," + weather.temperature+"摄氏度";
+        $hWeather.text(info);
+    }, {
+        autoReturn: false
     });
     $.when(listAjax, timeAjax, toAjax, weatherAjax).done(function() {
         $divLoading.hide();
@@ -10299,11 +10304,16 @@ function ajax(url, data, callback, _opt) {
         dataType: "json",
         error: function() {
             console.error("ajax fail!", arguments);
-        }
+        },
+        autoReturn: true
     }, {
         url: url,
         data: data,
         success: function(retData) {
+            if (!opt.autoReturn) {
+                callback(retData);
+                return;
+            }
             if (retData && retData.retCode == "00") {
                 callback(retData.data);
             } else {
