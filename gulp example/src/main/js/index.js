@@ -3,7 +3,7 @@ var $ = require("jquery");
 $(function() {
     var $divLoading = $("#divLoading"),
         $hServiceTime = $("#hServiceTime"),
-        $hWeather = $("#hWeather");
+        $divWeather = $("#divWeather");
 
     // 测试映射本地文件
     var listAjax = ajax("service/user/list.json", {}, function(data) {
@@ -24,8 +24,10 @@ $(function() {
     var weatherAjax = ajax("service/weather.json", {}, function(data) {
         var location = data.results[0].location,
         weather = data.results[0].now,
-        info = location.name + "天气："+weather.text + "," + weather.temperature+"摄氏度";
-        $hWeather.text(info);
+        info = location.name + "天气："+weather.text + "," + weather.temperature+"摄氏度",
+        iconUrl = "//s2.sencdn.com/web/icons/3d_50/"+ weather.code +".png",
+        icon = '<img src="'+ iconUrl +'" />';
+        $divWeather.html(info+icon);
     }, {
         autoReturn: false
     });
