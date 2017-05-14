@@ -16,4 +16,5 @@ exports.log4js_config = {
     }
 };
 log4js.configure(this.log4js_config);
+exports.log4js = log4js;
 exports.logger = log4js.getLogger("app");

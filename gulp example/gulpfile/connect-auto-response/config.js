@@ -36,7 +36,7 @@ module.exports = [{
     {
         reg: /^\/service\/something\/wrong/,
         // 跳转
-        action: "redirect:/error.html"
+        action: "redirect:/main/error.html"
     }, 
     {
         reg: /^\/service\/([^\.]+.json)(\?.*)?/,

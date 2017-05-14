@@ -1,1 +1,48 @@
-@-webkit-keyframes fade{from{opacity:.3}to{opacity:1}}@keyframes fade{from{opacity:.3}to{opacity:1}}.loading{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3)}.loading-info{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:45px;color:#fff;-webkit-animation:fade .6s ease infinite;animation:fade .6s ease infinite}
+* {
+    margin:0;
+    padding:0;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body{
+    color:#fff;
+    background:url(../img/starry_sky.jpg) 0 0 no-repeat fixed;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.loading-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 45px;
+    color: #fff;
+    -webkit-animation: fade .6s ease infinite;
+            animation: fade .6s ease infinite;
+}

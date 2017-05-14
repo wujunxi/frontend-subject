@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const querystring = require('querystring');
 const url = require('url');
-const log = require('../my-log').logger;
+const log = require('../my-log').log4js.getLogger("connect-auto-response");
 const http = require('http');
 
 // 获取映射配置

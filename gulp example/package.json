@@ -17,8 +17,11 @@
     "gulp-clean-css": "^3.2.0",
     "gulp-connect": "^5.0.0",
     "gulp-cssimport": "^5.0.0",
+    "gulp-imagemin": "^3.2.0",
     "gulp-inline-source": "^3.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-pngquant": "^5.0.0",
     "jquery": "^3.2.1",
     "log4js": "^1.1.1"
   }
