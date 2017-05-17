@@ -1,11 +1,18 @@
 <template>
     <div id="app">
-        <layer :width="600" :height="600"></layer>
+        <tool-bar position="left" @showColorPannel="showColorPannel"></tool-bar>
+        <div id="divMain">
+            <layer :width="600" :height="600"></layer>
+        </div>
+        <!--<tool-bar position="right"></tool-bar>-->
+        <color-panel></color-panel>
     </div>
 </template>
 
 <script>
 import Layer from './components/Layer'
+import ToolBar from './components/ToolBar'
+import ColorPanel from './components/ColorPanel'
 
 export default {
     name: 'myPaint',
@@ -13,24 +20,46 @@ export default {
         return {}
     },
     components: {
-        Layer
+        Layer,
+        ToolBar,
+        ColorPanel
+    },
+    methods: {
+        showColorPannel: function (color) {
+            console.log(color);
+        }
     }
 }
 </script>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    text-align: center;
     background: #333;
 }
 
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#divMain {
     background: url(assets/bg.svg);
-    background-size:20px 20px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    background-size: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 </style>

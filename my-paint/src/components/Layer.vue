@@ -1,12 +1,17 @@
 <template>
-    <canvas>
-    </canvas>
+  <canvas :width="width" :height="height">
+  </canvas>
 </template>
 
 <script>
 export default {
   name: 'layer',
-  prop: ['width','height']
+  props: ['width', 'height'],
+  data: function () {
+    return {
+
+    };
+  }
 }
 </script>
 
