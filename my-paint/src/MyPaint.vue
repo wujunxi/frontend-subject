@@ -5,7 +5,7 @@
             <layer :width="600" :height="600"></layer>
         </div>
         <!--<tool-bar position="right"></tool-bar>-->
-        <color-panel></color-panel>
+        <color-panel ref="colorPanel"></color-panel>
     </div>
 </template>
 
@@ -17,7 +17,9 @@ import ColorPanel from './components/ColorPanel'
 export default {
     name: 'myPaint',
     data: function () {
-        return {}
+        return {
+            
+        }
     },
     components: {
         Layer,
@@ -26,7 +28,7 @@ export default {
     },
     methods: {
         showColorPannel: function (color) {
-            console.log(color);
+            this.$refs.colorPanel.show(color);
         }
     }
 }
