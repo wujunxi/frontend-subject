@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简单分页Demo</title>
+    <link rel="stylesheet" href="css/paging.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width:980px;
+            margin:100px auto;
+            box-shadow: #333 2px 2px 3px;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="divPaging">
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/paging.js"></script>
+    <script>
+        $(function(){
+            var total = 101,
+                pageSize = 10,
+                current = 5;
+
+            var paging = $.Paging({
+                el:"#divPaging",
+                onChangePage:function(pageNum){
+                    // alert(pageNum);
+                    paging.refresh(pageNum,pageSize,total);
+                }
+            });
+
+            paging.refresh(current,pageSize,total);
+        });
+    </script>
+</body>
+
+</html>

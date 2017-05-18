@@ -1,8 +1,8 @@
 <template>
     <div :class="['tool-bar',pos]">
         <div class="color">
-            <span class="back" :style="{'background-color':color.backColor}"></span>
-            <span class="fore" :style="{'background-color':color.foreColor}" @click="showColorPannel"></span>
+            <span class="back" :style="{'background-color':backColor}"></span>
+            <span class="fore" :style="{'background-color':foreColor}" @click="showColorPannel"></span>
         </div>
         <ul class="menu">
             <li v-for="item in menuList" @click="select(item.key)">
@@ -43,10 +43,8 @@ export default {
     data: function () {
         return {
             pos: classPosition[this.position],
-            color: {
-                foreColor: '#000',
-                backColor: '#fff',
-            },
+            foreColor: '#000',
+            backColor: '#fff',
             menuList: menuData
         };
     },
@@ -56,7 +54,7 @@ export default {
             alert(key);
         },
         showColorPannel: function () {
-            this.$emit("showColorPannel", this.color);
+            this.$emit("showColorPannel", this.foreColor);
         }
     }
 }
@@ -120,6 +118,7 @@ export default {
     line-height: 40px;
     font-size: 14px;
     cursor: pointer;
+    text-align: center;
 }
 
 .menu li:hover {

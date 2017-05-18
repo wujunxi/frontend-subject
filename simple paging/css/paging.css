@@ -1,0 +1,45 @@
+.paging {
+    list-style: none;
+    overflow: hidden;
+    font-size:12px;
+}
+
+.paging .pg-btn,.paging .pg-txt {
+    float:left;
+    height:26px;
+    line-height: 26px;
+    padding:0 8px;
+    border:solid 1px #ccc;
+    margin:0 0 0 10px;
+}
+
+.paging .pg-txt {
+    border:solid 1px transparent;
+}
+
+.paging .pg-btn:first-child {
+    margin-left:0;
+}
+
+.paging .pg-btn {
+    cursor:pointer;
+}
+
+.paging .pg-btn:hover {
+    background: #dedede;
+}
+
+.paging .pg-btn.on {
+    color:#fff;
+    background:rgb(139,80,14);
+    cursor:default;
+}
+
+.paging .pg-btn.off {
+    opacity:0.3;
+    cursor:default;
+}
+
+.paging .pg-btn.off:hover {
+    background: #fff;
+}

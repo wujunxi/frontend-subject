@@ -47,7 +47,6 @@ html {
 body {
     height: 100%;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    text-align: center;
     background: #333;
 }
 
