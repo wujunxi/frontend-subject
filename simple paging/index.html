@@ -12,12 +12,12 @@
             margin: 0;
             padding: 0;
         }
-
+        
         .content {
-            width:980px;
-            margin:100px auto;
-            box-shadow: #333 2px 2px 3px;
-            padding:20px;
+            width: 980px;
+            margin: 100px auto;
+            box-shadow: #333 0 0 3px;
+            padding: 20px;
         }
     </style>
 </head>
@@ -30,20 +30,22 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/paging.js"></script>
     <script>
-        $(function(){
-            var total = 101,
-                pageSize = 10,
-                current = 5;
+        $(function() {
+            var total = 101, // 总记录条数
+                pageSize = 10, // 每页大小
+                current = 5; // 当前页码
 
+            // 获得分页对象
             var paging = $.Paging({
-                el:"#divPaging",
-                onChangePage:function(pageNum){
-                    // alert(pageNum);
-                    paging.refresh(pageNum,pageSize,total);
+                el: "#divPaging", // 绑定节点
+                onChangePage: function(pageNum) { // 设置页码改变时回调函数，返回当前页码
+                    // 刷新页码
+                    paging.refresh(pageNum, pageSize, total);
                 }
             });
 
-            paging.refresh(current,pageSize,total);
+            // 刷新页码
+            paging.refresh(current, pageSize, total);
         });
     </script>
 </body>
