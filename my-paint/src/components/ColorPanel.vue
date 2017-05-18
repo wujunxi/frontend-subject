@@ -5,7 +5,7 @@
         </h3>
         <div class="color-content">
             <ul class="color-list">
-                <li v-for="item of colorList" class="color-cell" :style="{background:item}"></li>
+                <li v-for="item of colorList" class="color-cell" :style="{background:item}" @click="updateNewColor(COLOR_SOURCE.PICK,item)"></li>
             </ul>
             <div class="selected-color">
                 <label>旧的</label>
@@ -16,21 +16,21 @@
             <div class="color-rgb mt-10">
                 <div class="row">
                     <label class="key">R：</label>
-                    <input type="text" class="input" v-model.lazy="R" maxlength="3" />
+                    <input type="text" class="input" :value="R" @input="updateR($event.target.value)" maxlength="3" />
                 </div>
                 <div class="row">
                     <label class="key">G：</label>
-                    <input type="text" class="input" v-model.lazy="G" maxlength="3" />
+                    <input type="text" class="input" :value="G" @input="updateG($event.target.value)" maxlength="3" />
                 </div>
                 <div class="row">
                     <label class="key">B：</label>
-                    <input type="text" class="input" v-model.lazy="B" maxlength="3" />
+                    <input type="text" class="input" :value="B" @input="updateB($event.target.value)" maxlength="3" />
                 </div>
             </div>
             <div class="color-base16 mt-10">
                 <div class="row">
                     <label class="key ta-right">#&nbsp;</label>
-                    <input type="text" class="input w-48" v-model="base16" maxlength="6" />
+                    <input type="text" class="input w-48" :value="base16" @input="updateNewColor(COLOR_SOURCE.BASE16,$event.target.value)" maxlength="6" />
                 </div>
             </div>
         </div>
@@ -55,25 +55,26 @@ const colorData = (function () {
     return ar;
 })();
 
+const COLOR_SOURCE = { RGB: 0, BASE16: 1, PICK: 2 };
+
 export default {
     name: "color-panel",
     props: [],
     data: function () {
         return {
+            COLOR_SOURCE: COLOR_SOURCE,
             colorList: colorData,
             isShow: false,
             color: '#000',
-            newColor:'#000',
-            R:"0",
-            G:"0",
-            B:"0",
-            base16:"000"
+            newColor: '#000',
+            R: "0",
+            G: "0",
+            B: "0",
+            base16: "000"
         };
     },
-    computed:{
-        newColor:function(){
-            return 
-        }
+    computed: {
+
     },
     methods: {
         show: function (color) {
@@ -83,20 +84,37 @@ export default {
         hide: function () {
             this.isShow = false;
         },
-        changeRGB:function(){
-
+        updateR: function (r) {
+            this.R = r;
+            this.updateNewColor(COLOR_SOURCE.RGB);
         },
-        changeNewColor:function(){
-            this.newColor = '#'+toBase16(this.R,2) + toBase16(this.G,2) + toBase16(this.B,2);
+        updateG: function (g) {
+            this.G = g;
+            this.updateNewColor(COLOR_SOURCE.RGB);
+        },
+        updateB: function (b) {
+            this.B = b;
+            this.updateNewColor(COLOR_SOURCE.RGB);
+        },
+        updateNewColor: function (source, v) {
+            // console.log(arguments);
+            if (source == COLOR_SOURCE.RGB) {
+                this.newColor = '#' + toBase16(this.R, 2) + toBase16(this.G, 2) + toBase16(this.B, 2);
+            } else if (source == COLOR_SOURCE.BASE16) {
+                this.newColor = '#' + v;
+                this.base16 = v;
+            } else if (source == COLOR_SOURCE.PICK) {
+                this.newColor = v;
+            }
         }
     }
 }
 
-function toBase16(v,len){
+function toBase16(v, len) {
     var _len = len || 1;
     var temp = parseInt(v).toString(16);
-    while(temp.length < _len){
-        temp = '0'+temp;
+    while (temp.length < _len) {
+        temp = '0' + temp;
     }
     return temp;
 }
@@ -171,15 +189,15 @@ function toBase16(v,len){
 }
 
 .selected-color {
-    width:48px;
+    width: 48px;
     overflow: hidden;
     text-align: center;
-    font-size:12px;
+    font-size: 12px;
 }
 
 .selected-color>div {
-    width:48px;
-    height:24px;
+    width: 48px;
+    height: 24px;
 }
 
 .selected-color,
