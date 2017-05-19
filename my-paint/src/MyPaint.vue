@@ -48,6 +48,19 @@ body {
     height: 100%;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     background: #333;
+    font-size:14px;
+}
+
+input,button {
+    border:solid 1px #838383;
+    font-size:14px;
+    height:20px;
+    padding:0 3px;
+    box-sizing:border-box;
+}
+
+button {
+    background: #e1e1e1;
 }
 
 #app {

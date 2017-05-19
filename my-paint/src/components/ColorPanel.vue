@@ -1,18 +1,22 @@
 <template>
     <div class="color-panel" :style="{display:isShow?'block':'none'}">
+        <!--标题-->
         <h3>拾色器
             <i class="icon-close" @click="hide"></i>
         </h3>
         <div class="color-content">
+            <!--色表-->
             <ul class="color-list">
                 <li v-for="item of colorList" :class="['color-cell', item.isSelected ? 'selected':'']" :style="{background:item.color}" @click="selectColor(item.color)"></li>
             </ul>
+            <!--选中颜色-->
             <div class="selected-color">
                 <label>旧的</label>
                 <div :style="{background:color}"></div>
                 <div :style="{background:newColor}"></div>
                 <label>新的</label>
             </div>
+            <!--RGB颜色表示法-->
             <div class="color-rgb mt-10">
                 <div class="row">
                     <label class="key">R：</label>
@@ -27,12 +31,14 @@
                     <input type="text" class="input" :value="B" @input="updateB($event.target.value)" maxlength="3" />
                 </div>
             </div>
+            <!--十六进制颜色表示法-->
             <div class="color-base16 mt-10">
                 <div class="row">
                     <label class="key ta-right">#&nbsp;</label>
                     <input type="text" class="input w-48" :value="base16" @input="updateBase16($event.target.value)" maxlength="6" />
                 </div>
             </div>
+            <button class="btn-sure">确认</button>
         </div>
     </div>
 </template>
@@ -46,7 +52,7 @@ function ColorItem(color, isSelected) {
 
 const colorList = (function () {
     let ar = [], b16, index, v, flag = false, temp, prev;
-    for (let i = 0, len = 36; i < len; i++) {
+    for (let i = 0, len = 35; i < len; i++) {
         v = i % 6;
         flag = (v == 0 ? !flag : flag);
         index = Math.floor(i / 6);
@@ -113,8 +119,16 @@ export default {
                 this.updateNewColor(COLOR_SOURCE.RGB);
             }
         },
-        updateRGB: function (color) {
-
+        updateRGB: function (color,notPop) {
+            let temp = formateBase16(color.substr(1));
+            if(temp != ""){
+                this.R = parseInt(temp.substr(0,2),16);
+                this.G = parseInt(temp.substr(2,2),16);
+                this.B = parseInt(temp.substr(4,2),16);
+                if(!notPop){
+                    this.updateNewColor(COLOR_SOURCE.RGB);
+                }
+            }
         },
         updateBase16: function (v) {
             this.base16 = v;
@@ -142,11 +156,11 @@ export default {
             } else if (source == COLOR_SOURCE.BASE16) {
                 v = color.substr(1);
                 this.newColor = color;
-                this.updateRGB(color);
+                this.updateRGB(color,true);
                 this.selectColor(this.newColor, true);
             } else if (source == COLOR_SOURCE.PICK) {
                 this.newColor = color;
-                this.updateRGB(color);
+                this.updateRGB(color,true);
                 this.base16 = color.substr(1);
             }
         }
@@ -189,7 +203,7 @@ function toBase16(v, len) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #dedede;
+    background: #ededed;
 }
 
 .color-panel h3 {
@@ -204,6 +218,7 @@ function toBase16(v, len) {
 .color-content {
     padding: 20px;
     overflow: hidden;
+    position:relative;
 }
 
 .color-cell {
@@ -257,7 +272,7 @@ function toBase16(v, len) {
     height: 0;
     border-top: solid 5px transparent;
     border-bottom: solid 5px transparent;
-    border-right: solid 5px #fff;
+    border-right: solid 5px #000;
     margin: 0 0 0 22px;
     position: absolute;
 }
@@ -296,14 +311,18 @@ function toBase16(v, len) {
 }
 
 .color-content .input {
-    width: 24px;
-    height: 18px;
-    padding: 0 3px;
+    width: 34px;
     float: left;
 }
 
 .color-content .w-48 {
-    width: 48px;
+    width: 58px;
+}
+
+.btn-sure {
+    position:absolute;
+    bottom:20px;
+    right:20px;
 }
 
 .ta-right {
