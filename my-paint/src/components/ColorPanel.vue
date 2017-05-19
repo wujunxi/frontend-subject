@@ -38,7 +38,7 @@
                     <input type="text" class="input w-48" :value="base16" @input="updateBase16($event.target.value)" maxlength="6" />
                 </div>
             </div>
-            <button class="btn-sure">确认</button>
+            <button class="btn-sure" @click="onSure">确认</button>
         </div>
     </div>
 </template>
@@ -91,6 +91,10 @@ export default {
 
     },
     methods: {
+        onSure:function(){
+            this.$emit('selectedColor',this.newColor);
+            this.isShow = false;
+        },
         show: function (color) {
             this.color = color;
             this.isShow = true;

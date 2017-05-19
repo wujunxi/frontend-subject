@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <tool-bar position="left" @showColorPannel="showColorPannel"></tool-bar>
+        <tool-bar position="left" :menuList="menuList" :foreColor="foreColor" :backColor="backColor" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
         <div id="divMain">
             <layer :width="600" :height="600"></layer>
         </div>
         <!--<tool-bar position="right"></tool-bar>-->
-        <color-panel ref="colorPanel"></color-panel>
+        <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
     </div>
 </template>
 
@@ -14,11 +14,32 @@ import Layer from './components/Layer'
 import ToolBar from './components/ToolBar'
 import ColorPanel from './components/ColorPanel'
 
+const menuList = [
+    {
+        key: "pen",
+        name: "画笔",
+        isSelected: true
+    },
+    {
+        key: "erasure",
+        name: "擦除",
+        isSelected: false
+    },
+    {
+        key: "shape",
+        name: "图形",
+        isSelected: false
+    },
+];
+
 export default {
     name: 'myPaint',
     data: function () {
         return {
-            
+            foreColor: '#000',
+            backColor: '#fff',
+            operTypeKey: "pen",
+            menuList: menuList
         }
     },
     components: {
@@ -27,8 +48,17 @@ export default {
         ColorPanel
     },
     methods: {
-        showColorPannel: function (color) {
+        showColorPanel: function (color) {
             this.$refs.colorPanel.show(color);
+        },
+        selectedColor: function (color) {
+            this.foreColor = color;
+        },
+        selectedOperType:function(key){
+            this.operTypekey = key;
+            menuList.forEach(function(item,index) {
+                item.isSelected = item.key == key;
+            });
         }
     }
 }
@@ -48,15 +78,16 @@ body {
     height: 100%;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     background: #333;
-    font-size:14px;
+    font-size: 14px;
 }
 
-input,button {
-    border:solid 1px #838383;
-    font-size:14px;
-    height:20px;
-    padding:0 3px;
-    box-sizing:border-box;
+input,
+button {
+    border: solid 1px #838383;
+    font-size: 14px;
+    height: 20px;
+    padding: 0 3px;
+    box-sizing: border-box;
 }
 
 button {

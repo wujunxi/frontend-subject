@@ -5,7 +5,7 @@
             <span class="fore" :style="{'background-color':foreColor}" @click="showColorPannel"></span>
         </div>
         <ul class="menu">
-            <li v-for="item in menuList" @click="select(item.key)">
+            <li v-for="item in menuList" @click="select(item.key)" :class="item.isSelected ? 'on':''">
                 {{item.name}}
             </li>
         </ul>
@@ -14,20 +14,6 @@
 
 <script>
 const classPosition = { left: "tb-left", right: "tb-right" };
-const menuData = [
-    {
-        key: "pen",
-        name: "画笔"
-    },
-    {
-        key: "erasure",
-        name: "擦除"
-    },
-    {
-        key: "shape",
-        name: "图形"
-    },
-];
 
 export default {
     name: "tool-bar",
@@ -38,23 +24,24 @@ export default {
             validator: function (value) {
                 return value in classPosition;
             }
+        },
+        backColor:{type: String},
+        foreColor:{type: String},
+        menuList :{
+            type:Array
         }
     },
     data: function () {
         return {
-            pos: classPosition[this.position],
-            foreColor: '#000',
-            backColor: '#fff',
-            menuList: menuData
+            pos: classPosition[this.position]
         };
     },
     methods: {
         select: function (key) {
-            // to-do
-            alert(key);
+            this.$emit("selectedOperType",key);
         },
         showColorPannel: function () {
-            this.$emit("showColorPannel", this.foreColor);
+            this.$emit("showColorPanel", this.foreColor);
         }
     }
 }
@@ -107,13 +94,10 @@ export default {
 }
 
 .menu {
-    float: left;
     overflow: hidden;
 }
 
 .menu li {
-    display: inline-block;
-    width: 40px;
     height: 40px;
     line-height: 40px;
     font-size: 14px;
@@ -122,6 +106,10 @@ export default {
 }
 
 .menu li:hover {
+    background: #333;
+}
+
+.menu li.on {
     background: #333;
 }
 </style>
