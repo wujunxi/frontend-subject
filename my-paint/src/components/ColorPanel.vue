@@ -5,7 +5,7 @@
         </h3>
         <div class="color-content">
             <ul class="color-list">
-                <li v-for="item of colorList" class="color-cell" :style="{background:item}" @click="updateNewColor(COLOR_SOURCE.PICK,item)"></li>
+                <li v-for="item of colorList" :class="['color-cell', item.isSelected ? 'selected':'']" :style="{background:item.color}" @click="selectColor(item.color)"></li>
             </ul>
             <div class="selected-color">
                 <label>旧的</label>
@@ -30,7 +30,7 @@
             <div class="color-base16 mt-10">
                 <div class="row">
                     <label class="key ta-right">#&nbsp;</label>
-                    <input type="text" class="input w-48" :value="base16" @input="updateNewColor(COLOR_SOURCE.BASE16,$event.target.value)" maxlength="6" />
+                    <input type="text" class="input w-48" :value="base16" @input="updateBase16($event.target.value)" maxlength="6" />
                 </div>
             </div>
         </div>
@@ -38,7 +38,13 @@
 </template>
 
 <script>
-const colorData = (function () {
+
+function ColorItem(color, isSelected) {
+    this.color = color;
+    this.isSelected = isSelected;
+}
+
+const colorList = (function () {
     let ar = [], b16, index, v, flag = false, temp, prev;
     for (let i = 0, len = 36; i < len; i++) {
         v = i % 6;
@@ -46,8 +52,10 @@ const colorData = (function () {
         index = Math.floor(i / 6);
         b16 = flag ? (v * 3).toString(16) : (15 - v * 3).toString(16);
         temp = ['#f0' + b16, '#' + b16 + '0f', '#0' + b16 + 'f', '#0f' + b16, '#' + b16 + 'f0', '#f' + b16 + '0'][index];
+        // 3位补全为6位
+        temp = temp.replace(/([\da-f])/g, "$1$1");
         if (i == 0 || temp != prev) {
-            ar.push(temp);
+            ar.push(new ColorItem(temp, false));
             prev = temp;
             // console.log(temp,ar.length);
         }
@@ -63,14 +71,14 @@ export default {
     data: function () {
         return {
             COLOR_SOURCE: COLOR_SOURCE,
-            colorList: colorData,
+            colorList: colorList,
             isShow: false,
-            color: '#000',
-            newColor: '#000',
+            color: '#000000',
+            newColor: '#000000',
             R: "0",
             G: "0",
             B: "0",
-            base16: "000"
+            base16: "000000"
         };
     },
     computed: {
@@ -86,30 +94,84 @@ export default {
         },
         updateR: function (r) {
             this.R = r;
-            this.updateNewColor(COLOR_SOURCE.RGB);
+            let temp = parseInt(r);
+            if (!isNaN(temp) && temp > -1 && temp < 256) {
+                this.updateNewColor(COLOR_SOURCE.RGB);
+            }
         },
         updateG: function (g) {
             this.G = g;
-            this.updateNewColor(COLOR_SOURCE.RGB);
+            let temp = parseInt(g);
+            if (!isNaN(temp) && temp > -1 && temp < 256) {
+                this.updateNewColor(COLOR_SOURCE.RGB);
+            }
         },
         updateB: function (b) {
             this.B = b;
-            this.updateNewColor(COLOR_SOURCE.RGB);
+            let temp = parseInt(b);
+            if (!isNaN(temp) && temp > -1 && temp < 256) {
+                this.updateNewColor(COLOR_SOURCE.RGB);
+            }
         },
-        updateNewColor: function (source, v) {
-            // console.log(arguments);
+        updateRGB: function (color) {
+
+        },
+        updateBase16: function (v) {
+            this.base16 = v;
+            let temp = formateBase16(v);
+            if (temp != "") {
+                this.updateNewColor(COLOR_SOURCE.BASE16, '#' + temp);
+            }
+        },
+        selectColor: function (color, notPop) {
+            this.colorList.forEach(function (item, index) {
+                item.isSelected = item.color == color;
+            });
+            if (!notPop) {
+                this.updateNewColor(COLOR_SOURCE.PICK, color);
+            }
+        },
+        updateNewColor: function (source, color) {
+            let temp, v;
+            // to-do watch model
             if (source == COLOR_SOURCE.RGB) {
-                this.newColor = '#' + toBase16(this.R, 2) + toBase16(this.G, 2) + toBase16(this.B, 2);
+                temp = toBase16(this.R, 2) + toBase16(this.G, 2) + toBase16(this.B, 2);
+                this.newColor = '#' + temp;
+                this.base16 = temp;
+                this.selectColor(this.newColor, true);
             } else if (source == COLOR_SOURCE.BASE16) {
-                this.newColor = '#' + v;
-                this.base16 = v;
+                v = color.substr(1);
+                this.newColor = color;
+                this.updateRGB(color);
+                this.selectColor(this.newColor, true);
             } else if (source == COLOR_SOURCE.PICK) {
-                this.newColor = v;
+                this.newColor = color;
+                this.updateRGB(color);
+                this.base16 = color.substr(1);
             }
         }
     }
 }
 
+/**
+ * 格式化16进制颜色值，格式不正确返回空字符串
+ * @param v 3位或6位16进制颜色值
+ * */
+function formateBase16(v) {
+    if (!/^([\da-f]{3}){1,2}$/.test(v)) {
+        return "";
+    }
+    if (v.length == 3) {
+        return v.replace(/([\da-f])/g, "$1$1");
+    }
+    return v;
+}
+
+/**
+ * 十进制转化为16进制，不足位数补零
+ * @param v 整数
+ * @param len 长度
+ * */
 function toBase16(v, len) {
     var _len = len || 1;
     var temp = parseInt(v).toString(16);
@@ -184,8 +246,20 @@ function toBase16(v, len) {
 }
 
 .color-list {
+    list-style: none;
     float: left;
-    overflow: hidden;
+}
+
+.color-list .selected:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    border-right: solid 5px #fff;
+    margin: 0 0 0 22px;
+    position: absolute;
 }
 
 .selected-color {
