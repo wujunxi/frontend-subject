@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <tool-bar position="left" :menuList="menuList" :foreColor="foreColor" :backColor="backColor" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
-        <div id="divMain">
-            <layer :width="600" :height="600"></layer>
+        <tool-bar position="left" :menuData="menuData" :foreColor="foreColor" :backColor="backColor" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
+        <div id="divMain" :class="[menuData[operTypeKey].cursorClass]">
+            <layer :width="600" :height="600" :operTypeKey="operTypeKey"></layer>
         </div>
         <!--<tool-bar position="right"></tool-bar>-->
         <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
@@ -14,23 +14,26 @@ import Layer from './components/Layer'
 import ToolBar from './components/ToolBar'
 import ColorPanel from './components/ColorPanel'
 
-const menuList = [
-    {
+const menuData = {
+    "pen":{
         key: "pen",
         name: "画笔",
+        cursorClass:"cur-pen",
         isSelected: true
     },
-    {
+    "erasure":{
         key: "erasure",
         name: "擦除",
+        cursorClass:"cur-erasure",
         isSelected: false
     },
-    {
+    "shape":{
         key: "shape",
         name: "图形",
+        cursorClass:"cur-select",
         isSelected: false
     },
-];
+};
 
 export default {
     name: 'myPaint',
@@ -39,7 +42,7 @@ export default {
             foreColor: '#000',
             backColor: '#fff',
             operTypeKey: "pen",
-            menuList: menuList
+            menuData: menuData
         }
     },
     components: {
@@ -55,10 +58,12 @@ export default {
             this.foreColor = color;
         },
         selectedOperType:function(key){
-            this.operTypekey = key;
-            menuList.forEach(function(item,index) {
+            let k,item;
+            this.operTypeKey = key;
+            for(k in menuData){
+                item = menuData[k];
                 item.isSelected = item.key == key;
-            });
+            }
         }
     }
 }
@@ -106,5 +111,17 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.cur-pen {
+    cursor:url(assets/pen.png) 0 -32,auto;
+}
+
+.cur-select {
+    cursor:crosshair;
+}
+
+.cur-erasure {
+    cursor:url(assets/erasure.png),auto;
 }
 </style>

@@ -5,7 +5,7 @@
             <span class="fore" :style="{'background-color':foreColor}" @click="showColorPannel"></span>
         </div>
         <ul class="menu">
-            <li v-for="item in menuList" @click="select(item.key)" :class="item.isSelected ? 'on':''">
+            <li v-for="item in menuData" @click="select(item.key)" :class="item.isSelected ? 'on':''">
                 {{item.name}}
             </li>
         </ul>
@@ -27,8 +27,8 @@ export default {
         },
         backColor:{type: String},
         foreColor:{type: String},
-        menuList :{
-            type:Array
+        menuData :{
+            type:Object
         }
     },
     data: function () {
