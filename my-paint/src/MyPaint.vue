@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <tool-bar position="left" :menuData="menuData" :foreColor="foreColor" :backColor="backColor" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
-        <div id="divMain" :class="[menuData[operTypeKey].cursorClass]">
-            <layer :width="600" :height="600" :operTypeKey="operTypeKey"></layer>
+        <tool-bar position="left" :menuData="menuData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
+        <div id="divMain" :class="[menuData[state.operTypeKey].cursorClass]">
+            <layer :state="state"></layer>
         </div>
         <!--<tool-bar position="right"></tool-bar>-->
         <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
@@ -15,22 +15,22 @@ import ToolBar from './components/ToolBar'
 import ColorPanel from './components/ColorPanel'
 
 const menuData = {
-    "pen":{
+    "pen": {
         key: "pen",
         name: "画笔",
-        cursorClass:"cur-pen",
+        cursorClass: "cur-pen",
         isSelected: true
     },
-    "erasure":{
+    "erasure": {
         key: "erasure",
         name: "擦除",
-        cursorClass:"cur-erasure",
+        cursorClass: "cur-erasure",
         isSelected: false
     },
-    "shape":{
+    "shape": {
         key: "shape",
         name: "图形",
-        cursorClass:"cur-select",
+        cursorClass: "cur-select",
         isSelected: false
     },
 };
@@ -39,9 +39,13 @@ export default {
     name: 'myPaint',
     data: function () {
         return {
-            foreColor: '#000',
-            backColor: '#fff',
-            operTypeKey: "pen",
+            state: {
+                height:600,
+                width:600,
+                foreColor: '#000',
+                backColor: '#fff',
+                operTypeKey: "pen"
+            },
             menuData: menuData
         }
     },
@@ -55,12 +59,12 @@ export default {
             this.$refs.colorPanel.show(color);
         },
         selectedColor: function (color) {
-            this.foreColor = color;
+            this.state.foreColor = color;
         },
-        selectedOperType:function(key){
-            let k,item;
-            this.operTypeKey = key;
-            for(k in menuData){
+        selectedOperType: function (key) {
+            let k, item;
+            this.state.operTypeKey = key;
+            for (k in menuData) {
                 item = menuData[k];
                 item.isSelected = item.key == key;
             }
@@ -114,14 +118,14 @@ button {
 }
 
 .cur-pen {
-    cursor:url(assets/pen.png) 0 -32,auto;
+    cursor: url(assets/pen.png) 0 -32, auto;
 }
 
 .cur-select {
-    cursor:crosshair;
+    cursor: crosshair;
 }
 
 .cur-erasure {
-    cursor:url(assets/erasure.png),auto;
+    cursor: url(assets/erasure.png), auto;
 }
 </style>

@@ -1,13 +1,13 @@
 <template>
-  <div class="canvas-wrap" :style="{width:width+'px',height:height+'px'}" @mousedown="mousedown" @mousemove="mousemove" @mouseup="mouseup">
+  <div class="canvas-wrap" :style="{width:state.width+'px',height:state.height+'px'}" @mousedown="mousedown" @mousemove="mousemove" @mouseup="mouseup">
     <!--合成层-->
-    <canvas id="cvsCom" :width="width" :height="height">
+    <canvas id="cvsCom" :width="state.width" :height="state.height">
     </canvas>
     <!--绘制层-->
-    <canvas id="cvsDraw" :width="width" :height="height">
+    <canvas id="cvsDraw" :width="state.width" :height="state.height">
     </canvas>
     <!--操作层-->
-    <canvas id="cvsOper" :width="width" :height="height">
+    <canvas id="cvsOper" :width="state.width" :height="state.height">
     </canvas>
   </div>
 </template>
@@ -16,11 +16,16 @@
 
 export default {
   name: 'layer',
-  props: ['width', 'height', 'operTypeKey'],
+  props: ['state'],
   data: function () {
     return {
 
     };
+  },
+  watch: {
+    'state.foreColor': function (newValue) {
+      this.ctxDraw.strokeStyle = newValue;
+    }
   },
   mounted: function () {
     this.cvsDraw = document.getElementById("cvsDraw");
@@ -33,15 +38,14 @@ export default {
   },
   methods: {
     mousedown: function (e) {
-      console.log(e.offsetX, e.offsetY);
       this.isMouseDown = true;
-      if (this.operTypeKey == "pen") {
+      if (this.state.operTypeKey == "pen") {
         this.ctxDraw.beginPath();
         this.ctxDraw.moveTo(e.offsetX, e.offsetY);
       }
     },
     mousemove: function (e) {
-      if (this.operTypeKey == "pen" && this.isMouseDown) {
+      if (this.state.operTypeKey == "pen" && this.isMouseDown) {
         this.ctxDraw.lineTo(e.offsetX, e.offsetY);
         this.ctxDraw.stroke();
       }

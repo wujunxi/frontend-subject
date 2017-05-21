@@ -1,8 +1,8 @@
 <template>
     <div :class="['tool-bar',pos]">
         <div class="color">
-            <span class="back" :style="{'background-color':backColor}"></span>
-            <span class="fore" :style="{'background-color':foreColor}" @click="showColorPannel"></span>
+            <span class="back" :style="{'background-color':state.backColor}"></span>
+            <span class="fore" :style="{'background-color':state.foreColor}" @click="showColorPannel"></span>
         </div>
         <ul class="menu">
             <li v-for="item in menuData" @click="select(item.key)" :class="item.isSelected ? 'on':''">
@@ -25,8 +25,9 @@ export default {
                 return value in classPosition;
             }
         },
-        backColor:{type: String},
-        foreColor:{type: String},
+        state:{
+            type:Object
+        },
         menuData :{
             type:Object
         }
