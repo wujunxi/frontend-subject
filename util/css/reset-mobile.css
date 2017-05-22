@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    /*系统默认菜单被禁用*/
+    -webkit-touch-callout: none;
+    -moz-touch-callout:none;
+    -ms-touch-callout:none;
+    -webkit-user-select: none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select: none;
+}
+
+html,
+body {
+    line-height: 1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}

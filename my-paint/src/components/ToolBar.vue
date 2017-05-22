@@ -56,7 +56,7 @@ export default {
     color: #ececec;
     background: #535353;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
 }
 
 .tb-left {

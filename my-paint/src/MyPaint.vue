@@ -1,17 +1,25 @@
 <template>
-    <div id="app">
-        <tool-bar position="left" :menuData="menuData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
-        <div id="divMain" :class="[menuData[state.operTypeKey].cursorClass]">
-            <layer :state="state"></layer>
-        </div>
-        <!--<tool-bar position="right"></tool-bar>-->
-        <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
+    <div class="app">
+        <header>
+            <menu-bar class="fl"></menu-bar>
+            <span class="fr">x:{{state.x}},y:{{state.y}}</span>
+        </header>
+        <main>
+            <tool-bar position="left" :menuData="menuData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
+            <div :class="['paint-zone',menuData[state.operTypeKey].cursorClass]" @mousemove="changeXY">
+                <layer ref="paintLayer" :state="state"></layer>
+            </div>
+            <!--<tool-bar position="right"></tool-bar>-->
+            <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
+        </main>
+        <footer></footer>
     </div>
 </template>
 
 <script>
 import Layer from './components/Layer'
 import ToolBar from './components/ToolBar'
+import MenuBar from './components/MenuBar'
 import ColorPanel from './components/ColorPanel'
 
 const menuData = {
@@ -40,8 +48,10 @@ export default {
     data: function () {
         return {
             state: {
-                height:600,
-                width:600,
+                x:0,
+                y:0,
+                height: 600,
+                width: 600,
                 foreColor: '#000',
                 backColor: '#fff',
                 operTypeKey: "pen"
@@ -50,11 +60,16 @@ export default {
         }
     },
     components: {
+        MenuBar,
         Layer,
         ToolBar,
         ColorPanel
     },
     methods: {
+        changeXY:function(e){
+            this.state.x = e.offsetX;
+            this.state.y = e.offsetY;
+        },
         showColorPanel: function (color) {
             this.$refs.colorPanel.show(color);
         },
@@ -74,41 +89,27 @@ export default {
 </script>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-}
 
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    background: #333;
-    font-size: 14px;
-}
-
-input,
-button {
-    border: solid 1px #838383;
-    font-size: 14px;
-    height: 20px;
-    padding: 0 3px;
-    box-sizing: border-box;
-}
-
-button {
-    background: #e1e1e1;
-}
-
-#app {
+.app {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#divMain {
+header {
+    padding:0 10px;
+    height:30px;
+    line-height: 30px;
+    background:#f0f0f0;
+}
+
+main {
+    flex:1;
+    position:relative;
+}
+
+.paint-zone {
     background: url(assets/bg.svg);
     background-size: 20px 20px;
     position: absolute;
@@ -118,7 +119,7 @@ button {
 }
 
 .cur-pen {
-    cursor: url(assets/pen.png) 0 -32, auto;
+    cursor: url(assets/pen.png), auto;
 }
 
 .cur-select {
