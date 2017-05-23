@@ -28,6 +28,15 @@ button {
     background: #e1e1e1;
 }
 
+ul {
+    list-style: none;
+}
+
+a,a:hover,a:active {
+    color:#000;
+    text-decoration:none;
+}
+
 .fr {
     float :right;
 }

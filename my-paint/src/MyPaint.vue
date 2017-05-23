@@ -1,12 +1,12 @@
 <template>
     <div class="app">
         <header>
-            <menu-bar class="fl"></menu-bar>
+            <menu-bar class="fl" :menuData="menuData"></menu-bar>
             <span class="fr">x:{{state.x}},y:{{state.y}}</span>
         </header>
         <main>
-            <tool-bar position="left" :menuData="menuData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
-            <div :class="['paint-zone',menuData[state.operTypeKey].cursorClass]" @mousemove="changeXY">
+            <tool-bar position="left" :toolData="toolData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
+            <div :class="['paint-zone',cursorClass]" @mousemove="changeXY">
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
             <!--<tool-bar position="right"></tool-bar>-->
@@ -22,7 +22,7 @@ import ToolBar from './components/ToolBar'
 import MenuBar from './components/MenuBar'
 import ColorPanel from './components/ColorPanel'
 
-const menuData = {
+const toolData = {
     "pen": {
         key: "pen",
         name: "画笔",
@@ -43,6 +43,44 @@ const menuData = {
     },
 };
 
+const menuData = {
+    "file":{
+        key:"file",
+        name:"文件"
+    },
+    "view":{
+        key:"view",
+        name:"查看"
+    },
+    "edit":{
+        key:"edit",
+        name:"编辑"
+    },
+    "canvas":{
+        key:"canvas",
+        name:"画布",
+        sub:{
+            "clear":{
+                key:"clear",
+                name:"清空画布",
+                action:"canvas.clear"
+            }
+        }
+    },
+    "layer":{
+        key:"layer",
+        name:"图层"
+    },
+    "setting":{
+        key:"setting",
+        name:"设置"
+    },
+    "about":{
+        key:"about",
+        name:"关于"
+    }
+};
+
 export default {
     name: 'myPaint',
     data: function () {
@@ -56,7 +94,13 @@ export default {
                 backColor: '#fff',
                 operTypeKey: "pen"
             },
+            toolData: toolData,
             menuData: menuData
+        }
+    },
+    computed:{
+        cursorClass:function(){
+            return toolData[this.state.operTypeKey].cursorClass;
         }
     },
     components: {
@@ -79,8 +123,8 @@ export default {
         selectedOperType: function (key) {
             let k, item;
             this.state.operTypeKey = key;
-            for (k in menuData) {
-                item = menuData[k];
+            for (k in toolData) {
+                item = toolData[k];
                 item.isSelected = item.key == key;
             }
         }

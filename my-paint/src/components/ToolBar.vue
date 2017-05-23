@@ -5,7 +5,7 @@
             <span class="fore" :style="{'background-color':state.foreColor}" @click="showColorPannel"></span>
         </div>
         <ul class="menu">
-            <li v-for="item in menuData" @click="select(item.key)" :class="item.isSelected ? 'on':''">
+            <li v-for="item in toolData" @click="select(item.key)" :class="item.isSelected ? 'on':''">
                 {{item.name}}
             </li>
         </ul>
@@ -28,8 +28,9 @@ export default {
         state:{
             type:Object
         },
-        menuData :{
-            type:Object
+        toolData :{
+            type:Object,
+            required:true
         }
     },
     data: function () {
