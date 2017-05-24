@@ -1,8 +1,10 @@
 <template>
     <div>
         <ul class="menu">
+            <!-- 一级菜单 -->
             <li v-for="item in menuData" @mouseenter="showSubMenu($event)" @mouseleave="hideSubMenu($event)">
                 <span>{{item.name}}</span>
+                <!-- 二级菜单 -->
                 <ul class="sub-menu">
                     <li v-for="subItem in item.sub" @click="doAction(subItem.action,$event)">
                         <span>{{subItem.name}}</span>
@@ -38,7 +40,6 @@ export default {
         },
         doAction: function (action, e) {
             var el = e.currentTarget;
-            console.log(el);
             el.parentNode.style.display = "none";
             this.$emit("doAction", action);
         }

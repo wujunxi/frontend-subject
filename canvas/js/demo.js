@@ -148,4 +148,8 @@ stroke()
 fill()
 通过填充路径的内容区域生成实心的图形。
 
+
+4.圆弧
+arc(x, y, radius, startAngle, endAngle, anticlockwise)
+arcTo(x1, y1, x2, y2, radius)
 */

@@ -37,20 +37,32 @@ export default {
     this.isMouseDown = false;
   },
   methods: {
-    clearDraw:function(){
-      this.ctxDraw.clearRect(0,0,this.cvsDraw.width,this.cvsDraw.height);
+    clearDraw: function () {
+      this.ctxDraw.clearRect(0, 0, this.cvsDraw.width, this.cvsDraw.height);
+    },
+    erasurePointer: function (x, y, size) {
+      this.ctxDraw.save();
+      this.ctxDraw.beginPath();
+      this.ctxDraw.arc(x, y, size, 0, Math.PI * 2, true);
+      this.ctxDraw.clip();
+      this.clearDraw();
+      this.ctxDraw.restore();
     },
     mousedown: function (e) {
       this.isMouseDown = true;
       if (this.state.operTypeKey == "pen") {
         this.ctxDraw.beginPath();
         this.ctxDraw.moveTo(e.offsetX, e.offsetY);
+      } else if (this.state.operTypeKey == "erasure") {
+        this.erasurePointer(e.offsetX, e.offsetY, this.state.erasureSize);
       }
     },
     mousemove: function (e) {
       if (this.state.operTypeKey == "pen" && this.isMouseDown) {
         this.ctxDraw.lineTo(e.offsetX, e.offsetY);
         this.ctxDraw.stroke();
+      } else if (this.state.operTypeKey == "erasure" && this.isMouseDown) {
+        this.erasurePointer(e.offsetX, e.offsetY, this.state.erasureSize);
       }
     },
     mouseup: function (e) {

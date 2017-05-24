@@ -15,7 +15,7 @@
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
             <!-- 色板 -->
-            <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
+            <color-panel ref="colorPanel" :color="state.foreColor" @selectedColor="selectedColor"></color-panel>
         </main>
     </div>
 </template>
@@ -35,20 +35,21 @@ export default {
     data: function () {
         return {
             state: {
-                x:0,
-                y:0,
+                x: 0,
+                y: 0,
                 height: 600,
                 width: 600,
                 foreColor: '#000',
                 backColor: '#fff',
-                operTypeKey: "pen"
+                operTypeKey: "pen",
+                erasureSize: 20
             },
             toolData: toolData,
             menuData: menuData
         }
     },
-    computed:{
-        cursorClass:function(){
+    computed: {
+        cursorClass: function () {
             return toolData[this.state.operTypeKey].cursorClass;
         }
     },
@@ -59,9 +60,9 @@ export default {
         ColorPanel
     },
     methods: {
-        doAction:function(action){
+        doAction: function (action) {
             console.log(action);
-            switch(action){
+            switch (action) {
                 case "canvas.clear":
                     this.clear();
                     break;
@@ -69,15 +70,15 @@ export default {
                     break;
             }
         },
-        clear:function(){
+        clear: function () {
             this.$refs.paintLayer.clearDraw();
         },
-        changeXY:function(e){
+        changeXY: function (e) {
             this.state.x = e.offsetX;
             this.state.y = e.offsetY;
         },
-        showColorPanel: function (color) {
-            this.$refs.colorPanel.show(color);
+        showColorPanel: function () {
+            this.$refs.colorPanel.show();
         },
         selectedColor: function (color) {
             this.state.foreColor = color;
@@ -95,30 +96,29 @@ export default {
 </script>
 
 <style>
-
 .app {
     width: 100%;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 header {
-    padding:0 10px;
-    width:100%;
-    height:30px;
-    min-width:960px;
-    box-sizing:border-box;
+    padding: 0 10px;
+    width: 100%;
+    height: 30px;
+    min-width: 960px;
+    box-sizing: border-box;
     line-height: 30px;
-    background:#f0f0f0;
-    position:absolute;
-    z-index:1;
+    background: #f0f0f0;
+    position: absolute;
+    z-index: 1;
 }
 
 main {
-    padding:30px 0 0 0;
-    height:100%;
-    box-sizing:border-box;
-    position:relative;
+    padding: 30px 0 0 0;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .paint-zone {

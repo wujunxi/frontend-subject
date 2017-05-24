@@ -73,13 +73,17 @@ const COLOR_SOURCE = { RGB: 0, BASE16: 1, PICK: 2 };
 
 export default {
     name: "color-panel",
-    props: [],
+    props: {
+        color:{
+            type:String,
+            default:'#000000'
+        }
+    },
     data: function () {
         return {
             COLOR_SOURCE: COLOR_SOURCE,
             colorList: colorList,
             isShow: false,
-            color: '#000000',
             newColor: '#000000',
             R: "0",
             G: "0",
@@ -95,8 +99,7 @@ export default {
             this.$emit('selectedColor',this.newColor);
             this.isShow = false;
         },
-        show: function (color) {
-            this.color = color;
+        show: function () {
             this.isShow = true;
         },
         hide: function () {
