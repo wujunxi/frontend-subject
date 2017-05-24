@@ -1,18 +1,22 @@
 <template>
     <div class="app">
         <header>
-            <menu-bar class="fl" :menuData="menuData"></menu-bar>
+            <!-- 菜单 -->
+            <menu-bar class="fl" :menuData="menuData" @doAction="doAction"></menu-bar>
+            <!-- 坐标 -->
             <span class="fr">x:{{state.x}},y:{{state.y}}</span>
         </header>
         <main>
+            <!-- 操作栏 -->
             <tool-bar position="left" :toolData="toolData" :state="state" @showColorPanel="showColorPanel" @selectedOperType="selectedOperType"></tool-bar>
+            <!-- 画布 -->
             <div :class="['paint-zone',cursorClass]" @mousemove="changeXY">
+                <!-- 绘制图层 -->
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
-            <!--<tool-bar position="right"></tool-bar>-->
+            <!-- 色板 -->
             <color-panel ref="colorPanel" @selectedColor="selectedColor"></color-panel>
         </main>
-        <footer></footer>
     </div>
 </template>
 
@@ -22,64 +26,9 @@ import ToolBar from './components/ToolBar'
 import MenuBar from './components/MenuBar'
 import ColorPanel from './components/ColorPanel'
 
-const toolData = {
-    "pen": {
-        key: "pen",
-        name: "画笔",
-        cursorClass: "cur-pen",
-        isSelected: true
-    },
-    "erasure": {
-        key: "erasure",
-        name: "擦除",
-        cursorClass: "cur-erasure",
-        isSelected: false
-    },
-    "shape": {
-        key: "shape",
-        name: "图形",
-        cursorClass: "cur-select",
-        isSelected: false
-    },
-};
-
-const menuData = {
-    "file":{
-        key:"file",
-        name:"文件"
-    },
-    "view":{
-        key:"view",
-        name:"查看"
-    },
-    "edit":{
-        key:"edit",
-        name:"编辑"
-    },
-    "canvas":{
-        key:"canvas",
-        name:"画布",
-        sub:{
-            "clear":{
-                key:"clear",
-                name:"清空画布",
-                action:"canvas.clear"
-            }
-        }
-    },
-    "layer":{
-        key:"layer",
-        name:"图层"
-    },
-    "setting":{
-        key:"setting",
-        name:"设置"
-    },
-    "about":{
-        key:"about",
-        name:"关于"
-    }
-};
+// 配置参数
+import menuData from './config/menu.config'
+import toolData from './config/tool.config'
 
 export default {
     name: 'myPaint',
@@ -110,6 +59,19 @@ export default {
         ColorPanel
     },
     methods: {
+        doAction:function(action){
+            console.log(action);
+            switch(action){
+                case "canvas.clear":
+                    this.clear();
+                    break;
+                default:
+                    break;
+            }
+        },
+        clear:function(){
+            this.$refs.paintLayer.clearDraw();
+        },
         changeXY:function(e){
             this.state.x = e.offsetX;
             this.state.y = e.offsetY;
@@ -137,19 +99,25 @@ export default {
 .app {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow:hidden;
 }
 
 header {
     padding:0 10px;
+    width:100%;
     height:30px;
+    min-width:960px;
+    box-sizing:border-box;
     line-height: 30px;
     background:#f0f0f0;
+    position:absolute;
+    z-index:1;
 }
 
 main {
-    flex:1;
+    padding:30px 0 0 0;
+    height:100%;
+    box-sizing:border-box;
     position:relative;
 }
 

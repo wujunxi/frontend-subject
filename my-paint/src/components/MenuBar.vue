@@ -1,13 +1,13 @@
 <template>
     <div>
         <ul class="menu">
-            <li v-for="item in menuData" @mouseenter="showSubMenu(item.key)" @mouseleave="hideSubMenu(item.key)">
-                <a href="javascript:;">{{item.name}}</a>
-            </li>
-        </ul>
-        <ul :class="['sub-menu',isShowSubMenu ? 'on':'']">
-            <li v-for="item in subMenu">
-                <a href="javascript:;">{{item.name}}</a>
+            <li v-for="item in menuData" @mouseenter="showSubMenu($event)" @mouseleave="hideSubMenu($event)">
+                <span>{{item.name}}</span>
+                <ul class="sub-menu">
+                    <li v-for="subItem in item.sub" @click="doAction(subItem.action,$event)">
+                        <span>{{subItem.name}}</span>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -18,8 +18,7 @@ export default {
     name: "menuBar",
     data: function () {
         return {
-            isShowSubMenu:false,
-            subMenu:{}
+            subMenu: {}
         };
     },
     props: {
@@ -29,14 +28,19 @@ export default {
         }
     },
     methods: {
-        showSubMenu: function (key) {
-            this.subMenu = this.menuData[key].sub;
-            this.isShowSubMenu = true;
-            console.log(key);
+        showSubMenu: function (e) {
+            var el = e.currentTarget;
+            el.querySelector(".sub-menu").style.display = "block";
         },
-        hideSubMenu: function (key) {
-            console.log('hide', key);
-            this.isShowSubMenu = false;
+        hideSubMenu: function (e) {
+            var el = e.currentTarget;
+            el.querySelector(".sub-menu").style.display = "none";
+        },
+        doAction: function (action, e) {
+            var el = e.currentTarget;
+            console.log(el);
+            el.parentNode.style.display = "none";
+            this.$emit("doAction", action);
         }
     }
 }
@@ -50,7 +54,7 @@ export default {
     cursor: default;
 }
 
-.menu li {
+.menu>li {
     min-width: 40px;
     float: left;
     text-align: center;
@@ -61,9 +65,10 @@ export default {
 }
 
 .sub-menu {
-    position:absolute;
+    padding: 3px 0;
+    position: absolute;
     background: #f0f0f0;
-    border: solid 1px #999;
+    /*border: solid 1px #999;*/
     display: none;
 }
 
@@ -71,10 +76,12 @@ export default {
     display: block;
 }
 
-.sub-menu li {
+.sub-menu>li {
+    min-width: 100px;
     height: 26px;
     line-height: 26px;
     padding: 0 20px;
+    text-align: left;
 }
 </style>
 

@@ -1,0 +1,20 @@
+{
+    "pen": {
+        "key": "pen",
+        "name": "画笔",
+        "cursorClass": "cur-pen",
+        "isSelected": true
+    },
+    "erasure": {
+        "key": "erasure",
+        "name": "擦除",
+        "cursorClass": "cur-erasure",
+        "isSelected": false
+    },
+    "shape": {
+        "key": "shape",
+        "name": "图形",
+        "cursorClass": "cur-select",
+        "isSelected": false
+    }
+}

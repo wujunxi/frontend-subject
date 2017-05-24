@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     clearDraw:function(){
-      this.ctx.Draw.clearArc(0,0,this.cvsDraw.width,this.cvsDraw.height);
+      this.ctxDraw.clearRect(0,0,this.cvsDraw.width,this.cvsDraw.height);
     },
     mousedown: function (e) {
       this.isMouseDown = true;
