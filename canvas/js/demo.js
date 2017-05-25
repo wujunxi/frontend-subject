@@ -148,8 +148,19 @@ stroke()
 fill()
 通过填充路径的内容区域生成实心的图形。
 
-
-4.圆弧
-arc(x, y, radius, startAngle, endAngle, anticlockwise)
+moveTo(x, y)
+将笔触移动到指定的坐标x以及y上。
+lineTo(x, y)
+绘制一条从当前位置到指定x以及y位置的直线。
+rect(x, y, width, height)
+绘制一个左上角坐标为（x,y），宽高为width以及height的矩形。
+quadraticCurveTo(cp1x, cp1y, x, y)
+绘制贝塞尔曲线，cp1x,cp1y为控制点，x,y为结束点。
+bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+绘制二次贝塞尔曲线，cp1x,cp1y为控制点一，cp2x,cp2y为控制点二，x,y为结束点。
 arcTo(x1, y1, x2, y2, radius)
+根据给定的控制点和半径画一段圆弧，再以直线连接两个控制点。
+arc(x, y, radius, startAngle, endAngle, anticlockwise)
+画一个以（x,y）为圆心的以radius为半径的圆弧（圆），从startAngle开始到endAngle结束，按照anticlockwise给定的方向（默认为顺时针）来生成。
+
 */

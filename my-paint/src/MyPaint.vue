@@ -15,7 +15,7 @@
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
             <!-- 色板 -->
-            <color-panel ref="colorPanel" :color="state.foreColor" @selectedColor="selectedColor"></color-panel>
+            <color-panel ref="colorPanel" :color="state.color.foreColor" @selectedColor="selectedColor"></color-panel>
         </main>
     </div>
 </template>
@@ -39,10 +39,26 @@ export default {
                 y: 0,
                 height: 600,
                 width: 600,
-                foreColor: '#000',
-                backColor: '#fff',
-                operTypeKey: "pen",
-                erasureSize: 20
+                color:{
+                    foreColor: '#000', // 前景色
+                    backColor: '#fff' // 背景色
+                },
+                oper:{
+                    key: "pen" // 操作类型
+                },
+                pen:{
+                    size:10, // 笔触大小
+                },
+                select:{
+                    isActive:false, // 是否有选中区域
+                    x:0,
+                    y:0,
+                    width:0,
+                    height:0
+                },
+                erasure:{
+                    size:20 // 橡皮擦笔触大小
+                }
             },
             toolData: toolData,
             menuData: menuData
@@ -50,7 +66,7 @@ export default {
     },
     computed: {
         cursorClass: function () {
-            return toolData[this.state.operTypeKey].cursorClass;
+            return toolData[this.state.oper.key].cursorClass;
         }
     },
     components: {
@@ -81,11 +97,11 @@ export default {
             this.$refs.colorPanel.show();
         },
         selectedColor: function (color) {
-            this.state.foreColor = color;
+            this.state.color.foreColor = color;
         },
         selectedOperType: function (key) {
             let k, item;
-            this.state.operTypeKey = key;
+            this.state.oper.key = key;
             for (k in toolData) {
                 item = toolData[k];
                 item.isSelected = item.key == key;
@@ -134,8 +150,16 @@ main {
     cursor: url(assets/pen.png), auto;
 }
 
+.cur-fill {
+    cursor: url(assets/fill.png), auto;
+}
+
 .cur-select {
     cursor: crosshair;
+}
+
+.cur-move {
+    cursor: move;
 }
 
 .cur-erasure {

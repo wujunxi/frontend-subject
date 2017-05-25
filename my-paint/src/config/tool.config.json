@@ -1,4 +1,16 @@
 {
+    "select": {
+        "key": "select",
+        "name": "选择",
+        "cursorClass": "cur-select",
+        "isSelected": false
+    },
+    "move": {
+        "key": "move",
+        "name": "移动",
+        "cursorClass": "cur-move",
+        "isSelected": false
+    },
     "pen": {
         "key": "pen",
         "name": "画笔",
@@ -15,6 +27,12 @@
         "key": "shape",
         "name": "图形",
         "cursorClass": "cur-select",
+        "isSelected": false
+    },
+    "fill": {
+        "key": "fill",
+        "name": "填充",
+        "cursorClass": "cur-fill",
         "isSelected": false
     }
 }

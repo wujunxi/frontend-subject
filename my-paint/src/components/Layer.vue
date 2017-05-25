@@ -23,8 +23,11 @@ export default {
     };
   },
   watch: {
-    'state.foreColor': function (newValue) {
+    'state.color.foreColor': function (newValue) {
+      // 设置新描边色
       this.ctxDraw.strokeStyle = newValue;
+      // 设置新填充色
+      this.ctxDraw.fillStyle = newValue;
     }
   },
   mounted: function () {
@@ -37,9 +40,15 @@ export default {
     this.isMouseDown = false;
   },
   methods: {
+    /**
+    * 清空画布
+    */
     clearDraw: function () {
       this.ctxDraw.clearRect(0, 0, this.cvsDraw.width, this.cvsDraw.height);
     },
+    /**
+    * 擦除圆形区域
+    */
     erasurePointer: function (x, y, size) {
       this.ctxDraw.save();
       this.ctxDraw.beginPath();
@@ -48,25 +57,64 @@ export default {
       this.clearDraw();
       this.ctxDraw.restore();
     },
+    /**
+     * 绘制一个像素
+     * */
+    dot: function (x, y) {
+      this.ctxDraw.save();
+      this.ctxDraw.beginPath()
+      this.ctxDraw.arc(x, y, 1, 0, 2 * Math.PI, true);
+      this.ctxDraw.fill();
+      this.ctxDraw.restore();
+    },
+    /**
+    * 填充正方形区域
+    */
+    fillRect: function (x, y, width, height) {
+      this.ctxDraw.save();
+      this.ctxDraw.fillRect(x, y, width, height);
+      this.ctxDraw.restore();
+    },
     mousedown: function (e) {
+      let x = e.offsetX,
+        y = e.offsetY,
+        selectArea = this.state.select,
+        erasure = this.state.erasure;
       this.isMouseDown = true;
-      if (this.state.operTypeKey == "pen") {
+      // 现场保存
+      this.ctxDraw.save();
+      if (this.state.oper.key == "pen") {
+        this.dot(x,y);
         this.ctxDraw.beginPath();
-        this.ctxDraw.moveTo(e.offsetX, e.offsetY);
-      } else if (this.state.operTypeKey == "erasure") {
-        this.erasurePointer(e.offsetX, e.offsetY, this.state.erasureSize);
+        this.ctxDraw.moveTo(x, y);
+      } else if (this.state.oper.key == "erasure") {
+        this.ctxDraw.lineCap = "round";　　//设置线条两端为圆弧
+        this.ctxDraw.lineJoin = "round";　　//设置线条转折为圆弧
+        this.ctxDraw.lineWidth = erasure.size; // 设置笔触大小
+        this.ctxDraw.globalCompositeOperation = "destination-out"; // 设置混合方式
+        this.dot(x,y);
+        this.ctxDraw.beginPath();
+        this.ctxDraw.moveTo(x, y);
+      } else if (this.state.oper.key == "fill") {
+        if (selectArea.isActive) {
+          this.fillRect(selectArea.x, selectArea.y, selectArea.width, selectArea.height);
+        } else {
+          this.fillRect(0, 0, this.state.width, this.state.height);
+        }
       }
     },
     mousemove: function (e) {
-      if (this.state.operTypeKey == "pen" && this.isMouseDown) {
-        this.ctxDraw.lineTo(e.offsetX, e.offsetY);
+      let x = e.offsetX,
+        y = e.offsetY;
+      if ((this.state.oper.key == "pen" || this.state.oper.key == "erasure") && this.isMouseDown) {
+        this.ctxDraw.lineTo(x, y);
         this.ctxDraw.stroke();
-      } else if (this.state.operTypeKey == "erasure" && this.isMouseDown) {
-        this.erasurePointer(e.offsetX, e.offsetY, this.state.erasureSize);
       }
     },
     mouseup: function (e) {
       this.isMouseDown = false;
+      // 现场恢复
+      this.ctxDraw.restore();
     }
   }
 }

@@ -1,11 +1,11 @@
 <template>
     <div :class="['tool-bar',pos]">
         <div class="color">
-            <span class="back" :style="{'background-color':state.backColor}"></span>
-            <span class="fore" :style="{'background-color':state.foreColor}" @click="showColorPannel"></span>
+            <span class="back" :style="{'background-color':state.color.backColor}"></span>
+            <span class="fore" :style="{'background-color':state.color.foreColor}" @click="onClickColor"></span>
         </div>
         <ul class="menu">
-            <li v-for="item in toolData" @click="select(item.key)" :class="item.isSelected ? 'on':''">
+            <li v-for="item in toolData" @click="onSelect(item.key)" :class="item.isSelected ? 'on':''">
                 {{item.name}}
             </li>
         </ul>
@@ -39,10 +39,18 @@ export default {
         };
     },
     methods: {
-        select: function (key) {
+        /**
+        * 操作类型选中事件
+        */
+        onSelect: function (key) {
+            // 通知父组件
             this.$emit("selectedOperType",key);
         },
-        showColorPannel: function () {
+        /**
+        * 颜色点击事件
+        */
+        onClickColor: function () {
+            // 通知父组件
             this.$emit("showColorPanel", this.foreColor);
         }
     }
