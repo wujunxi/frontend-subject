@@ -14,6 +14,22 @@
 
 <script>
 
+function animation() {
+  var fun = arguments[0], args = [], _args = arguments, raf;
+  for (var arg of arguments) {
+    args.push(arg);
+  }
+  var frame = function () {
+    fun.apply(this,args);
+    raf = window.requestAnimationFrame(frame);
+  }
+  return raf;
+}
+
+function cancleAnimation(raf) {
+  window.cancelAnimationFrame(raf);
+}
+
 export default {
   name: 'layer',
   props: ['state'],
@@ -45,6 +61,10 @@ export default {
     */
     clearDraw: function () {
       this.ctxDraw.clearRect(0, 0, this.cvsDraw.width, this.cvsDraw.height);
+    },
+    clearOper: function () {
+      console.log("clear");
+      this.ctxOper.clearRect(0, 0, this.ctxOper.width, this.ctxOper.height);
     },
     /**
     * 擦除圆形区域
@@ -84,7 +104,7 @@ export default {
       // 现场保存
       this.ctxDraw.save();
       if (this.state.oper.key == "pen") {
-        this.dot(x,y);
+        this.dot(x, y);
         this.ctxDraw.beginPath();
         this.ctxDraw.moveTo(x, y);
       } else if (this.state.oper.key == "erasure") {
@@ -92,7 +112,7 @@ export default {
         this.ctxDraw.lineJoin = "round";　　//设置线条转折为圆弧
         this.ctxDraw.lineWidth = erasure.size; // 设置笔触大小
         this.ctxDraw.globalCompositeOperation = "destination-out"; // 设置混合方式
-        this.dot(x,y);
+        this.dot(x, y);
         this.ctxDraw.beginPath();
         this.ctxDraw.moveTo(x, y);
       } else if (this.state.oper.key == "fill") {
@@ -101,6 +121,10 @@ export default {
         } else {
           this.fillRect(0, 0, this.state.width, this.state.height);
         }
+      } else if(this.state.oper.key == "select") {
+        this.x = x;
+        this.y = y;
+        console.log(x,y);
       }
     },
     mousemove: function (e) {
@@ -109,12 +133,26 @@ export default {
       if ((this.state.oper.key == "pen" || this.state.oper.key == "erasure") && this.isMouseDown) {
         this.ctxDraw.lineTo(x, y);
         this.ctxDraw.stroke();
+      } else if (this.state.oper.key == "select" && this.isMouseDown) {
+        if (this.selectRectRaf) {
+          cancleAnimation(this.selectRectRaf);
+        }
+        this.selectRect(this.x, this.y, x, y);
       }
     },
     mouseup: function (e) {
       this.isMouseDown = false;
       // 现场恢复
       this.ctxDraw.restore();
+    },
+    selectRect: function (x1, y1, x2, y2) {
+      console.log(x1, y1, x2, y2);
+      this.clearOper();
+      this.selectOffset = this.selectOffset ? ++this.selectOffset % 16 : 0;
+      this.ctxOper.setLineDash([4, 2]);
+      this.ctxOper.lineDashOffset = -this.selectOffset;
+      this.ctxOper.strokeRect(x1, y1, x2, y2);
+      this.selectRectRaf = animation.call(this,this.selectRect, x1, y1, x2, y2);
     }
   }
 }
