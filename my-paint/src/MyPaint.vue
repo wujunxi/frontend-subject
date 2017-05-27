@@ -82,12 +82,17 @@ export default {
                 case "canvas.clear":
                     this.clear();
                     break;
+                case "canvas.cancelSelect":
+                    this.cancelSelect();
                 default:
                     break;
             }
         },
         clear: function () {
             this.$refs.paintLayer.clearDraw();
+        },
+        cancelSelect: function(){
+            this.$refs.paintLayer.cancelSelect();
         },
         changeXY: function (e) {
             this.state.x = e.offsetX;

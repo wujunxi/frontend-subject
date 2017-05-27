@@ -14,22 +14,6 @@
 
 <script>
 
-function animation() {
-  var fun = arguments[0], args = [], _args = arguments, raf;
-  for (var arg of arguments) {
-    args.push(arg);
-  }
-  var frame = function () {
-    fun.apply(this,args);
-    raf = window.requestAnimationFrame(frame);
-  }
-  return raf;
-}
-
-function cancleAnimation(raf) {
-  window.cancelAnimationFrame(raf);
-}
-
 export default {
   name: 'layer',
   props: ['state'],
@@ -54,6 +38,7 @@ export default {
     this.ctxCom = cvsCom.getContext("2d");
     this.ctxOper = cvsOper.getContext("2d");
     this.isMouseDown = false;
+    // this.selectRect(100, 100, 100, 100);
   },
   methods: {
     /**
@@ -63,8 +48,7 @@ export default {
       this.ctxDraw.clearRect(0, 0, this.cvsDraw.width, this.cvsDraw.height);
     },
     clearOper: function () {
-      console.log("clear");
-      this.ctxOper.clearRect(0, 0, this.ctxOper.width, this.ctxOper.height);
+      this.ctxOper.clearRect(0, 0, this.cvsOper.width, this.cvsOper.height);
     },
     /**
     * 擦除圆形区域
@@ -91,6 +75,7 @@ export default {
     * 填充正方形区域
     */
     fillRect: function (x, y, width, height) {
+      console.log("fillRect:",arguments);
       this.ctxDraw.save();
       this.ctxDraw.fillRect(x, y, width, height);
       this.ctxDraw.restore();
@@ -121,10 +106,9 @@ export default {
         } else {
           this.fillRect(0, 0, this.state.width, this.state.height);
         }
-      } else if(this.state.oper.key == "select") {
+      } else if (this.state.oper.key == "select") {
         this.x = x;
         this.y = y;
-        console.log(x,y);
       }
     },
     mousemove: function (e) {
@@ -134,25 +118,60 @@ export default {
         this.ctxDraw.lineTo(x, y);
         this.ctxDraw.stroke();
       } else if (this.state.oper.key == "select" && this.isMouseDown) {
-        if (this.selectRectRaf) {
-          cancleAnimation(this.selectRectRaf);
-        }
         this.selectRect(this.x, this.y, x, y);
       }
     },
     mouseup: function (e) {
+      let x = e.offsetX,
+        y = e.offsetY;
+      console.log("mouseup:",this.x, this.y, x, y);
       this.isMouseDown = false;
       // 现场恢复
       this.ctxDraw.restore();
     },
     selectRect: function (x1, y1, x2, y2) {
-      console.log(x1, y1, x2, y2);
-      this.clearOper();
-      this.selectOffset = this.selectOffset ? ++this.selectOffset % 16 : 0;
-      this.ctxOper.setLineDash([4, 2]);
-      this.ctxOper.lineDashOffset = -this.selectOffset;
-      this.ctxOper.strokeRect(x1, y1, x2, y2);
-      this.selectRectRaf = animation.call(this,this.selectRect, x1, y1, x2, y2);
+      var that = this,
+        offset = 0,
+        selectWidth = x2 - x1,
+        selectHeight = y2- y1,
+        lastTimestamp;
+      // 取消已有选中动画
+      if (this.selectRectRaf) {
+        window.cancelAnimationFrame(this.selectRectRaf);
+      }
+      // 设置选中状态
+      this.state.select.isActive = true;
+      this.state.select.x = x1;
+      this.state.select.y = y1;
+      this.state.select.width = selectWidth;
+      this.state.select.height = selectHeight;
+      // 动画帧绘制
+      function draw(timestamp) {
+        if (!lastTimestamp) {
+          lastTimestamp = timestamp;
+        } else {
+          offset = ((timestamp - lastTimestamp) * 0.02 + offset) % 14;
+          lastTimestamp = timestamp;
+          that.ctxOper.save();
+          that.clearOper();
+          that.ctxOper.strokeStyle = "#000";
+          that.ctxOper.setLineDash([4, 3]);
+          that.ctxOper.lineDashOffset = -offset;
+          that.ctxOper.strokeRect(x1, y1, selectWidth, selectHeight);
+          that.ctxOper.restore();
+        }
+        that.selectRectRaf = window.requestAnimationFrame(draw);
+      }
+      draw();
+    },
+    cancelSelect:function(){
+      // 设置选中状态
+      this.state.select.isActive = false;
+      // 取消已有选中动画
+      if (this.selectRectRaf) {
+        window.cancelAnimationFrame(this.selectRectRaf);
+        this.clearOper();
+      }
     }
   }
 }

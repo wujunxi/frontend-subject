@@ -9,7 +9,14 @@
     },
     "edit":{
         "key":"edit",
-        "name":"编辑"
+        "name":"编辑",
+        "sub":{
+            "cancelSelect":{
+                "key":"cancelSelect",
+                "name":"取消选择",
+                "action":"canvas.cancelSelect"
+            }
+        }
     },
     "canvas":{
         "key":"canvas",
