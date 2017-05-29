@@ -14,6 +14,8 @@
                 <!-- 绘制图层 -->
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
+            <!-- 属性栏 -->
+            <property-bar position="right"></property-bar>
             <!-- 色板 -->
             <color-panel ref="colorPanel" :color="state.color.foreColor" @selectedColor="selectedColor"></color-panel>
         </main>
@@ -24,6 +26,7 @@
 import Layer from './components/Layer'
 import ToolBar from './components/ToolBar'
 import MenuBar from './components/MenuBar'
+import PropertyBar from './components/PropertyBar'
 import ColorPanel from './components/ColorPanel'
 
 // 配置参数
@@ -37,8 +40,8 @@ export default {
             state: {
                 x: 0,
                 y: 0,
-                height: 600,
-                width: 600,
+                height: 450,
+                width: 450,
                 color:{
                     foreColor: '#000', // 前景色
                     backColor: '#fff' // 背景色
@@ -73,9 +76,17 @@ export default {
         MenuBar,
         Layer,
         ToolBar,
-        ColorPanel
+        ColorPanel,
+        PropertyBar
+    },
+    mounted:function(){
+        document.addEventListener("keyup",this.onKeyUp);
     },
     methods: {
+        onKeyUp: function(e){
+            console.log(e.keyCode);
+            
+        },
         doAction: function (action) {
             console.log(action);
             switch (action) {
@@ -155,6 +166,10 @@ main {
     cursor: url(assets/pen.png), auto;
 }
 
+.cur-pen2 {
+    cursor: url(assets/pen2.png), auto;
+}
+
 .cur-fill {
     cursor: url(assets/fill.png), auto;
 }
@@ -169,5 +184,9 @@ main {
 
 .cur-erasure {
     cursor: url(assets/erasure.png), auto;
+}
+
+.cur-text {
+    cursor: text;
 }
 </style>
