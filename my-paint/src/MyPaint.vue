@@ -15,7 +15,7 @@
                 <layer ref="paintLayer" :state="state"></layer>
             </div>
             <!-- 属性栏 -->
-            <property-bar position="right"></property-bar>
+            <select-panel position="right"></select-panel>
             <!-- 色板 -->
             <color-panel ref="colorPanel" :color="state.color.foreColor" @selectedColor="selectedColor"></color-panel>
         </main>
@@ -26,7 +26,7 @@
 import Layer from './components/Layer'
 import ToolBar from './components/ToolBar'
 import MenuBar from './components/MenuBar'
-import PropertyBar from './components/PropertyBar'
+import SelectPanel from './components/panels/selectPanel'
 import ColorPanel from './components/ColorPanel'
 
 // 配置参数
@@ -77,7 +77,7 @@ export default {
         Layer,
         ToolBar,
         ColorPanel,
-        PropertyBar
+        SelectPanel
     },
     mounted:function(){
         document.addEventListener("keyup",this.onKeyUp);

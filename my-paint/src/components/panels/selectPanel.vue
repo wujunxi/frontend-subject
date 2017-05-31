@@ -1,12 +1,16 @@
 <template>
-    <div>
-
-    </div>
+    <panel title="选择">
+        
+    </panel>
 </template>
 
 <script>
+    import Panel from './Panel';
     export default {
-        name:"property-bar",
+        name:"select-panel",
+        components:{
+            Panel
+        },
         props:{},
         data:function(){
             return {};
