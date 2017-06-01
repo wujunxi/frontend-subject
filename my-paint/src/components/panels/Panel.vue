@@ -1,7 +1,7 @@
 <template>
-    <div :class="['panel',moveable ? 'moveable':'']">
+    <div class="panel">
         <div class="panel-hd">
-            <i v-if="moveable" class="panel-move"></i>
+            <i v-if="moveable" class="panel-move" @mousedown="onMoveStart" @mousemove="onMove" @mouseup="onMoveEnd"></i>
             {{title}}
             <i v-if="closeable" class="panel-close"></i>
             <i v-if="collapsable" class="panel-collapse"></i>
@@ -43,7 +43,17 @@ export default {
         }
     },
     methods: {
-
+        onMoveStart : function(){
+            console.log("moveStart:");
+            this.isMouseDown = true;
+        },
+        onMove:function(){
+            console.log("move:");
+        },
+        onMoveEnd:function(){
+            console.log("moveEnd:");
+            this.isMouseDown = false;
+        }
     }
 }
 </script>
@@ -66,10 +76,6 @@ export default {
     text-indent: 10px;
 }
 
-.panel.moveable .panel-hd {
-    cursor: move;
-}
-
 .panel-bd {
     padding: 20px;
     overflow: hidden;
@@ -77,7 +83,12 @@ export default {
 }
 
 .panel-move {
-    
+    float:left;
+    box-sizing:border-box;
+    height:25px;
+    width:13px;
+    background:url(../../assets/move_icon.svg) center center / 50% 100% no-repeat;
+    cursor:move;
 }
 
 .panel-close,.panel-collapse {
