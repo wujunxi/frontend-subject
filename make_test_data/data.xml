@@ -1,0 +1,531 @@
+<?xml version="1.0" standalone="yes"?>
+<FiddlerDS>
+  <dsProject LastSave="2017-06-02T18:39:05.7630361+08:00" FiddlerVersion="1.4.0.0">
+    <Project Name="A--Host-本地" Enabled="false">
+      <OverrideHost Enabled="true" Name="www.xiaoniu88.com" IP="172.20.17.163" Order="35" />
+      <OverrideHost Enabled="true" Name="image.xiaoniu88.com" IP="172.20.21.200" Order="17" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.81" Order="36" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.81" Order="37" />
+    </Project>
+    <Project Name="weinre" Enabled="false">
+      <ResponseRule Enabled="true" Match="www.a.com/test/t.html" Action="F:\m\qianduan\a.html" WillowData="" Order="1" ResponseRule_Id="72" />
+      <OverrideHost Enabled="false" Name="www.a.com" IP="127.0.0.1" Order="40" />
+    </Project>
+    <Project Name="weixin-detail" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_detail_debt.tpl" Action="E:\project\xn_web\src\weixin\tpl\wx_detail_debt.tpl" WillowData="" Order="14" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/debt/" Action="E:\project\xn_web\src\weixin\data\detail_debt.txt" WillowData="" Order="38" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_detail_axn.tpl" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\tpl\wx_detail_axn.tpl" WillowData="" Order="62" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/ptd" Action="E:\project\ue_weixin\branches\1.3.9\src\weixin\data\detail_axn.txt" WillowData="" Order="85" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_detail_sanbiao.tpl" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\tpl\wx_detail_sanbiao.tpl" WillowData="" Order="81" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/loan/" Action="E:\project\ue_weixin\branches\1.4.4\src\weixin\data\detail_sanbiao.txt" WillowData="" Order="87" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:wx_detail_axn.js" Action="E:\project\ue_weixin\branches\1.2.2\src\weixin\js\wx_detail_axn.js" WillowData="" Order="92" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/js/wx_detail_sanbiao.js" Action="E:\project\ue_weixin\branches\1.3.7\src\weixin\js\wx_detail_sanbiao.js" WillowData="" Order="48" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_detail_debt.js" Action="E:\project\xn_web\src\weixin\js\wx_detail_debt.js" WillowData="" Order="60" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_detail.css" Action="E:\project\xn_web\src\weixin\css\wx_detail.css" WillowData="" Order="23" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\css\wx_common.css" WillowData="" Order="2" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/product/trade/WeChat/buy" Action="E:\project\ue_weixin\branches\mod\src\weixin\data\detail_buy.txt" WillowData="" Order="84" ResponseRule_Id="200" />
+      <ResponseRule Enabled="false" Match="regex:weixin/productDetails/current/" Action="E:\project\ue_weixin\branches\1.4.0\src\weixin\data\detail_hq.txt" WillowData="" Order="90" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:wx_common.js" Action="E:\project\ue_weixin\branches\1.2.2\src\weixin\js\wx_common.js" WillowData="" Order="93" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:tpl/wx_list_licai.tpl" Action="E:\project\ue_weixin\branches\1.2.2\src\weixin\tpl\wx_list_licai.tpl" WillowData="" Order="82" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/invests/" Action="E:\project\ue_weixin\branches\mod\src\weixin\data\detail_record.txt" WillowData="" Order="64" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/index" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\data\detail_record.txt" WillowData="" Order="91" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/current[^view]" Action="E:\project\ue_weixin\branches\1.3.9\src\weixin\data\detail_hq.txt" WillowData="" Order="88" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/debt" Action="E:\project\ue_weixin\branches\1.3.6\src\weixin\data\detail_debt.txt" WillowData="" Order="63" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/debt" Action="E:\project\ue_weixin\branches\1.3.9\src\weixin\data\detail_debt.txt" WillowData="" Order="89" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/js/wx_detail_axn.js" Action="E:\project\ue_weixin\branches\1.3.7\src\weixin\js\wx_detail_axn.js" WillowData="" Order="49" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/product/purchase" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\detail_buy.json" WillowData="" Order="86" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/coupon[^\/list]" Action="E:\project\ue_weixin\branches\1.4.4\src\weixin\data\detail_experience_post.txt" WillowData="" Order="115" ResponseRule_Id="1015" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/coupon/list" Action="E:\project\ue_weixin\branches\1.4.4\src\weixin\data\detail_experience_list.txt" WillowData="" Order="116" ResponseRule_Id="1016" />
+      <ResponseRule Enabled="false" Match="regex:module/detail/experience/main.js" Action="E:\project\ue_weixin\branches\1.4.4\src\weixin\static\module\detail\experience\main.js" WillowData="" Order="117" ResponseRule_Id="1123" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/static/module/detail/sanbiao/main.js" Action="E:\project\ue_weixin\branches\1.4.9\src\weixin\module\detail\sanbiao\main.js" WillowData="" Order="123" ResponseRule_Id="1317" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/yyn" Action="E:\project\ue_weixin\branches\1.7.4\src\weixin\data\detail_yyn.txt" WillowData="" Order="169" ResponseRule_Id="1813" />
+    </Project>
+    <Project Name="weixin-home" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_index.tpl" Action="E:\project\ue_weixin\branches\1.2.2\src\weixin\tpl\wx_index.tpl" WillowData="" Order="21" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/index/data" Action="E:\project\ue_weixin\branches\mod\src\weixin\data\index.txt" WillowData="" Order="59" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\xn_web\src\weixin\css\wx_common.css" WillowData="" Order="12" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_index.css" Action="E:\project\ue_weixin\branches\1.1.3\src\weixin\css\wx_index.css" WillowData="" Order="13" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_index.js" Action="E:\project\ue_weixin\branches\1.2.2\src\weixin\js\wx_index.js" WillowData="" Order="22" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="列表" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/productlist/v2/axn/" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\list\axn.json" WillowData="" Order="236" ResponseRule_Id="2460" />
+      <ResponseRule Enabled="false" Match="regex:weixin/productlist/v2/vip" Action="E:\project\ue_weixin\trunk\src\weixin\data\list\vip.json" WillowData="" Order="237" ResponseRule_Id="2460" />
+      <ResponseRule Enabled="false" Match="regex:weixin/productlist/v2/common/0/5" Action="E:\project\ue_weixin\trunk\src\weixin\data\list\sanbiao.json" WillowData="" Order="250" ResponseRule_Id="2916" />
+      <ResponseRule Enabled="true" Match="regex:weixin/productlist/v2/transferable/0/5" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\list\transfer.json" WillowData="" Order="251" ResponseRule_Id="2916" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productlist/v2/yyn" Action="E:\project\ue_weixin\branches\2.38.0\src\weixin\data\list\yyn.json" WillowData="" Order="259" ResponseRule_Id="3207" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productlist/v2/fixed" Action="E:\project\ue_weixin\branches\2.61.0\src\weixin\data\list\fixed.json" WillowData="" Order="260" ResponseRule_Id="3207" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productlist/v2/flexible" Action="E:\project\ue_weixin\branches\2.61.0\src\weixin\data\list\flexible.json" WillowData="" Order="261" ResponseRule_Id="3207" />
+    </Project>
+    <Project Name="proxy" Enabled="false">
+      <OverrideHost Enabled="true" Name="*.withdata.cn" IP="127.0.0.1" Order="42" />
+      <OverrideHost Enabled="true" Name="*.diditaxi.com.cn" IP="127.0.0.1" Order="41" />
+      <OverrideHost Enabled="false" Name="*.fibodata.com" IP="127.0.0.1" Order="38" />
+      <OverrideHost Enabled="true" Name="*.udache.com" IP="127.0.0.1" Order="42" />
+    </Project>
+    <Project Name="提现" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_draw.tpl" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\tpl\wx_account_draw.tpl" WillowData="" Order="18" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/withdraw" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account_draw.txt" WillowData="" Order="41" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_account.css" Action="E:\project\xn_web\src\weixin\css\wx_account.css" WillowData="" Order="35" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\xn_web\src\weixin\css\wx_common.css" WillowData="" Order="8" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_draw.js" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\js\wx_account_draw.js" WillowData="" Order="45" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/paycode/sendcode" Action="E:\project\xn_web\src\weixin\data\code.txt" WillowData="" Order="53" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/withdraw/provicecode/" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\data\account_draw-provicecode.txt" WillowData="" Order="54" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/withdraw/updatebranchinfo" Action="E:\project\xn_web\src\weixin\data\account_draw_province.txt" WillowData="" Order="55" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/withdraw/citycode/701/banktype/CCB" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\data\account_draw_province.txt" WillowData="" Order="240" ResponseRule_Id="2667" />
+    </Project>
+    <Project Name="weixin-dealpassword" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_draw.tpl" Action="E:\project\xn_web\src\weixin\tpl\wx_account_draw.tpl" WillowData="" Order="20" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_account.css" Action="E:\project\xn_web\src\weixin\css\wx_account.css" WillowData="" Order="37" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\xn_web\src\weixin\css\wx_common.css" WillowData="" Order="11" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_deal_pw.js" Action="E:\project\xn_web\src\weixin\js\wx_account_deal_pw.js" WillowData="" Order="50" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/paycode/sendcode" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\code.txt" WillowData="" Order="57" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/paycode" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\code.txt" WillowData="" Order="58" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="weixin-充值" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_recharge.tpl" Action="E:\project\ue_weixin\branches\1.2.8\src\weixin\tpl\wx_account_recharge.tpl" WillowData="" Order="15" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/recharge[^\/quickpayvalidate]" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account_recharge.json" WillowData="" Order="39" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_account.css" Action="E:\project\xn_web\src\weixin\css\wx_account.css" WillowData="" Order="24" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\ue_weixin\branches\1.0.6\src\weixin\css\wx_common.css" WillowData="" Order="5" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_recharge.js" Action="E:\project\ue_weixin\branches\1.3.1\src\weixin\js\wx_account_recharge.js" WillowData="" Order="43" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/rechargepay/sendcode" Action="E:\project\ue_weixin\branches\2.93.0\src\weixin\data\code.txt" WillowData="" Order="51" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_common.js" Action="E:\project\ue_weixin\branches\1.0.5\WebHtml\weixin\js\wx_common.js" WillowData="" Order="44" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:img/wx_logo.png" Action="E:\project\ue_weixin\branches\1.0.6\src\weixin\img\wx_logo.png" WillowData="" Order="6" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_bank.tpl" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\tpl\wx_account_bank.tpl" WillowData="" Order="16" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/supportbank" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\banklist.json" WillowData="" Order="40" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/rechargepay/resendcode" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\code.txt" WillowData="" Order="52" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/recharge/quickpayvalidate" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\quickpay_validate.json" WillowData="" Order="269" ResponseRule_Id="3383" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/rechargepay" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_recharge_post.txt" WillowData="" Order="270" ResponseRule_Id="3383" />
+    </Project>
+    <Project Name="weixin-renzheng" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_bind_card.tpl" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\tpl\wx_account_bind_card.tpl" WillowData="" Order="17" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_account.css" Action="E:\project\xn_web\src\weixin\css\wx_account.css" WillowData="" Order="25" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\xn_web\src\weixin\css\wx_common.css" WillowData="" Order="7" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/applyquickpaybindcard" Action="E:\project\ue_weixin\branches\2.42.0\src\weixin\data\account_bank_auth.txt" WillowData="" Order="26" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/applyquickpaybindcard/verifycardno" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\account_bank_auth_cardno.txt" WillowData="" Order="27" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_bank_auth.js" Action="E:\project\xn_web\src\weixin\js\wx_account_bank_auth.js" WillowData="" Order="28" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/applyquickpaybindcard/verifycardno?" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\data\account_bank_auth_cardno.txt" WillowData="" Order="31" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/applyquickpaybindcard/sendcode" Action="E:\project\ue_weixin\branches\1.2.7\src\weixin\data\account_bank_auth_code.txt" WillowData="" Order="33" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_bind_card.js" Action="E:\project\ue_weixin\branches\1.2.5\src\weixin\js\wx_account_bind_card.js" WillowData="" Order="29" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/sendapplycode" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\account_bank_auth_code.txt" WillowData="" Order="34" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/realnameauth/verifyidno" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\account_realname.txt" WillowData="" Order="32" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_form.js" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\js\wx_form.js" WillowData="" Order="30" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="weixin-我的账户" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/tpl/wx_account_draw.tpl" Action="E:\project\ue_weixin\branches\1.4.6\src\weixin\tpl\wx_account_draw.tpl" WillowData="" Order="19" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/withdraw" Action="E:\project\ue_weixin\branches\1.4.6\src\weixin\data\account_draw.txt" WillowData="" Order="42" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_account.css" Action="E:\project\xn_web\src\weixin\css\wx_account.css" WillowData="" Order="36" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/css/wx_common.css" Action="E:\project\xn_web\src\weixin\css\wx_common.css" WillowData="" Order="10" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_draw.js" Action="E:\project\xn_web\src\weixin\js\wx_account_draw.js" WillowData="" Order="46" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/paycode/sendcode" Action="E:\project\xn_web\src\weixin\data\code.txt" WillowData="" Order="56" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/info" Action="E:\project\ue_weixin\branches\2.50.0\src\weixin\data\account_info.json" WillowData="" Order="110" ResponseRule_Id="817" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/js/wx_account_bank.js" Action="E:\project\ue_weixin\branches\1.3.2\src\weixin\js\wx_account_bank.js" WillowData="" Order="47" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/supportbank" Action="E:\project\ue_weixin\branches\2.50.0\src\weixin\data\banklist.json" WillowData="" Order="114" ResponseRule_Id="966" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/index" Action="E:\project\ue_weixin\branches\1.4.7\src\weixin\data\account.txt" WillowData="" Order="122" ResponseRule_Id="1238" />
+    </Project>
+    <Project Name="weixin-planner" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/planner" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account_planner.txt" WillowData="" Order="3" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/send/planner" Action="E:\project\ue_weixin\branches\1.0.2\src\weixin\account_planner.html" WillowData="" Order="4" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="活动-感恩H5动画" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:mobile/papers/act/thanksgiving/info.json" Action="E:\project\ue_weixin\branches\2.24.1\src\weixin\data\activity\thanksgiving\info.txt" WillowData="" Order="257" ResponseRule_Id="3086" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgiving/couponreceive" Action="E:\project\ue_weixin\branches\2.24.1\src\weixin\data\activity\thanksgiving\lcj.txt" WillowData="" Order="258" ResponseRule_Id="3086" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="192.20.17.129" Order="26" />
+    </Project>
+    <Project Name="weixin-register" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/register/type/mobile/param" Action="E:\project\ue_weixin\branches\2.26.0\src\weixin\data\register_check_mobile.txt" WillowData="" Order="67" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/register/step1" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\register_step1.txt" WillowData="" Order="69" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/register/sendcode" Action="E:\project\ue_weixin\branches\1.3.3\src\weixin\data\register_code.txt" WillowData="" Order="70" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/register/type/refferee/param/" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\register_check_ref.txt" WillowData="" Order="72" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/test" Action="E:\project\ue_weixin\branches\1.6.9\src\weixin\data\register.txt" WillowData="" Order="73" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/realnameauth/verifyidno" Action="E:\project\ue_weixin\branches\1.1.2\src\weixin\data\account_realname.txt" WillowData="" Order="74" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:wx_register_thirdplat.js" Action="E:\project\ue_weixin\branches\1.3.4\src\weixin\js\wx_register_thirdplat.js" WillowData="" Order="75" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/css-150609/weixin/css/wx_register_eat.css" Action="E:\project\ue_weixin\branches\1.1.5\src\weixin\css\wx_register_eat.css" WillowData="" Order="79" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:shake.mp3" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\media\shake.mp3" WillowData="" Order="80" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/register2" Action="E:\project\ue_weixin\branches\1.3.1\src\weixin\data\register.txt" WillowData="" Order="111" ResponseRule_Id="939" />
+      <ResponseRule Enabled="false" Match="regex:weixin/js/wx_register_thirdplat.js?" Action="E:\project\ue_weixin\branches\1.3.9\src\weixin\js\wx_register_thirdplat.js" WillowData="" Order="112" ResponseRule_Id="940" />
+      <ResponseRule Enabled="false" Match="regex:weixin/register/type/refferee/param" Action="E:\project\ue_weixin\branches\1.3.4\src\weixin\data\register_check_mobile.txt" WillowData="" Order="68" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:web/style/functions.js" Action="C:\Users\Administrator\Desktop\functions.js" WillowData="" Order="113" ResponseRule_Id="940" />
+      <ResponseRule Enabled="false" Match="regex:weixin/forgetpassword/sendcode" Action="E:\project\ue_weixin\branches\mod\src\weixin\data\forgetpassword_code.txt" WillowData="" Order="71" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:weixin/resources/weixin/js/wx_register_shareBonus.js" Action="E:\project\ue_weixin\branches\1.4.9\src\weixin\js\wx_register_shareBonus.js" WillowData="" Order="124" ResponseRule_Id="1440" />
+    </Project>
+    <Project Name="weixin-APP" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:download.html" Action="E:\project\ue_weixin\branches\1.1.6\src\weixin\app\download.html" WillowData="" Order="78" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="weixin-登录" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:static/weixin/static/module/login/main.js" Action="E:\project\ue_weixin\branches\2.95.0\WebHtml\weixin\static\module\login\main.js" WillowData="" Order="76" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/login" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\login\login.json" WillowData="" Order="77" ResponseRule_Id="101" />
+    </Project>
+    <Project Name="weixin-account" Enabled="false">
+      <ResponseRule Enabled="false" Match="/account/current" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\dev\account_hq.html" WillowData="" Order="94" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/index" Action="E:\project\ue_weixin\branches\1.4.7\src\weixin\data\account.txt" WillowData="" Order="101" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/current" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\data\account_hq.txt" WillowData="" Order="102" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:account/current/withdraw" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\data\account_hq_draw_succ.txt" WillowData="" Order="103" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:account/current/withdra2" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\data\account_hq_draw.txt" WillowData="" Order="104" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:/account/current/withdraw/success" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\dev\account_hq_draw_succ.html" WillowData="" Order="105" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:js/wx_account_hq_draw.js" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\js\wx_account_hq_draw.js" WillowData="" Order="106" ResponseRule_Id="796" />
+      <ResponseRule Enabled="false" Match="regex:tpl/wx_account_hq_draw.tpl" Action="E:\project\ue_weixin\branches\1.3.0\src\weixin\tpl\wx_account_hq_draw.tpl" WillowData="" Order="107" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/realnameauth[^\/verifyidno]" Action="E:\project\ue_weixin\branches\1.5.4\src\weixin\data\account_realname.txt" WillowData="" Order="128" ResponseRule_Id="1501" />
+      <ResponseRule Enabled="true" Match="regex:weixin/resources/weixin/static/module/account/realname/main.js" Action="E:\project\ue_weixin\branches\1.5.4\src\weixin\static\module\account\realname\main.js" WillowData="" Order="129" ResponseRule_Id="1502" />
+    </Project>
+    <Project Name="红包分享" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:wx_bonus_receive.css" Action="E:\project\ue_weixin\branches\1.2.4\src\weixin\css\wx_bonus_receive.css" WillowData="" Order="108" ResponseRule_Id="814" />
+      <ResponseRule Enabled="false" Match="regex:wx_bonus_send.js" Action="E:\project\ue_weixin\branches\1.3.2\src\weixin\js\wx_bonus_send.js" WillowData="" Order="109" ResponseRule_Id="814" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/bonusShare/receive" Action="E:\project\ue_weixin\trunk\src\weixin\data\bonus\bonus_receive.json" WillowData="" Order="135" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/bonusShare/details" Action="E:\project\ue_weixin\branches\1.7.3\src\weixin\data\bonus_share.txt" WillowData="" Order="167" ResponseRule_Id="1749" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/resources/weixin/static/module/bonus/201512/share.js" Action="E:\project\ue_weixin\branches\1.7.3\src\weixin\static\module\bonus\201512\share.js" WillowData="" Order="168" ResponseRule_Id="1781" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/bonusShare/records" Action="E:\project\ue_weixin\trunk\src\weixin\data\bonus_records.txt" WillowData="" Order="182" ResponseRule_Id="1963" />
+    </Project>
+    <Project Name="第三方" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:partner/sendcode" Action="E:\project\ue_weixin\branches\2.44.0\src\weixin\data\register_code.txt" WillowData="" Order="9" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:partner/channel/submit" Action="E:\project\ue_weixin\branches\2.44.0\src\weixin\data\partner\register.json" WillowData="" Order="133" ResponseRule_Id="1694" />
+      <ResponseRule Enabled="false" Match="regex:partner/login" Action="E:\project\ue_weixin\branches\2.37.0\src\weixin\data\partner\login.json" WillowData="" Order="207" ResponseRule_Id="2380" />
+      <ResponseRule Enabled="false" Match="regex:partner/weixin/static/module/thirdplat/expericence9999/main.js" Action="E:\project\ue_weixin\branches\2.37.0\src\weixin\static\module\thirdplat\expericence9999\main.js" WillowData="" Order="239" ResponseRule_Id="2666" />
+      <ResponseRule Enabled="true" Match="regex:/partner/captcha" Action="E:\project\ue_weixin\branches\2.88.0\src\weixin\res\img\partner\captcha.jpg" WillowData="" Order="276" ResponseRule_Id="3462" />
+    </Project>
+    <Project Name="首页" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/index" Action="E:\project\ue_weixin\trunk\src\weixin\data\index.txt" WillowData="" Order="61" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:tpl/wx_index.tpl" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\tpl\wx_index.tpl" WillowData="" Order="83" ResponseRule_Id="101" />
+      <ResponseRule Enabled="false" Match="regex:resources/weixin/dev/html/index.html" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\dev\html\index.html" WillowData="" Order="130" ResponseRule_Id="1534" />
+      <ResponseRule Enabled="true" Match="regex:weixin/index/v2.json" Action="E:\project\ue_weixin\branches\2.93.0\src\weixin\data\index\index.json" WillowData="" Order="193" ResponseRule_Id="2032" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/activity/tzdb/notice" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\index\prize.json" WillowData="" Order="238" ResponseRule_Id="2615" />
+    </Project>
+    <Project Name="帐户中心--充值" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:account/supportbank" Action="E:\project\ue_weixin\branches\2.88.0\src\weixin\data\account\recharge\banklist.json" WillowData="" Order="95" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/recharge[^pay]" Action="E:\project\ue_weixin\branches\2.88.0\src\weixin\data\account\recharge\account_recharge.json" WillowData="" Order="97" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/rechargepay/sendcode" Action="E:\project\ue_weixin\branches\2.88.0\src\weixin\data\account\recharge\account_recharge_sendcode.json" WillowData="" Order="98" ResponseRule_Id="796" />
+    </Project>
+    <Project Name="weixin-绑卡" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/account/applyquickpay[^\//verifyidno]" Action="E:\project\ue_weixin\branches\2.45.0\src\weixin\data\account_bank_auth.json" WillowData="" Order="99" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/applyquickpaybindcard/verifyidno" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_bank_auth_idno.txt" WillowData="" Order="118" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/applyquickpaybindcard/verifycardno" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_bank_auth_cardno.json" WillowData="" Order="100" ResponseRule_Id="796" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/sendapplycode" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_bank_auth_code.txt" WillowData="" Order="96" ResponseRule_Id="1236" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/applyquickpaybindcard" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\bindCard\bindcard.json" WillowData="" Order="119" ResponseRule_Id="1237" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/supportbank" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\banklist.json" WillowData="" Order="120" ResponseRule_Id="1237" />
+      <ResponseRule Enabled="false" Match="regex:/account/channel/info/user" Action="E:\project\ue_weixin\branches\2.45.0\src\weixin\data\account\bindCard\toubei_realname.json" WillowData="" Order="274" ResponseRule_Id="3386" />
+      <ResponseRule Enabled="false" Match="regex:/account/channel/info/card" Action="E:\project\ue_weixin\branches\2.45.0\src\weixin\data\account\bindCard\toubei_bankcard.json" WillowData="" Order="275" ResponseRule_Id="3386" />
+    </Project>
+    <Project Name="抽奖" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/niubility[^\/records]" Action="E:\project\ue_weixin\branches\1.5.4\src\weixin\data\lottery.txt" WillowData="" Order="125" ResponseRule_Id="1479" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/niubility/records" Action="E:\project\ue_weixin\branches\1.5.4\src\weixin\data\lottery_records.txt" WillowData="" Order="126" ResponseRule_Id="1499" />
+      <ResponseRule Enabled="false" Match="regex:weixin/resources/weixin/static/module/activity/niubility/main.js" Action="E:\project\ue_weixin\branches\1.5.4\src\weixin\static\module\activity\niubility\main.js" WillowData="" Order="127" ResponseRule_Id="1500" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/bonusShare" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\detail_bonus_share.json" WillowData="" Order="131" ResponseRule_Id="1670" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/springfestival/records" Action="E:\project\ue_weixin\branches\1.8.5\src\weixin\data\lottery_records.json" WillowData="" Order="132" ResponseRule_Id="1672" />
+      <ResponseRule Enabled="false" Match="regex:weixin/activity/springfestival" Action="E:\project\ue_weixin\branches\1.8.5\src\weixin\data\lottery.json" WillowData="" Order="188" ResponseRule_Id="2002" />
+    </Project>
+    <Project Name="活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:weixin/activity/financingseason/ranklist" Action="E:\project\ue_weixin\branches\1.6.5\src\weixin\data\ranking.txt" WillowData="" Order="134" ResponseRule_Id="1716" />
+    </Project>
+    <Project Name="我的账户-月月牛" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/account/yyn/earnings" Action="E:\project\ue_weixin\branches\1.7.4\src\weixin\data\account_yyn_income.txt" WillowData="" Order="170" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/index" Action="E:\project\ue_weixin\branches\1.7.4\src\weixin\data\account_yyn_account.txt" WillowData="" Order="172" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/invest" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_buy.json" WillowData="" Order="174" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/yyn" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_yyn_detail.txt" WillowData="" Order="180" ResponseRule_Id="1962" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/withdraw/init/" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\account_yyn_draw_init.txt" WillowData="" Order="184" ResponseRule_Id="2000" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/withdraw" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\account_yyn_draw_success.txt" WillowData="" Order="186" ResponseRule_Id="2000" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/assets" Action="E:\project\ue_weixin\branches\2.1.0\src\weixin\data\account\yyn\invest_list.json" WillowData="" Order="189" ResponseRule_Id="2010" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/earnings" Action="E:\project\ue_weixin\branches\1.8.5\src\weixin\data\account_yyn_detail.json" WillowData="" Order="191" ResponseRule_Id="2010" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/yyn/138754" Action="E:\project\ue_weixin\branches\2.1.0\src\weixin\data\account\yyn\detail.json" WillowData="" Order="209" ResponseRule_Id="2423" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/withdraw" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_draw.json" WillowData="" Order="176" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/earnings" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_income.json" WillowData="" Order="178" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/yyninfo" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\index_list.json" WillowData="" Order="211" ResponseRule_Id="2423" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/holdingrecords" Action="E:\project\ue_weixin\branches\2.74.0\src\weixin\data\account\yyn\holdingrecords.json" WillowData="" Order="213" ResponseRule_Id="2423" />
+    </Project>
+    <Project Name="详情" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/invests/" Action="E:\project\ue_weixin\branches\2.51.0\src\weixin\data\detail\detail_record.json" WillowData="" Order="65" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:weixin/product/purchase" Action="E:\project\ue_weixin\branches\2.51.0\src\weixin\data\detail\detail_buy.json" WillowData="" Order="208" ResponseRule_Id="2422" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/bonusShare" Action="E:\project\ue_weixin\branches\2.51.0\src\weixin\data\detail\detail_bonus_share.json" WillowData="" Order="215" ResponseRule_Id="2435" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/productDetails/ptd" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\detail\detail_axn.json" WillowData="" Order="216" ResponseRule_Id="2437" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/yyninvests" Action="E:\project\ue_weixin\branches\2.51.0\src\weixin\data\detail\detail_record.json" WillowData="" Order="66" ResponseRule_Id="101" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/product/couponinfo" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\detail\detail_bonus.json" WillowData="" Order="217" ResponseRule_Id="2437" />
+    </Project>
+    <Project Name="账户中心" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/info/v2.json" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\info\index.json" WillowData="" Order="197" ResponseRule_Id="2064" />
+      <ResponseRule Enabled="true" Match="regex:weixin/account/index/v2" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account\index.json" WillowData="" Order="198" ResponseRule_Id="2064" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/msg" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\msg\index.json" WillowData="" Order="241" ResponseRule_Id="2816" />
+    </Project>
+    <Project Name="详情-天天牛" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/productDetails/current[^view]" Action="E:\project\ue_weixin\branches\2.76.0\src\weixin\data\detail\detail_ttn.json" WillowData="" Order="200" ResponseRule_Id="2379" />
+    </Project>
+    <Project Name="详情-散标" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/loan" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\detail\detail_sanbiao.json" WillowData="" Order="201" ResponseRule_Id="2379" />
+      <ResponseRule Enabled="false" Match="regex:weixin/test" Action="E:\project\ue_weixin\branches\2.1.0\src\weixin\data\detail\test.json" WillowData="" Order="205" ResponseRule_Id="2379" />
+      <ResponseRule Enabled="false" Match="regex:weixin/static/module/detail/sanbiao/main.js" Action="E:\project\ue_weixin\trunk\WebHtml\weixin\static\module\detail\sanbiao\main.js" WillowData="" Order="245" ResponseRule_Id="2838" />
+    </Project>
+    <Project Name="详情-理财金券" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/productDetails/loan" Action="E:\project\ue_weixin\branches\2.16.0\src\weixin\data\detail\detail_experience.json" WillowData="" Order="206" ResponseRule_Id="2379" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/coupon/list" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\detail\detail_experience_list.json" WillowData="" Order="220" ResponseRule_Id="2445" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/coupon[^\/list]" Action="E:\project\ue_weixin\branches\2.16.0\src\weixin\data\detail\detail_experience_post.json" WillowData="" Order="222" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/coupon" Action="E:\project\ue_weixin\branches\2.16.0\src\weixin\data\detail\detail_experience_post.json" WillowData="" Order="221" ResponseRule_Id="2445" />
+    </Project>
+    <Project Name="详情-安心牛" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/ptd/" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\detail\detail_axn.json" WillowData="" Order="202" ResponseRule_Id="2379" />
+    </Project>
+    <Project Name="详情-月月牛" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/yyn[^view]" Action="E:\project\ue_weixin\branches\2.55.0\src\weixin\data\detail\detail_yyn.json" WillowData="" Order="223" ResponseRule_Id="2446" />
+    </Project>
+    <Project Name="详情-债权" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/debt" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\detail\detail_transfer.json" WillowData="" Order="204" ResponseRule_Id="2379" />
+    </Project>
+    <Project Name="消息中心" Enabled="false">
+      <ResponseRule Enabled="true" Match="https://www.xiaoniu88.com/weixin/account/sitemessage/list/0/10.json" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\data\account\msg\list.json" WillowData="" Order="199" ResponseRule_Id="2064" />
+      <ResponseRule Enabled="false" Match="regex:/account/sitemessage/detail" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\html\account\v2\msg\detail.html" WillowData="" Order="244" ResponseRule_Id="2820" />
+      <ResponseRule Enabled="false" Match="regex:static/weixin/static/module/account/v2/msg/list.js" Action="E:\project\ue_weixin\branches\2.7.0\WebHtml\weixin\static\module\account\v2\msg\list.js" WillowData="" Order="248" ResponseRule_Id="2859" />
+    </Project>
+    <Project Name="我的夺宝" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/account/activity/tzdb/investrecords" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\data\account\tzdb\list.json" WillowData="" Order="242" ResponseRule_Id="2816" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/activity/tzdb/numbersindex" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\html\account\v2\tzdb\show_number.html" WillowData="" Order="246" ResponseRule_Id="2855" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/activity/tzdb/addressindex" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\html\account\v2\tzdb\input_address.html" WillowData="" Order="243" ResponseRule_Id="2816" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/static/module/common/util" Action="E:\project\ue_weixin\branches\2.7.0\src\weixin\res\module\common\util.js" WillowData="" Order="247" ResponseRule_Id="2858" />
+      <ResponseRule Enabled="true" Match="regex:weixin/activity/tzdb/product/0/10" Action="E:\project\ue_weixin\trunk\src\weixin\data\account\tzdb\list.json" WillowData="" Order="249" ResponseRule_Id="2915" />
+    </Project>
+    <Project Name="账户中心--绑卡" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/supportbank" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account\bindCard\bindcard.json" WillowData="" Order="252" ResponseRule_Id="3075" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/applyquickpaybindcard" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account_bank_auth_post.txt" WillowData="" Order="121" ResponseRule_Id="1237" />
+    </Project>
+    <Project Name="理财金分享" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/couponshare/receive" Action="E:\project\ue_weixin\branches\2.20.0\src\weixin\data\licaijin\receive.json" WillowData="" Order="136" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/couponshare/records" Action="E:\project\ue_weixin\branches\2.20.0\src\weixin\data\licaijin\records.json" WillowData="" Order="183" ResponseRule_Id="1963" />
+    </Project>
+    <Project Name="token" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/token" Action="E:\project\ue_weixin\branches\2.104.0\src\weixin\data\token\main.json" WillowData="" Order="253" ResponseRule_Id="3075" />
+      <ResponseRule Enabled="false" Match="regex:weixin/repayment/recharge" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\puhui\main.json" WillowData="" Order="254" ResponseRule_Id="3075" />
+    </Project>
+    <Project Name="618活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="http://image.xiaoniu88.com/static/weixin/static/module/partner/app_promotion/main.js?" Action="E:\project\ue_weixin\branches\2.24.1\WebHtml\weixin\static\module\partner\app_promotion\main.js" WillowData="" Order="255" ResponseRule_Id="3085" />
+    </Project>
+    <Project Name="B--Host-童吕萍" Enabled="false">
+      <OverrideHost Enabled="true" Name="image.xiaoniu88.com" IP="172.20.21.200" Order="18" />
+      <OverrideHost Enabled="true" Name="www.xiaoniu88.com" IP="172.20.17.115" Order="39" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.17.115" Order="16" />
+    </Project>
+    <Project Name="C--Host-测试" Enabled="true">
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.83" Order="7" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.230" Order="19" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.230" Order="21" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.84" Order="12" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.86" Order="23" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.30.63" Order="27" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.85" Order="5" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.83" Order="8" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.82" Order="9" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.84" Order="13" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.30.63" Order="1" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.30.63" Order="2" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.82" Order="10" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.85" Order="6" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.86" Order="24" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.30.63" Order="28" />
+      <OverrideHost Enabled="true" Name="www.xiaoniu88.com" IP="172.20.20.89" Order="15" />
+      <OverrideHost Enabled="true" Name="image.xiaoniu88.com" IP="172.20.20.89" Order="14" />
+      <OverrideHost Enabled="false" Name="m.xiaoniu88.com" IP="172.20.20.82" Order="11" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.20.81" Order="3" />
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.20.81" Order="4" />
+    </Project>
+    <Project Name="D--Host-准生产" Enabled="false">
+      <OverrideHost Enabled="false" Name="www.xiaoniu88.com" IP="172.20.77.1" Order="29" />
+      <OverrideHost Enabled="false" Name="image.xiaoniu88.com" IP="172.20.77.5" Order="22" />
+      <OverrideHost Enabled="false" Name="m.xiaoniu88.com" IP="172.20.77.5" Order="30" />
+      <OverrideHost Enabled="true" Name="xnbe.xiaoniu88.com" IP="172.20.77.121" Order="31" />
+      <OverrideHost Enabled="true" Name="www.xiaoniu88.com" IP="172.20.77.122" Order="32" />
+      <OverrideHost Enabled="true" Name="image.xiaoniu88.com" IP="172.20.77.122" Order="33" />
+      <OverrideHost Enabled="true" Name="m.xiaoniu88.com" IP="172.20.77.122" Order="34" />
+    </Project>
+    <Project Name="D--Host-开发环境101" Enabled="false">
+      <OverrideHost Enabled="true" Name="www.xiaoniu88.com" IP="172.20.21.101" Order="25" />
+      <OverrideHost Enabled="true" Name="image.xiaoniu88.com" IP="172.20.21.200" Order="20" />
+    </Project>
+    <Project Name="开宝箱" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/treasurebox/draw" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\kaibaoxiang\prize.json" WillowData="" Order="137" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/treasurebox/saveaddress" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\kaibaoxiang\address.json" WillowData="" Order="159" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="300亿活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/30billion/draw" Action="E:\project\ue_weixin\trunk\src\weixin\data\activity\300yi\lottery.json" WillowData="" Order="138" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:weixin/activity/30billion/init" Action="E:\project\ue_weixin\trunk\src\weixin\data\activity\300yi\init.json" WillowData="" Order="164" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/30billion/address" Action="E:\project\ue_weixin\trunk\src\weixin\data\activity\300yi\address.json" WillowData="" Order="165" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:static/WebXn/dist/payment/recharge/js/init.js" Action="C:\Users\Administrator\Desktop\init.js" WillowData="" Order="166" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="理财师奔跑" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/olympicmarathon/ranklist" Action="E:\project\ue_weixin\branches\2.33.0\src\weixin\data\activity\aoyun\licaishi.json" WillowData="" Order="256" ResponseRule_Id="3085" />
+    </Project>
+    <Project Name="七夕活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/chinesevalentinesday/init" Action="E:\project\ue_weixin\branches\2.40.0\src\weixin\data\activity\7xi\2016\init.json" WillowData="" Order="139" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/chinesevalentinesday/draw" Action="E:\project\ue_weixin\branches\2.40.0\src\weixin\data\activity\7xi\2016\lottery.json" WillowData="" Order="152" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="奥运竞猜" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/olympicquiz/info" Action="E:\project\ue_weixin\branches\2.80.0\src\weixin\data\activity\aoyun\jingcai.json" WillowData="" Order="151" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/olympicquiz/schedule" Action="E:\project\ue_weixin\branches\2.35.0\src\weixin\data\activity\aoyun\jiangpai.json" WillowData="" Order="158" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/olympicquiz/draw" Action="E:\project\ue_weixin\branches\2.35.0\src\weixin\data\activity\aoyun\draw.json" WillowData="" Order="264" ResponseRule_Id="3205" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/olympicquiz/records/" Action="E:\project\ue_weixin\branches\2.35.0\src\weixin\data\activity\aoyun\jiangpai_records.json" WillowData="" Order="265" ResponseRule_Id="3206" />
+    </Project>
+    <Project Name="中秋活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/activity/midautumnfestival/init" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\zhongqiu\2016\init.json" WillowData="" Order="153" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/midautumnfestival/draw" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\zhongqiu\2016\lottery.json" WillowData="" Order="143" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/midautumnfestival/address" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\zhongqiu\2016\address.json" WillowData="" Order="160" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:activity/midautumnfestival/myrecords" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\zhongqiu\2016\records.json" WillowData="" Order="266" ResponseRule_Id="3383" />
+    </Project>
+    <Project Name="PC Portal" Enabled="false">
+      <ResponseRule Enabled="true" Match="http://image.xiaoniu88.com/static/WebXn/dist/" Action="E:\project\PC\front-end\branches\2.98.0\WebXn\" WillowData="" Order="277" ResponseRule_Id="3553" />
+    </Project>
+    <Project Name="家庭理财师" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/financierfamily/init" Action="E:\project\ue_weixin\branches\2.44.0\src\weixin\data\activity\licaishi\family\data.json" WillowData="" Order="150" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="iphone7活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/activity/iphone7/init" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\iphone7\init.json" WillowData="" Order="155" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/iphone7/draw" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\iphone7\draw.json" WillowData="" Order="147" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/iphone7/address" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\iphone7\address.json" WillowData="" Order="162" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:activity/iphone7/myrecords" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\activity\iphone7\records.json" WillowData="" Order="268" ResponseRule_Id="3383" />
+    </Project>
+    <Project Name="普惠三期" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/activity/midautumnfestival/init" Action="E:\project\ue_weixin\branches\2.46.0\src\weixin\data\activity\zhongqiu\2016\init.json" WillowData="" Order="154" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/repayment/contract" Action="E:\project\ue_weixin\branches\2.104.0\src\weixin\data\puhui\contract.json" WillowData="" Order="146" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/midautumnfestival/address" Action="E:\project\ue_weixin\branches\2.46.0\src\weixin\data\activity\zhongqiu\2016\address.json" WillowData="" Order="161" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:activity/midautumnfestival/myrecords" Action="E:\project\ue_weixin\branches\2.46.0\src\weixin\data\activity\zhongqiu\2016\records.json" WillowData="" Order="267" ResponseRule_Id="3383" />
+    </Project>
+    <Project Name="国庆活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/nationalday/init" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\guoqing\init.json" WillowData="" Order="157" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/nationalday/investment" Action="E:\project\ue_weixin\branches\2.49.0\src\weixin\data\activity\guoqing\investment.json" WillowData="" Order="149" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="微信三期" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/capital/compound_invest" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\compound_invest.json" WillowData="" Order="156" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/repaymentcalendar" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\repayment_calendar.json" WillowData="" Order="148" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/iphone7/address" Action="E:\project\ue_weixin\branches\2.52.0\src\weixin\data\activity\iphone7\address.json" WillowData="" Order="163" ResponseRule_Id="1717" />
+      <ResponseRule Enabled="false" Match="regex:activity/iphone7/myrecords" Action="E:\project\ue_weixin\branches\2.52.0\src\weixin\data\activity\iphone7\records.json" WillowData="" Order="271" ResponseRule_Id="3383" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/recharge/quickpayvalidate" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\quickpay_validate.json" WillowData="" Order="272" ResponseRule_Id="3383" />
+      <ResponseRule Enabled="true" Match="http://image.xiaoniu88.com/static/weixin/static/js/res/module/account/yyn/money.js" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\res\module\account\yyn\money.js" WillowData="" Order="273" ResponseRule_Id="3383" />
+    </Project>
+    <Project Name="CBA" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/cba/init" Action="E:\project\ue_weixin\branches\2.54.0\src\weixin\data\activity\cba\init.json" WillowData="" Order="140" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="我的账户-增利券" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/account/interestcoupon/list" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\account_rate.json" WillowData="" Order="141" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="贷款人信息披露" Enabled="false">
+      <ResponseRule Enabled="true" Match="http://image.xiaoniu88.com/static/WebXn/dist/product/detail/js/init.js" Action="D:\work\branches\front-end\2.91.10\WebXn\product\detail\js\init.js" WillowData="" Order="145" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="借款人信息披露" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/static/WebXn/dist/product/detail/js/init.js" Action="D:\work\branches\front-end\2.114.0\WebXn\product\detail\js\init.js" WillowData="" Order="144" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="20161126感恩节" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgivingseason/init" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\thanksgiving\2016\init.json" WillowData="" Order="278" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgivingseason/myrecords/" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\thanksgiving\2016\records.json" WillowData="" Order="280" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgivingseason/rewarddetail/" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\thanksgiving\2016\rewarddetail.json" WillowData="" Order="282" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgivingseason/myaddress" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\thanksgiving\2016\myaddress.json" WillowData="" Order="284" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/thanksgivingseason/logisticsaddr" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\thanksgiving\2016\setAddressResult.json" WillowData="" Order="285" ResponseRule_Id="3583" />
+    </Project>
+    <Project Name="我的账户-天天牛" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:weixin/account/yyn/earnings" Action="E:\project\ue_weixin\branches\1.7.4\src\weixin\data\account_yyn_income.txt" WillowData="" Order="171" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="false" Match="regex:weixin/account/index" Action="E:\project\ue_weixin\branches\1.7.4\src\weixin\data\account_yyn_account.txt" WillowData="" Order="173" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/invest" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_buy.json" WillowData="" Order="175" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:weixin/productDetails/yyn" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account_yyn_detail.txt" WillowData="" Order="181" ResponseRule_Id="1962" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/withdraw/init/" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\account_yyn_draw_init.txt" WillowData="" Order="185" ResponseRule_Id="2000" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/withdraw" Action="E:\project\ue_weixin\branches\1.8.3\src\weixin\data\account_yyn_draw_success.txt" WillowData="" Order="187" ResponseRule_Id="2000" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/assets" Action="E:\project\ue_weixin\branches\2.1.0\src\weixin\data\account\yyn\invest_list.json" WillowData="" Order="190" ResponseRule_Id="2010" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/account/yyn/earnings" Action="E:\project\ue_weixin\branches\1.8.5\src\weixin\data\account_yyn_detail.json" WillowData="" Order="192" ResponseRule_Id="2010" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/productDetails/yyn/138754" Action="E:\project\ue_weixin\branches\2.1.0\src\weixin\data\account\yyn\detail.json" WillowData="" Order="210" ResponseRule_Id="2423" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/withdraw" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_draw.json" WillowData="" Order="177" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/account/yyn/capital/earnings" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\money_income.json" WillowData="" Order="179" ResponseRule_Id="1959" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/yyninfo" Action="E:\project\ue_weixin\branches\2.57.0\src\weixin\data\account\yyn\index_list.json" WillowData="" Order="212" ResponseRule_Id="2423" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/holdingrecords" Action="E:\project\ue_weixin\branches\2.59.0\src\weixin\data\account\yyn\holdingrecords.json" WillowData="" Order="214" ResponseRule_Id="2423" />
+    </Project>
+    <Project Name="20161207会员一期" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/member/init" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\member\init.json" WillowData="" Order="299" ResponseRule_Id="3611" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/member/task/list" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\member\task.json" WillowData="" Order="301" ResponseRule_Id="3611" />
+    </Project>
+    <Project Name="20161212十二月会员活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/membership/init" Action="E:\project\ue_weixin\branches\2.72.0\src\weixin\data\activity\member\init.json" WillowData="" Order="300" ResponseRule_Id="3611" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/membership/answer" Action="E:\project\ue_weixin\branches\2.72.0\src\weixin\data\activity\member\answer.json" WillowData="" Order="302" ResponseRule_Id="3611" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/membership/records" Action="E:\project\ue_weixin\branches\2.72.0\src\weixin\data\activity\member\records.json" WillowData="" Order="303" ResponseRule_Id="3611" />
+    </Project>
+    <Project Name="20161120元旦活动" Enabled="false">
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/newyear/init" Action="E:\project\ue_weixin\branches\2.76.0\src\weixin\data\activity\newyear\2017\init.json" WillowData="" Order="225" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/newyear/draw" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\newyear\2017\draw.json" WillowData="" Order="227" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/springfestival/records.json" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\newyear\2016\index.json" WillowData="" Order="230" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/newyear/sign" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\newyear\2017\sign.json" WillowData="" Order="228" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/newyear/myrecords" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\newyear\2017\myRecords.json" WillowData="" Order="229" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/address/list" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\account\address\list.json" WillowData="" Order="231" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/address/setlogisticsaddr" Action="E:\project\ue_weixin\branches\2.78.0\src\weixin\data\account\address\setAddressResult.json" WillowData="" Order="233" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/newyear/rewarddetail" Action="E:\project\ue_weixin\branches\2.75.0\src\weixin\data\activity\newyear\2017\rewarddetail.json" WillowData="" Order="235" ResponseRule_Id="2446" />
+    </Project>
+    <Project Name="20170103运营500亿活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/init" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\init.json" WillowData="" Order="304" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/current/floor" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\floor.json" WillowData="" Order="315" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/draw" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\draw.json" WillowData="" Order="318" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/account/prize/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\records.json" WillowData="" Order="321" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/latest/prize/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\recentRecords.json" WillowData="" Order="324" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/latest/floor/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\floorRecords.json" WillowData="" Order="326" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/account/floor/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\myFloors.json" WillowData="" Order="328" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/fiftybillions/floor/detail" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\500yi\prizeDetail.json" WillowData="" Order="330" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="我的账户-红包" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/redbag" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account_bonus.json" WillowData="" Order="142" ResponseRule_Id="1717" />
+    </Project>
+    <Project Name="20170113新年活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/2017springfestival/rank" Action="E:\project\ue_weixin\branches\2.80.0\src\weixin\data\activity\newyear\2017\init-chinesenewyear.json" WillowData="" Order="226" ResponseRule_Id="2446" />
+    </Project>
+    <Project Name="20161117生财有道" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/holdingrecords" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\account\flexible\flexible_list.json" WillowData="" Order="279" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/overview/info" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\flexible\flexible_overview.json" WillowData="" Order="281" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/capital" Action="E:\project\ue_weixin\branches\2.61.0\src\weixin\data\account\flexible\capital_records.json" WillowData="" Order="283" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/account/flex/detail/info/" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\account\flexible\flexible_account_detail.json" WillowData="" Order="286" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/finishedrecords" Action="E:\project\ue_weixin\branches\2.87.0\src\weixin\data\account\flexible\finishedrecords.json" WillowData="" Order="287" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/productDetails/flex/[^view]" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\detail\detail_flexible.json" WillowData="" Order="224" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/withdraw/init" Action="E:\project\ue_weixin\branches\2.61.0\src\weixin\data\account\flexible\withdraw_init.json" WillowData="" Order="290" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/productlist/v2/list/fixed" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\list\fixed.json" WillowData="" Order="262" ResponseRule_Id="3207" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/capital" Action="E:\project\ue_weixin\branches\2.61.0\src\weixin\data\account\capital.json" WillowData="" Order="291" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="https://image.xiaoniu88.com/static/weixin/static/img/v2/record/grade.png" Action="E:\project\ue_weixin\branches\2.68.0\src\weixin\res\img\v2\record\grade.png" WillowData="" Order="298" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/yyn/finishedrecords" Action="E:\project\ue_weixin\branches\2.74.0\src\weixin\data\account\yyn\finishedrecords.json" WillowData="" Order="289" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/productlist/v2/list/flexible" Action="E:\project\ue_weixin\trunk\src\weixin\data\list\flexible.json" WillowData="" Order="263" ResponseRule_Id="3207" />
+    </Project>
+    <Project Name="20170221地址管理" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/address/list" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\account\address\list.json" WillowData="" Order="232" ResponseRule_Id="2446" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/address/setlogisticsaddr" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\account\address\setAddressResult.json" WillowData="" Order="234" ResponseRule_Id="2446" />
+    </Project>
+    <Project Name="20170222三八女神节" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/womensday/init" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\init.json" WillowData="" Order="305" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/womensday/redbag/draw" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\draw_redbag.json" WillowData="" Order="316" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/womensday/redbag/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\records_redbag.json" WillowData="" Order="319" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/womensday/reward/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\records.json" WillowData="" Order="322" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/reward/itemdetail/" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\records_detail.json" WillowData="" Order="325" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/womensday/draw" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\draw.json" WillowData="" Order="327" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/womensday/account/floor/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\myFloors.json" WillowData="" Order="329" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/womensday/floor/detail" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\prizeDetail.json" WillowData="" Order="606" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="20170303微信服务号需求" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/user/wechat/init" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\login\init.json" WillowData="" Order="306" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/womensday/redbag/draw" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\draw_redbag.json" WillowData="" Order="317" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/womensday/redbag/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\records_redbag.json" WillowData="" Order="320" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="false" Match="regex:/weixin/activity/womensday/reward/records" Action="E:\project\ue_weixin\branches\2.86.0\src\weixin\data\activity\womensday\records.json" WillowData="" Order="323" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/user/wechat/bind" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\login\bind.json" WillowData="" Order="311" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/user/wechat/unbind" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\login\unbind.json" WillowData="" Order="313" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="20170316蘑菇活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/mushroom/init" Action="E:\project\ue_weixin\branches\2.93.0\src\weixin\data\activity\mushroom\init.json" WillowData="" Order="307" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/mushroom/draw" Action="E:\project\ue_weixin\branches\2.93.0\src\weixin\data\activity\mushroom\draw.json" WillowData="" Order="312" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/mushroom/exchange" Action="E:\project\ue_weixin\branches\2.93.0\src\weixin\data\activity\mushroom\exchange.json" WillowData="" Order="314" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="20170328 600亿活动" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/activity/sixtybillion/init" Action="E:\project\ue_weixin\trunk\src\weixin\data\activity\600yi\init.json" WillowData="" Order="308" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="20170401提现券" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/cashier/" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account_coupon_withdraw.json" WillowData="" Order="309" ResponseRule_Id="3626" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/withdraw[^/apply]" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account\withdraw\init.json" WillowData="" Order="218" ResponseRule_Id="2437" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/withdraw/apply" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\account\withdraw\apply.json" WillowData="" Order="219" ResponseRule_Id="2437" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/withdraw/confirm" Action="E:\project\ue_weixin\branches\2.99.0\src\weixin\data\account\withdraw\submit.json" WillowData="" Order="310" ResponseRule_Id="3626" />
+    </Project>
+    <Project Name="20170404存续牛" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/productDetails/duration/" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\detail\detail_duration.json" WillowData="" Order="203" ResponseRule_Id="2379" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/assets" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\capital.json" WillowData="" Order="292" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/index/v2.json" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\index\index.json" WillowData="" Order="194" ResponseRule_Id="2032" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/invest/index" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\invest\list.json" WillowData="" Order="293" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/invest/holding" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\account\duration\list.json" WillowData="" Order="294" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/flex/finishedrecords" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\flexible\finishedrecords.json" WillowData="" Order="288" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/account/invest/withdraw/" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account\duration\finished.json" WillowData="" Order="295" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/investlist/" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\detail\detail_duration_invest.json" WillowData="" Order="296" ResponseRule_Id="3583" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/productDetails/borrower/" Action="E:\project\ue_weixin\branches\2.102.0\src\weixin\data\detail\detail_duration_borrower.json" WillowData="" Order="297" ResponseRule_Id="3583" />
+    </Project>
+    <Project Name="20170411电子签章授权" Enabled="false">
+      <ResponseRule Enabled="true" Match="regex:/weixin/user/sign/author/info" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account_sign_author.json" WillowData="" Order="195" ResponseRule_Id="2032" />
+      <ResponseRule Enabled="true" Match="regex:/weixin/user/sign/author/allow" Action="E:\project\ue_weixin\branches\2.95.0\src\weixin\data\account_sign_arrow.json" WillowData="" Order="196" ResponseRule_Id="2032" />
+    </Project>
+  </dsProject>
+</FiddlerDS>
