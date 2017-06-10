@@ -8,7 +8,9 @@ const FILE_PATH = {
     projects: './project.json'
 };
 
-const PROJECT_ROOT = 'D:\\Work\\ue_weixin\\trunk';
+// const PROJECT_ROOT = 'D:\\Work\\ue_weixin\\trunk';
+const PROJECT_ROOT = 'D:\\Work\\2017-06-10\\weixin';
+const TEST_DATA_ROOT = './test_data';
 
 var fileStr = fs.readFileSync(FILE_PATH.data, { encoding: 'utf-8' });
 // console.log(fileStr);
@@ -38,6 +40,8 @@ $("Project").each(function() {
         var action = $rule.attr("action");
         // 替换掉正则表达式符号
         match = match.replace('regex:', '');
+        // 去除域名
+        match = match.replace('https://www.xiaoniu88.com/weixin','/weixin');
         // 替换双反斜杠为斜杠
         action = action.replace(/\\/g, '\/');
         // 替换掉绝对路径为相对路径，如去掉头E:/project/ue_weixin/branches/2.78.0/
@@ -64,6 +68,11 @@ projectList.forEach(function(project) {
             console.log('not in data folder:' + rule.action);
             return;
         }
+        // 过滤掉非标准url
+        if (!/^\/?weixin/.test(rule.match)) {
+            console.log('no standard url:'+rule.match);
+            return;
+        }
         // 过滤不存在数据文件的规则
         var file_path = path.join(PROJECT_ROOT, rule.action);
         try {
@@ -80,18 +89,82 @@ projectList.forEach(function(project) {
     newProjectList.push(newProject);
 });
 
-printProjectList(newProjectList);
+// printProjectList(newProjectList);
+//printNonStandardRule(newProjectList);
+printNonJsonFileRule(newProjectList);
 
 fs.writeFileSync(FILE_PATH.projects, JSON.stringify(newProjectList), { encoding: 'utf-8' });
 
+function printNonJsonFileRule(projectList){
+    var has = false;
+    eachRule(projectList,function(rule){
+        if(!isJsonFile(path.join(PROJECT_ROOT,rule.action))){
+            console.log(rule.action);
+        }
+    });
+}
 
+
+/**
+ * 打印非标准规则
+ * 
+ * @param {any} projectList 
+ */
+function printNonStandardRule(projectList) {
+    eachRule(projectList, function(rule) {
+        if (!/^\/?weixin/.test(rule.match)) {
+            console.log(rule.match);
+        }
+    });
+}
+
+/**
+ * 遍历规则
+ * 
+ * @param {any} projectList 
+ * @param {any} cb 
+ */
+function eachRule(projectList, cb) {
+    projectList.forEach(function(project) {
+        if (project.rules.length > 0) {
+            project.rules.forEach(function(rule) {
+                cb(rule, project);
+            });
+        }
+    });
+}
+
+/**
+ * 
+ * 打印工程列表
+ * 
+ * @param {any} projectList 
+ * @returns 
+ */
 function printProjectList(projectList) {
     if (projectList.length == 0) return;
     projectList.forEach(function(item) {
         console.log(item.name);
         if (item.rules.length == 0) return;
         item.rules.forEach(function(rule) {
-            console.log('\t%s -> %s', rule.match, rule.action);
+            console.log('\t%s -> %s', rule.match, path.join(PROJECT_ROOT, rule.action));
         });
     });
+}
+
+/**
+ * 
+ * 检查是否JSON文件
+ * 
+ * @param {any} path 
+ * @returns 
+ */
+function isJsonFile(path) {
+    var fileStr = fs.readFileSync(path, { encoding: 'utf-8' });
+    try {
+        var json = JSON.parse(fileStr);
+    } catch (e) {
+        return false;
+    }
+    return true;
 }
