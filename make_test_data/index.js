@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const DOMParser = require('xmldom').DOMParser;
 const cheerio = require('cheerio');
 
 const FILE_PATH = {
@@ -12,12 +11,9 @@ const FILE_PATH = {
 const PROJECT_ROOT = 'D:\\Work\\2017-06-10\\weixin';
 const TEST_DATA_ROOT = './test_data';
 
-var fileStr = fs.readFileSync(FILE_PATH.data, { encoding: 'utf-8' });
-// console.log(fileStr);
-// var doc = new DOMParser().parseFromString(fileStr);
-var $ = cheerio.load(fileStr);
-
 var projectList = [];
+
+// 定义数据结构
 
 function Project(name, rules = []) {
     this.name = name;
@@ -29,7 +25,13 @@ function Rule(match, action) {
     this.action = action;
 }
 
-// 读取xml文件
+// 读取配置文件
+var fileStr = fs.readFileSync(FILE_PATH.data, { encoding: 'utf-8' });
+// console.log(fileStr);
+// 使用 cheerio 遍历xml
+var $ = cheerio.load(fileStr);
+
+// 读取xml文件，格式化数据，构建json对象
 $("Project").each(function() {
     var $project = $(this);
     var name = $project.attr("name");
@@ -40,6 +42,8 @@ $("Project").each(function() {
         var action = $rule.attr("action");
         // 替换掉正则表达式符号
         match = match.replace('regex:', '');
+        // 格式化，去除正排除的则表达式
+        match = match.replace(/\[[^\]]+\]/,'');
         // 去除域名
         match = match.replace('https://www.xiaoniu88.com/weixin','/weixin');
         // 替换双反斜杠为斜杠
@@ -55,6 +59,7 @@ console.log('source project length:' + projectList.length);
 
 var newProjectList = [];
 
+// 清理数据
 projectList.forEach(function(project) {
     var newRuleList = [];
     // 过滤为空的project
@@ -90,13 +95,75 @@ projectList.forEach(function(project) {
 });
 
 // printProjectList(newProjectList);
-//printNonStandardRule(newProjectList);
-printNonJsonFileRule(newProjectList);
+// printNonStandardRule(newProjectList);
+// printNonJsonFileRule(newProjectList);
+makeTestData(newProjectList,TEST_DATA_ROOT);
 
-fs.writeFileSync(FILE_PATH.projects, JSON.stringify(newProjectList), { encoding: 'utf-8' });
+// fs.writeFileSync(FILE_PATH.projects, JSON.stringify(newProjectList), { encoding: 'utf-8' });
 
+// fs.statSync('./test_data');
+
+// createFile('./a/b/c/d.json','test');
+
+/**
+ * 生成新的测试数据文件
+ * 
+ * @param {any} projectList 
+ * @param {any} dir 
+ */
+function makeTestData(projectList,dir){
+    var count = 0;
+    eachRule(projectList,function(rule){
+        var _path = rule.match;
+        if(!/\.json$/.test(rule.match)){
+            _path = rule.match.replace(/\/$/,'') + '.json';
+        }
+        _path = path.join(dir,_path);
+        var from = path.join(PROJECT_ROOT,rule.action);
+        var fileStr = fs.readFileSync(from,{encoding:'utf-8'});
+        createFile(_path,fileStr)
+        console.log('save file : %s',_path);
+        count++;
+    });
+
+    console.log('total:%d files',count);
+}
+
+/**
+ * 创建文件
+ * 
+ * @param {any} _path 
+ * @param {any} fileStr 
+ */
+function createFile(_path,fileStr){
+    var dir = path.dirname(_path);
+    makeDir(dir);
+    fs.writeFileSync(_path,fileStr,{encoding:'utf-8'});
+}
+
+/**
+ * 
+ * 递归创建目录
+ * 
+ * @param {any} _path 
+ */
+function makeDir(_path){
+    try{
+        fs.statSync(_path);
+    }catch(e){
+        var parent = path.dirname(_path);
+        makeDir(parent);
+        fs.mkdirSync(_path);
+    }
+}
+
+/**
+ * 
+ * 打印非JSON的规则
+ * 
+ * @param {any} projectList 
+ */
 function printNonJsonFileRule(projectList){
-    var has = false;
     eachRule(projectList,function(rule){
         if(!isJsonFile(path.join(PROJECT_ROOT,rule.action))){
             console.log(rule.action);
@@ -113,6 +180,8 @@ function printNonJsonFileRule(projectList){
 function printNonStandardRule(projectList) {
     eachRule(projectList, function(rule) {
         if (!/^\/?weixin/.test(rule.match)) {
+            console.log(rule.match);
+        }else if(!/^[_a-zA-Z0-9\/]+$/.test(rule.match)){
             console.log(rule.match);
         }
     });
