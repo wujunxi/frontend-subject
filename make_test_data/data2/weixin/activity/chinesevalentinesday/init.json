@@ -1,0 +1,59 @@
+{
+	"activityInfo": {
+		"activityStatus": 2,
+		"activityDetail": {
+			"id": 20,
+			"activityCode": "double_seventh",
+			"activityName": "浪漫七夕活动",
+			"startDate": 1468944000000,
+			"endDate": 1471363199000,
+			"activityStatus": 2,
+			"remark": "浪漫七夕季",
+			"createTime": 1469103493000,
+			"updateTime": 1469103493000
+		},
+		"remainDrawCount": 200,
+		"latestRecords": [{
+			"userName": "m****ao",
+			"awardDesc": "积分10分",
+			"receiveTime": "1天前",
+			"awardType": 70
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "积分20分",
+			"receiveTime": "1天前",
+			"awardType": 71
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "积分20分",
+			"receiveTime": "1天前",
+			"awardType": 71
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "积分10分",
+			"receiveTime": "1天前",
+			"awardType": 70
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "投资返现红包30元",
+			"receiveTime": "1天前",
+			"awardType": 69
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "投资返现红包30元",
+			"receiveTime": "1天前",
+			"awardType": 69
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "积分20分",
+			"receiveTime": "1天前",
+			"awardType": 71
+		}, {
+			"userName": "m****ao",
+			"awardDesc": "投资返现红包30元",
+			"receiveTime": "1天前",
+			"awardType": 69
+		}]
+	},
+	"logined": true
+}

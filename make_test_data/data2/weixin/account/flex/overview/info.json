@@ -1,0 +1,51 @@
+[
+    {
+        "flexProductType": 11,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": 0,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 21,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": null,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 31,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": null,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 41,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": null,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 50,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": null,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 60,
+        "totalAmount": 0,
+        "totalRevenue": 0,
+        "yesterdayRevenue": null,
+        "currentProductId": null
+    },
+    {
+        "flexProductType": 99,
+        "totalAmount": null,
+        "totalRevenue": null,
+        "yesterdayRevenue": null,
+        "currentProductId": 110028
+    }
+]

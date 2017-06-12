@@ -1,0 +1,11 @@
+{
+    "data": {
+        "bankCode": "CMB",
+        "bankName": "招商银行",
+        "credit": false,
+        "quickPaySupported": true
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

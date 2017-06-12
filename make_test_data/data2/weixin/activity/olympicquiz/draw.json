@@ -1,0 +1,6 @@
+{
+    "data": null,
+    "status": 1,
+    "errorCode": "wechat_activity_times_limit",
+    "errorDetails": "抽奖次数不够"
+}

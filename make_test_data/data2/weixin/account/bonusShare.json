@@ -1,0 +1,14 @@
+{
+    "bonusData": {
+        "id": 25863,
+        "activityId": 5,
+        "userId": 38698,
+        "amount": 74.66,
+        "balance": 38.83,
+        "dataVersion": 8,
+        "createTime": 1452604172000,
+        "updateTime": 1452783190000
+    },
+    "channelIndex": 1,
+    "params": "333"
+}

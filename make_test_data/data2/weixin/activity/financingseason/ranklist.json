@@ -1,0 +1,48 @@
+{
+"data": [
+		{
+		"username": "a****1",
+		"ranking": 1,
+		"investAmount": 1000000,
+		"flag":0
+		},
+		{
+		"username": "a****2",
+		"ranking": 2,
+		"investAmount": 2000000,
+		"flag":1
+		},
+		{
+		"username": "a****3",
+		"ranking": 3,
+		"investAmount": 3000000,
+		"flag":0
+		},
+		{
+		"username": "a****4",
+		"ranking": 4,
+		"investAmount": 4000000,
+		"flag":0
+		},
+		{
+		"username": "a****5",
+		"ranking": 5,
+		"investAmount": 5000000,
+		"flag":0
+		},
+		{
+		"username": "a****6",
+		"ranking": 6,
+		"investAmount": 6000000,
+		"flag":0
+		},
+		{
+		"username": "a****7",
+		"ranking": 7,
+		"investAmount": 7000000,
+		"flag":1
+		}
+	],
+	"message": "success",
+	"code": "M00000"
+	}

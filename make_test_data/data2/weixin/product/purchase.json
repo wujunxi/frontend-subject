@@ -1,0 +1,11 @@
+{
+    "data": {
+        "productType": 3,
+        "redbag": false,
+        "investId": 205640123585,
+        "buyAmount": 3000
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

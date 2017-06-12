@@ -1,0 +1,41 @@
+{
+    "data": [
+        {
+            "userId": null,
+            "recordId": 133,
+            "sendId": null,
+            "rewardCategory": 8,
+            "rewardName": "60",
+            "rewardNum": 1,
+            "createTime": 1481163774000,
+            "origin": "十二月会员活动",
+            "logisticStatus": 0,
+            "recieveAddress": null
+        },
+        {
+            "userId": null,
+            "recordId": 132,
+            "sendId": null,
+            "rewardCategory": 8,
+            "rewardName": "60",
+            "rewardNum": 1,
+            "createTime": 1481163512000,
+            "origin": "十二月会员活动",
+            "logisticStatus": 0,
+            "recieveAddress": null
+        },
+        {
+            "userId": null,
+            "recordId": 131,
+            "sendId": null,
+            "rewardCategory": 8,
+            "rewardName": "60",
+            "rewardNum": 1,
+            "createTime": 1481162579000,
+            "origin": "十二月会员活动",
+            "logisticStatus": 0,
+            "recieveAddress": null
+        }
+    ],
+    "totalRow": 11
+}

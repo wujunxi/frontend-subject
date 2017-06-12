@@ -1,0 +1,28 @@
+{
+    "data": [{
+        "id": 1,
+        "mailTitle": "会员来领专属福利啦！",
+        "mailContent": "<p>尊敬的钻石会员tlp325：</p><p style=\"text-indent:2em;\">会员就是任性，红包根本不用抢！</p><p style=\"text-indent:2em;\">128.00元会员专属投资返现红包已经悄悄放到您的账户中。</p><p style=\"text-indent:2em;\">面额太大，建议速用！</p><p style=\"text-align:right;padding-right:10px;\">小牛在线运营团队</p>",
+        "sendTime": 1459841929000,
+        "sender": -1,
+        "reciver": 29283,
+        "mailType": 2,
+        "mailStatus": 3,
+        "borrowId": null,
+        "mailMode": 2,
+        "backgroundStatus": 1
+    }, {
+        "id": 2,
+        "mailTitle": "会员来领专属福利啦！",
+        "mailContent": "<p>尊敬的钻石会员tlp325：</p><p style=\"text-indent:2em;\">会员就是任性，红包根本不用抢！</p><p style=\"text-indent:2em;\">228.00元会员专属投资返现红包已经悄悄放到您的账户中。</p><p style=\"text-indent:2em;\">面额太大，建议速用！</p><p style=\"text-align:right;padding-right:10px;\">小牛在线运营团队</p>",
+        "sendTime": 1459841929000,
+        "sender": -1,
+        "reciver": 29283,
+        "mailType": 2,
+        "mailStatus": 1,
+        "borrowId": null,
+        "mailMode": 2,
+        "backgroundStatus": 1
+    }],
+    "totalRow": 21
+}

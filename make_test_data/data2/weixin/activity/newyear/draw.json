@@ -1,0 +1,18 @@
+{
+    "data": {
+        "userId": null,
+        "recordId": null,
+        "sendId": null,
+        "rewardCategory": 2,
+        "rewardName": "5元话费",
+        "rewardNum": null,
+        "createTime": null,
+        "origin": null,
+        "logisticStatus": 0,
+        "recieveAddress": null,
+        "rewardCode": "NEWYEAR004"
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

@@ -1,0 +1,750 @@
+[
+    {
+        "reg": "/weixin/productlist/v2/axn",
+        "local": "data2/weixin/productlist/v2/axn.json"
+    },
+    {
+        "reg": "weixin/productlist/v2/transferable/0/5",
+        "local": "data2/weixin/productlist/v2/transferable/0/5.json"
+    },
+    {
+        "reg": "/weixin/productlist/v2/yyn",
+        "local": "data2/weixin/productlist/v2/yyn.json"
+    },
+    {
+        "reg": "/weixin/productlist/v2/fixed",
+        "local": "data2/weixin/productlist/v2/fixed.json"
+    },
+    {
+        "reg": "/weixin/productlist/v2/flexible",
+        "local": "data2/weixin/productlist/v2/flexible.json"
+    },
+    {
+        "reg": "/weixin/account/withdraw",
+        "local": "data2/weixin/account/withdraw.json"
+    },
+    {
+        "reg": "/weixin/account/withdraw/provicecode",
+        "local": "data2/weixin/account/withdraw/provicecode.json"
+    },
+    {
+        "reg": "weixin/account/withdraw/citycode/701/banktype/CCB",
+        "local": "data2/weixin/account/withdraw/citycode/701/banktype/CCB.json"
+    },
+    {
+        "reg": "/weixin/account/paycode/sendcode",
+        "local": "data2/weixin/account/paycode/sendcode.json"
+    },
+    {
+        "reg": "/weixin/account/paycode",
+        "local": "data2/weixin/account/paycode.json"
+    },
+    {
+        "reg": "/weixin/account/recharge",
+        "local": "data2/weixin/account/recharge.json"
+    },
+    {
+        "reg": "/weixin/account/rechargepay/sendcode",
+        "local": "data2/weixin/account/rechargepay/sendcode.json"
+    },
+    {
+        "reg": "weixin/account/supportbank",
+        "local": "data2/weixin/account/supportbank.json"
+    },
+    {
+        "reg": "/weixin/account/rechargepay/resendcode",
+        "local": "data2/weixin/account/rechargepay/resendcode.json"
+    },
+    {
+        "reg": "/weixin/account/recharge/quickpayvalidate",
+        "local": "data2/weixin/account/recharge/quickpayvalidate.json"
+    },
+    {
+        "reg": "/weixin/account/rechargepay",
+        "local": "data2/weixin/account/rechargepay.json"
+    },
+    {
+        "reg": "/weixin/account/applyquickpaybindcard",
+        "local": "data2/weixin/account/applyquickpaybindcard.json"
+    },
+    {
+        "reg": "/weixin/account/applyquickpaybindcard/sendcode",
+        "local": "data2/weixin/account/applyquickpaybindcard/sendcode.json"
+    },
+    {
+        "reg": "/weixin/account/sendapplycode",
+        "local": "data2/weixin/account/sendapplycode.json"
+    },
+    {
+        "reg": "weixin/account/realnameauth/verifyidno",
+        "local": "data2/weixin/account/realnameauth/verifyidno.json"
+    },
+    {
+        "reg": "weixin/account/withdraw",
+        "local": "data2/weixin/account/withdraw.json"
+    },
+    {
+        "reg": "weixin/account/info",
+        "local": "data2/weixin/account/info.json"
+    },
+    {
+        "reg": "/weixin/account/supportbank",
+        "local": "data2/weixin/account/supportbank.json"
+    },
+    {
+        "reg": "/weixin/account/index",
+        "local": "data2/weixin/account/index.json"
+    },
+    {
+        "reg": "/weixin/account/planner",
+        "local": "data2/weixin/account/planner.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgiving/couponreceive",
+        "local": "data2/weixin/activity/thanksgiving/couponreceive.json"
+    },
+    {
+        "reg": "weixin/register/type/mobile/param",
+        "local": "data2/weixin/register/type/mobile/param.json"
+    },
+    {
+        "reg": "/weixin/register/step1",
+        "local": "data2/weixin/register/step1.json"
+    },
+    {
+        "reg": "/weixin/register/sendcode",
+        "local": "data2/weixin/register/sendcode.json"
+    },
+    {
+        "reg": "/weixin/register/type/refferee/param",
+        "local": "data2/weixin/register/type/refferee/param.json"
+    },
+    {
+        "reg": "/weixin/test",
+        "local": "data2/weixin/test.json"
+    },
+    {
+        "reg": "/weixin/realnameauth/verifyidno",
+        "local": "data2/weixin/realnameauth/verifyidno.json"
+    },
+    {
+        "reg": "weixin/register2",
+        "local": "data2/weixin/register2.json"
+    },
+    {
+        "reg": "weixin/register/type/refferee/param",
+        "local": "data2/weixin/register/type/refferee/param.json"
+    },
+    {
+        "reg": "/weixin/login",
+        "local": "data2/weixin/login.json"
+    },
+    {
+        "reg": "weixin/account/index",
+        "local": "data2/weixin/account/index.json"
+    },
+    {
+        "reg": "weixin/account/current",
+        "local": "data2/weixin/account/current.json"
+    },
+    {
+        "reg": "weixin/account/realnameauth",
+        "local": "data2/weixin/account/realnameauth.json"
+    },
+    {
+        "reg": "/weixin/bonusShare/details",
+        "local": "data2/weixin/bonusShare/details.json"
+    },
+    {
+        "reg": "weixin/index/v2.json",
+        "local": "data2/weixin/index/v2.json"
+    },
+    {
+        "reg": "/weixin/account/activity/tzdb/notice",
+        "local": "data2/weixin/account/activity/tzdb/notice.json"
+    },
+    {
+        "reg": "weixin/account/recharge",
+        "local": "data2/weixin/account/recharge.json"
+    },
+    {
+        "reg": "weixin/account/rechargepay/sendcode",
+        "local": "data2/weixin/account/rechargepay/sendcode.json"
+    },
+    {
+        "reg": "weixin/account/applyquickpay",
+        "local": "data2/weixin/account/applyquickpay.json"
+    },
+    {
+        "reg": "weixin/account/applyquickpaybindcard/verifyidno",
+        "local": "data2/weixin/account/applyquickpaybindcard/verifyidno.json"
+    },
+    {
+        "reg": "weixin/account/applyquickpaybindcard/verifycardno",
+        "local": "data2/weixin/account/applyquickpaybindcard/verifycardno.json"
+    },
+    {
+        "reg": "weixin/account/sendapplycode",
+        "local": "data2/weixin/account/sendapplycode.json"
+    },
+    {
+        "reg": "/weixin/account/applyquickpaybindcard",
+        "local": "data2/weixin/account/applyquickpaybindcard.json"
+    },
+    {
+        "reg": "weixin/account/supportbank",
+        "local": "data2/weixin/account/supportbank.json"
+    },
+    {
+        "reg": "/weixin/activity/springfestival/records",
+        "local": "data2/weixin/activity/springfestival/records.json"
+    },
+    {
+        "reg": "weixin/activity/springfestival",
+        "local": "data2/weixin/activity/springfestival.json"
+    },
+    {
+        "reg": "weixin/activity/financingseason/ranklist",
+        "local": "data2/weixin/activity/financingseason/ranklist.json"
+    },
+    {
+        "reg": "weixin/account/yyn/earnings",
+        "local": "data2/weixin/account/yyn/earnings.json"
+    },
+    {
+        "reg": "weixin/account/index",
+        "local": "data2/weixin/account/index.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/withdraw/init",
+        "local": "data2/weixin/account/yyn/withdraw/init.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/withdraw",
+        "local": "data2/weixin/account/yyn/withdraw.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/assets",
+        "local": "data2/weixin/account/yyn/assets.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/earnings",
+        "local": "data2/weixin/account/yyn/earnings.json"
+    },
+    {
+        "reg": "/weixin/productDetails/yyn/138754",
+        "local": "data2/weixin/productDetails/yyn/138754.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/yyninfo",
+        "local": "data2/weixin/account/yyn/yyninfo.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/holdingrecords",
+        "local": "data2/weixin/account/yyn/holdingrecords.json"
+    },
+    {
+        "reg": "/weixin/invests",
+        "local": "data2/weixin/invests.json"
+    },
+    {
+        "reg": "weixin/product/purchase",
+        "local": "data2/weixin/product/purchase.json"
+    },
+    {
+        "reg": "/weixin/account/bonusShare",
+        "local": "data2/weixin/account/bonusShare.json"
+    },
+    {
+        "reg": "/weixin/productDetails/ptd",
+        "local": "data2/weixin/productDetails/ptd.json"
+    },
+    {
+        "reg": "/weixin/yyninvests",
+        "local": "data2/weixin/yyninvests.json"
+    },
+    {
+        "reg": "/weixin/product/couponinfo",
+        "local": "data2/weixin/product/couponinfo.json"
+    },
+    {
+        "reg": "/weixin/account/info/v2.json",
+        "local": "data2/weixin/account/info/v2.json"
+    },
+    {
+        "reg": "weixin/account/index/v2",
+        "local": "data2/weixin/account/index/v2.json"
+    },
+    {
+        "reg": "/weixin/productDetails/current",
+        "local": "data2/weixin/productDetails/current.json"
+    },
+    {
+        "reg": "weixin/productDetails/loan",
+        "local": "data2/weixin/productDetails/loan.json"
+    },
+    {
+        "reg": "weixin/test",
+        "local": "data2/weixin/test.json"
+    },
+    {
+        "reg": "weixin/productDetails/loan",
+        "local": "data2/weixin/productDetails/loan.json"
+    },
+    {
+        "reg": "/weixin/account/coupon/list",
+        "local": "data2/weixin/account/coupon/list.json"
+    },
+    {
+        "reg": "/weixin/account/coupon",
+        "local": "data2/weixin/account/coupon.json"
+    },
+    {
+        "reg": "/weixin/account/coupon",
+        "local": "data2/weixin/account/coupon.json"
+    },
+    {
+        "reg": "weixin/productDetails/ptd",
+        "local": "data2/weixin/productDetails/ptd.json"
+    },
+    {
+        "reg": "weixin/productDetails/yyn",
+        "local": "data2/weixin/productDetails/yyn.json"
+    },
+    {
+        "reg": "weixin/productDetails/debt",
+        "local": "data2/weixin/productDetails/debt.json"
+    },
+    {
+        "reg": "/weixin/account/sitemessage/list/0/10.json",
+        "local": "data2/weixin/account/sitemessage/list/0/10.json"
+    },
+    {
+        "reg": "weixin/account/activity/tzdb/investrecords",
+        "local": "data2/weixin/account/activity/tzdb/investrecords.json"
+    },
+    {
+        "reg": "/weixin/account/supportbank",
+        "local": "data2/weixin/account/supportbank.json"
+    },
+    {
+        "reg": "/weixin/account/applyquickpaybindcard",
+        "local": "data2/weixin/account/applyquickpaybindcard.json"
+    },
+    {
+        "reg": "/weixin/couponshare/receive",
+        "local": "data2/weixin/couponshare/receive.json"
+    },
+    {
+        "reg": "/weixin/couponshare/records",
+        "local": "data2/weixin/couponshare/records.json"
+    },
+    {
+        "reg": "/weixin/token",
+        "local": "data2/weixin/token.json"
+    },
+    {
+        "reg": "weixin/repayment/recharge",
+        "local": "data2/weixin/repayment/recharge.json"
+    },
+    {
+        "reg": "/weixin/activity/treasurebox/draw",
+        "local": "data2/weixin/activity/treasurebox/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/treasurebox/saveaddress",
+        "local": "data2/weixin/activity/treasurebox/saveaddress.json"
+    },
+    {
+        "reg": "/weixin/activity/olympicmarathon/ranklist",
+        "local": "data2/weixin/activity/olympicmarathon/ranklist.json"
+    },
+    {
+        "reg": "/weixin/activity/chinesevalentinesday/init",
+        "local": "data2/weixin/activity/chinesevalentinesday/init.json"
+    },
+    {
+        "reg": "/weixin/activity/chinesevalentinesday/draw",
+        "local": "data2/weixin/activity/chinesevalentinesday/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/olympicquiz/info",
+        "local": "data2/weixin/activity/olympicquiz/info.json"
+    },
+    {
+        "reg": "/weixin/activity/olympicquiz/schedule",
+        "local": "data2/weixin/activity/olympicquiz/schedule.json"
+    },
+    {
+        "reg": "/weixin/activity/olympicquiz/draw",
+        "local": "data2/weixin/activity/olympicquiz/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/olympicquiz/records",
+        "local": "data2/weixin/activity/olympicquiz/records.json"
+    },
+    {
+        "reg": "/weixin/activity/midautumnfestival/draw",
+        "local": "data2/weixin/activity/midautumnfestival/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/midautumnfestival/address",
+        "local": "data2/weixin/activity/midautumnfestival/address.json"
+    },
+    {
+        "reg": "/weixin/activity/financierfamily/init",
+        "local": "data2/weixin/activity/financierfamily/init.json"
+    },
+    {
+        "reg": "/weixin/activity/iphone7/draw",
+        "local": "data2/weixin/activity/iphone7/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/iphone7/address",
+        "local": "data2/weixin/activity/iphone7/address.json"
+    },
+    {
+        "reg": "/weixin/activity/midautumnfestival/address",
+        "local": "data2/weixin/activity/midautumnfestival/address.json"
+    },
+    {
+        "reg": "/weixin/activity/nationalday/init",
+        "local": "data2/weixin/activity/nationalday/init.json"
+    },
+    {
+        "reg": "/weixin/activity/nationalday/investment",
+        "local": "data2/weixin/activity/nationalday/investment.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/capital/compound_invest",
+        "local": "data2/weixin/account/yyn/capital/compound_invest.json"
+    },
+    {
+        "reg": "/weixin/account/repaymentcalendar",
+        "local": "data2/weixin/account/repaymentcalendar.json"
+    },
+    {
+        "reg": "/weixin/activity/iphone7/address",
+        "local": "data2/weixin/activity/iphone7/address.json"
+    },
+    {
+        "reg": "/weixin/account/recharge/quickpayvalidate",
+        "local": "data2/weixin/account/recharge/quickpayvalidate.json"
+    },
+    {
+        "reg": "/weixin/activity/cba/init",
+        "local": "data2/weixin/activity/cba/init.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgivingseason/init",
+        "local": "data2/weixin/activity/thanksgivingseason/init.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgivingseason/myrecords",
+        "local": "data2/weixin/activity/thanksgivingseason/myrecords.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgivingseason/rewarddetail",
+        "local": "data2/weixin/activity/thanksgivingseason/rewarddetail.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgivingseason/myaddress",
+        "local": "data2/weixin/activity/thanksgivingseason/myaddress.json"
+    },
+    {
+        "reg": "/weixin/activity/thanksgivingseason/logisticsaddr",
+        "local": "data2/weixin/activity/thanksgivingseason/logisticsaddr.json"
+    },
+    {
+        "reg": "weixin/account/yyn/earnings",
+        "local": "data2/weixin/account/yyn/earnings.json"
+    },
+    {
+        "reg": "weixin/account/index",
+        "local": "data2/weixin/account/index.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/withdraw/init",
+        "local": "data2/weixin/account/yyn/withdraw/init.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/withdraw",
+        "local": "data2/weixin/account/yyn/withdraw.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/assets",
+        "local": "data2/weixin/account/yyn/assets.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/earnings",
+        "local": "data2/weixin/account/yyn/earnings.json"
+    },
+    {
+        "reg": "/weixin/productDetails/yyn/138754",
+        "local": "data2/weixin/productDetails/yyn/138754.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/yyninfo",
+        "local": "data2/weixin/account/yyn/yyninfo.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/holdingrecords",
+        "local": "data2/weixin/account/yyn/holdingrecords.json"
+    },
+    {
+        "reg": "/weixin/account/member/init",
+        "local": "data2/weixin/account/member/init.json"
+    },
+    {
+        "reg": "/weixin/account/member/task/list",
+        "local": "data2/weixin/account/member/task/list.json"
+    },
+    {
+        "reg": "/weixin/activity/membership/init",
+        "local": "data2/weixin/activity/membership/init.json"
+    },
+    {
+        "reg": "/weixin/activity/membership/answer",
+        "local": "data2/weixin/activity/membership/answer.json"
+    },
+    {
+        "reg": "/weixin/activity/membership/records",
+        "local": "data2/weixin/activity/membership/records.json"
+    },
+    {
+        "reg": "/weixin/activity/newyear/init",
+        "local": "data2/weixin/activity/newyear/init.json"
+    },
+    {
+        "reg": "/weixin/activity/newyear/draw",
+        "local": "data2/weixin/activity/newyear/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/springfestival/records.json",
+        "local": "data2/weixin/activity/springfestival/records.json"
+    },
+    {
+        "reg": "/weixin/activity/newyear/sign",
+        "local": "data2/weixin/activity/newyear/sign.json"
+    },
+    {
+        "reg": "/weixin/activity/newyear/myrecords",
+        "local": "data2/weixin/activity/newyear/myrecords.json"
+    },
+    {
+        "reg": "/weixin/account/address/list",
+        "local": "data2/weixin/account/address/list.json"
+    },
+    {
+        "reg": "/weixin/account/address/setlogisticsaddr",
+        "local": "data2/weixin/account/address/setlogisticsaddr.json"
+    },
+    {
+        "reg": "/weixin/activity/newyear/rewarddetail",
+        "local": "data2/weixin/activity/newyear/rewarddetail.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/init",
+        "local": "data2/weixin/activity/fiftybillions/init.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/current/floor",
+        "local": "data2/weixin/activity/fiftybillions/current/floor.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/draw",
+        "local": "data2/weixin/activity/fiftybillions/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/account/prize/records",
+        "local": "data2/weixin/activity/fiftybillions/account/prize/records.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/latest/prize/records",
+        "local": "data2/weixin/activity/fiftybillions/latest/prize/records.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/latest/floor/records",
+        "local": "data2/weixin/activity/fiftybillions/latest/floor/records.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/account/floor/records",
+        "local": "data2/weixin/activity/fiftybillions/account/floor/records.json"
+    },
+    {
+        "reg": "/weixin/activity/fiftybillions/floor/detail",
+        "local": "data2/weixin/activity/fiftybillions/floor/detail.json"
+    },
+    {
+        "reg": "/weixin/account/redbag",
+        "local": "data2/weixin/account/redbag.json"
+    },
+    {
+        "reg": "/weixin/activity/2017springfestival/rank",
+        "local": "data2/weixin/activity/2017springfestival/rank.json"
+    },
+    {
+        "reg": "/weixin/account/flex/holdingrecords",
+        "local": "data2/weixin/account/flex/holdingrecords.json"
+    },
+    {
+        "reg": "/weixin/account/flex/overview/info",
+        "local": "data2/weixin/account/flex/overview/info.json"
+    },
+    {
+        "reg": "/weixin/account/flex/capital",
+        "local": "data2/weixin/account/flex/capital.json"
+    },
+    {
+        "reg": "/weixin/account/flex/finishedrecords",
+        "local": "data2/weixin/account/flex/finishedrecords.json"
+    },
+    {
+        "reg": "/weixin/productDetails/flex",
+        "local": "data2/weixin/productDetails/flex.json"
+    },
+    {
+        "reg": "/weixin/account/flex/withdraw/init",
+        "local": "data2/weixin/account/flex/withdraw/init.json"
+    },
+    {
+        "reg": "/weixin/productlist/v2/list/fixed",
+        "local": "data2/weixin/productlist/v2/list/fixed.json"
+    },
+    {
+        "reg": "/weixin/account/capital",
+        "local": "data2/weixin/account/capital.json"
+    },
+    {
+        "reg": "/weixin/account/yyn/finishedrecords",
+        "local": "data2/weixin/account/yyn/finishedrecords.json"
+    },
+    {
+        "reg": "/weixin/account/address/list",
+        "local": "data2/weixin/account/address/list.json"
+    },
+    {
+        "reg": "/weixin/account/address/setlogisticsaddr",
+        "local": "data2/weixin/account/address/setlogisticsaddr.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/init",
+        "local": "data2/weixin/activity/womensday/init.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/redbag/draw",
+        "local": "data2/weixin/activity/womensday/redbag/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/redbag/records",
+        "local": "data2/weixin/activity/womensday/redbag/records.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/reward/records",
+        "local": "data2/weixin/activity/womensday/reward/records.json"
+    },
+    {
+        "reg": "/weixin/account/reward/itemdetail",
+        "local": "data2/weixin/account/reward/itemdetail.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/draw",
+        "local": "data2/weixin/activity/womensday/draw.json"
+    },
+    {
+        "reg": "/weixin/user/wechat/init",
+        "local": "data2/weixin/user/wechat/init.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/redbag/draw",
+        "local": "data2/weixin/activity/womensday/redbag/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/redbag/records",
+        "local": "data2/weixin/activity/womensday/redbag/records.json"
+    },
+    {
+        "reg": "/weixin/activity/womensday/reward/records",
+        "local": "data2/weixin/activity/womensday/reward/records.json"
+    },
+    {
+        "reg": "/weixin/user/wechat/bind",
+        "local": "data2/weixin/user/wechat/bind.json"
+    },
+    {
+        "reg": "/weixin/user/wechat/unbind",
+        "local": "data2/weixin/user/wechat/unbind.json"
+    },
+    {
+        "reg": "/weixin/activity/mushroom/init",
+        "local": "data2/weixin/activity/mushroom/init.json"
+    },
+    {
+        "reg": "/weixin/activity/mushroom/draw",
+        "local": "data2/weixin/activity/mushroom/draw.json"
+    },
+    {
+        "reg": "/weixin/activity/mushroom/exchange",
+        "local": "data2/weixin/activity/mushroom/exchange.json"
+    },
+    {
+        "reg": "/weixin/account/cashier",
+        "local": "data2/weixin/account/cashier.json"
+    },
+    {
+        "reg": "/weixin/account/withdraw",
+        "local": "data2/weixin/account/withdraw.json"
+    },
+    {
+        "reg": "/weixin/account/withdraw/apply",
+        "local": "data2/weixin/account/withdraw/apply.json"
+    },
+    {
+        "reg": "/weixin/account/withdraw/confirm",
+        "local": "data2/weixin/account/withdraw/confirm.json"
+    },
+    {
+        "reg": "/weixin/productDetails/duration",
+        "local": "data2/weixin/productDetails/duration.json"
+    },
+    {
+        "reg": "/weixin/account/assets",
+        "local": "data2/weixin/account/assets.json"
+    },
+    {
+        "reg": "/weixin/index/v2.json",
+        "local": "data2/weixin/index/v2.json"
+    },
+    {
+        "reg": "/weixin/account/invest/index",
+        "local": "data2/weixin/account/invest/index.json"
+    },
+    {
+        "reg": "/weixin/account/invest/holding",
+        "local": "data2/weixin/account/invest/holding.json"
+    },
+    {
+        "reg": "/weixin/account/flex/finishedrecords",
+        "local": "data2/weixin/account/flex/finishedrecords.json"
+    },
+    {
+        "reg": "/weixin/account/invest/withdraw",
+        "local": "data2/weixin/account/invest/withdraw.json"
+    },
+    {
+        "reg": "/weixin/investlist",
+        "local": "data2/weixin/investlist.json"
+    },
+    {
+        "reg": "/weixin/productDetails/borrower",
+        "local": "data2/weixin/productDetails/borrower.json"
+    },
+    {
+        "reg": "/weixin/user/sign/author/info",
+        "local": "data2/weixin/user/sign/author/info.json"
+    },
+    {
+        "reg": "/weixin/user/sign/author/allow",
+        "local": "data2/weixin/user/sign/author/allow.json"
+    }
+]

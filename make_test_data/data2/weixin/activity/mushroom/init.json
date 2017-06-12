@@ -1,0 +1,82 @@
+{
+    "todayLuckStatus": true,
+    "exchangeRewardStatus": 2,
+    "mushRoomList": [
+        {
+            "userId": null,
+            "recordId": 1653,
+            "sendId": null,
+            "rewardCategory": 2,
+            "rewardName": "蘑菇奖券",
+            "rewardNum": 1,
+            "createTime": 1489196479000,
+            "origin": "春季蘑菇赛",
+            "logisticStatus": 2,
+            "recieveAddress": null,
+            "rewardCode": "CN00026"
+        }
+    ],
+    "flowerList": [
+        {
+            "userId": null,
+            "recordId": 1662,
+            "sendId": null,
+            "rewardCategory": 2,
+            "rewardName": "鲜花奖券",
+            "rewardNum": 1,
+            "createTime": 1489477222000,
+            "origin": "春季蘑菇赛",
+            "logisticStatus": 2,
+            "recieveAddress": null,
+            "rewardCode": "CN00027"
+        },
+        {
+            "userId": null,
+            "recordId": 1652,
+            "sendId": null,
+            "rewardCategory": 2,
+            "rewardName": "鲜花奖券",
+            "rewardNum": 1,
+            "createTime": 1489141022000,
+            "origin": "春季蘑菇赛",
+            "logisticStatus": 2,
+            "recieveAddress": null,
+            "rewardCode": "CN00027"
+        },
+        {
+            "userId": null,
+            "recordId": 1651,
+            "sendId": null,
+            "rewardCategory": 2,
+            "rewardName": "鲜花奖券",
+            "rewardNum": 1,
+            "createTime": 1489140742000,
+            "origin": "春季蘑菇赛",
+            "logisticStatus": 2,
+            "recieveAddress": null,
+            "rewardCode": "CN00027"
+        },
+        {
+            "userId": null,
+            "recordId": 1650,
+            "sendId": null,
+            "rewardCategory": 2,
+            "rewardName": "鲜花奖券",
+            "rewardNum": 1,
+            "createTime": 1489137004000,
+            "origin": "春季蘑菇赛",
+            "logisticStatus": 2,
+            "recieveAddress": null,
+            "rewardCode": "CN00027"
+        }
+    ],
+    "activityId": 37,
+    "userId": null,
+    "activityCode": "mushroom_match",
+    "activityStartDate": 1490317200000,
+    "activityEndDate": 1490889599000,
+    "exchangeStartDate": 1489719050000,
+    "exchangeEndDate": 1489729050000,
+    "activityStateEnum": "in_progress",
+    "logined": true
+}

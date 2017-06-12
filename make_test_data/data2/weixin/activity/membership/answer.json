@@ -1,0 +1,17 @@
+{
+    "data": {
+        "userId": null,
+        "recordId": null,
+        "sendId": null,
+        "rewardCategory": null,
+        "rewardName": "288元理财金券",
+        "rewardNum": null,
+        "createTime": null,
+        "origin": null,
+        "logisticStatus": 0,
+        "recieveAddress": null
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

@@ -1,0 +1,45 @@
+{
+    "loanPurpose": "个人消费",
+    "borrowerType": 0,
+    "borrowerBasicInfo": {
+        "borrowerName": "同学",
+        "gender": 0,
+        "idNo": "500228198004139352",
+        "age": 37,
+        "address": "福成科技大厦",
+        "marryStatus": 1,
+        "hasChild": 1,
+        "education": 1,
+        "hasEstate": false,
+        "hasVehicle": false
+    },
+    "borrowerStatisticsInfo": {
+        "borrowAmt": 10000,
+        "borrowTimes": 1,
+        "settleTimes": 1,
+        "lstBorrowTime": 1487174400000,
+        "currentRepayment": 11710.74
+    },
+    "borrowerWorkInfo": {
+        "industry": "建筑业",
+        "workAddress": "深圳",
+        "beginWorkDate": 1483200000000,
+        "companyScale": "10-50人",
+        "position": "开发",
+        "yearsOfWork": "1年",
+        "monthlySalary": 5002
+    },
+    "borrowerLoanMortgageInfo": {
+        "mortgageType": 2,
+        "holder": "拉丝",
+        "city": "深圳",
+        "houseArea": 90,
+        "vehicleType": null,
+        "carNo": null,
+        "mileage": null,
+        "purchaseAmt": 1000000,
+        "valuationAmt": 2000000,
+        "registTime": 1489593600000,
+        "remark": null
+    }
+}

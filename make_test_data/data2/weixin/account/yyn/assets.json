@@ -1,0 +1,20 @@
+{
+    "data": [{
+        "id": 16,
+        "currentId": 138754,
+        "productId": 46369,
+        "createTime": 1451375328000,
+        "updateTime": 1451375328000,
+        "principle": 245.8,
+        "realPrincipal": 245.8,
+        "interest": null,
+        "annualRate": 13.9,
+        "totalInterest": null,
+        "accrualDate": null,
+        "type": 1,
+        "currencyType": null,
+        "status": 1,
+        "productName": "安逸信N20150303-3844"
+    }],
+    "totalRow": 0
+}

@@ -1,0 +1,28 @@
+{
+    "data": {
+        "availableBonusList": [],
+        "availableInterestCouponList": [
+            {
+                "couponId": 432628,
+                "interestRate": 25,
+                "description": "限安E计划、省心理财、月息牛项目使用",
+                "minAmount": 100,
+                "minDeadline": 3,
+                "source": "新客送礼活动",
+                "activeTime": 1495703610000,
+                "expireTime": 1527868798000,
+                "useTime": null,
+                "couponStatus": "VALID",
+                "rejectRedbag": 0,
+                "strategyId": null,
+                "sendTime": 1498382010000,
+                "effectPeriods": 0,
+                "effectUnit": 0,
+                "expectInterest": 50
+            }
+        ]
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

@@ -1,0 +1,84 @@
+{
+    "isLogined": true,
+    "isLastDay": false,
+    "redbagDate": 1488470400000,
+    "currentTime": 1488470400000,
+    "redbagStock": 0,
+    "remainDrawCount": 10,
+    "myRedBagInfo": {
+        "userId": null,
+        "recordId": 1645,
+        "sendId": null,
+        "rewardCategory": 1,
+        "rewardName": "38元投资返现红包",
+        "rewardNum": 1,
+        "createTime": 1487746486000,
+        "origin": "浪漫红包雨,致敬女神节",
+        "logisticStatus": 2,
+        "recieveAddress": null,
+        "rewardCode": "REDBAG03"
+    },
+    "activityInfo": {
+        "id": 52,
+        "activityName": "三月女神节",
+        "activityCode": "goddess_day",
+        "startDate": 1487692800000,
+        "endDate": 1489161599000,
+        "activityType": null,
+        "activityState": "in_progress"
+    },
+    "latestRedbagRecords": [
+        {
+            "id": 144,
+            "userId": null,
+            "userName": "t****25",
+            "luckyId": 3692,
+            "rewardId": 94,
+            "rewardName": "38元投资返现红包",
+            "luckytime": 1487746487000,
+            "presentTime": "16分钟前"
+        },
+        {
+            "id": 143,
+            "userId": null,
+            "userName": "m****ao",
+            "luckyId": 3691,
+            "rewardId": 91,
+            "rewardName": "380元投资返现红包",
+            "luckytime": 1487746357000,
+            "presentTime": "18分钟前"
+        }
+    ],
+    "latestRewardRecords": [
+        {
+            "id": 147,
+            "userId": null,
+            "userName": "m****ao",
+            "luckyId": 3690,
+            "rewardId": 105,
+            "rewardName": "8积分",
+            "luckytime": 1487747446000,
+            "presentTime": "24秒前"
+        },
+        {
+            "id": 146,
+            "userId": null,
+            "userName": "m****ao",
+            "luckyId": 3690,
+            "rewardId": 101,
+            "rewardName": "8元现金红包",
+            "luckytime": 1487747443000,
+            "presentTime": "27秒前"
+        },
+        {
+            "id": 145,
+            "userId": null,
+            "userName": "m****ao",
+            "luckyId": 3690,
+            "rewardId": 100,
+            "rewardName": "女神护肤必备品",
+            "luckytime": 1487747432000,
+            "presentTime": "38秒前"
+        }
+    ]
+}

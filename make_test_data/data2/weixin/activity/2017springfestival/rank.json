@@ -1,0 +1,847 @@
+{
+    "islogined": true,
+    "myInvestRank": {
+        "rank": 1,
+        "userId": 4068210,
+        "userName": "x****25",
+        "realAmount": 2080100,
+        "preRealAmount": null
+    },
+    "activityInfo": {
+        "id": 32,
+        "activityName": "2017金鸡贺岁",
+        "activityCode": "spring_festival_2017",
+        "startDate": 1484866800000,
+        "endDate": 1485705604000,
+        "activityType": 10,
+        "activityState": "in_progress"
+    },
+    "investRankList": [
+        {
+            "rank": 1,
+            "userId": 4159679,
+            "userName": "x****94",
+            "realAmount": 1000000,
+            "preRealAmount": null
+        },
+        {
+            "rank": 2,
+            "userId": 4068204,
+            "userName": "x****19",
+            "realAmount": 995600,
+            "preRealAmount": null
+        },
+        {
+            "rank": 3,
+            "userId": 4068210,
+            "userName": "x****25",
+            "realAmount": 208100,
+            "preRealAmount": null
+        },
+        {
+            "rank": 4,
+            "userId": 4068004,
+            "userName": "x****19",
+            "realAmount": 201618,
+            "preRealAmount": null
+        },
+        {
+            "rank": 5,
+            "userId": 4068128,
+            "userName": "x****43",
+            "realAmount": 150000,
+            "preRealAmount": null
+        },
+        {
+            "rank": 6,
+            "userId": 4110072,
+            "userName": "x****87",
+            "realAmount": 141662,
+            "preRealAmount": null
+        },
+        {
+            "rank": 7,
+            "userId": 4068214,
+            "userName": "x****29",
+            "realAmount": 120000,
+            "preRealAmount": null
+        },
+        {
+            "rank": 8,
+            "userId": 4110073,
+            "userName": "x****88",
+            "realAmount": 116774,
+            "preRealAmount": null
+        },
+        {
+            "rank": 9,
+            "userId": 4068206,
+            "userName": "x****21",
+            "realAmount": 104100,
+            "preRealAmount": null
+        },
+        {
+            "rank": 10,
+            "userId": 4068208,
+            "userName": "x****23",
+            "realAmount": 100975,
+            "preRealAmount": null
+        },
+        {
+            "rank": 20,
+            "userId": 4129158,
+            "userName": "x****73",
+            "realAmount": 100035,
+            "preRealAmount": 100058
+        },
+        {
+            "rank": 30,
+            "userId": 4153105,
+            "userName": "x****20",
+            "realAmount": 99997,
+            "preRealAmount": 100004
+        },
+        {
+            "rank": 40,
+            "userId": 4133546,
+            "userName": "x****61",
+            "realAmount": 99959,
+            "preRealAmount": 99960
+        },
+        {
+            "rank": 50,
+            "userId": 4117602,
+            "userName": "x****17",
+            "realAmount": 99891,
+            "preRealAmount": 99892
+        },
+        {
+            "rank": 60,
+            "userId": 4139598,
+            "userName": "x****13",
+            "realAmount": 99838,
+            "preRealAmount": 99838
+        },
+        {
+            "rank": 70,
+            "userId": 4083331,
+            "userName": "x****46",
+            "realAmount": 99801,
+            "preRealAmount": 99805
+        },
+        {
+            "rank": 80,
+            "userId": 4069426,
+            "userName": "x****41",
+            "realAmount": 99749,
+            "preRealAmount": 99756
+        },
+        {
+            "rank": 90,
+            "userId": 4075461,
+            "userName": "x****76",
+            "realAmount": 99707,
+            "preRealAmount": 99712
+        },
+        {
+            "rank": 100,
+            "userId": 4079373,
+            "userName": "x****88",
+            "realAmount": 99640,
+            "preRealAmount": 99642
+        },
+        {
+            "rank": 200,
+            "userId": 4071097,
+            "userName": "x****12",
+            "realAmount": 99020,
+            "preRealAmount": 99031
+        },
+        {
+            "rank": 300,
+            "userId": 4125550,
+            "userName": "x****65",
+            "realAmount": 98512,
+            "preRealAmount": 98516
+        },
+        {
+            "rank": 400,
+            "userId": 4105131,
+            "userName": "x****46",
+            "realAmount": 98021,
+            "preRealAmount": 98025
+        },
+        {
+            "rank": 500,
+            "userId": 4149206,
+            "userName": "x****21",
+            "realAmount": 97517,
+            "preRealAmount": 97519
+        },
+        {
+            "rank": 600,
+            "userId": 4119116,
+            "userName": "x****31",
+            "realAmount": 97043,
+            "preRealAmount": 97054
+        },
+        {
+            "rank": 700,
+            "userId": 4085306,
+            "userName": "x****21",
+            "realAmount": 96590,
+            "preRealAmount": 96590
+        },
+        {
+            "rank": 800,
+            "userId": 4139568,
+            "userName": "x****83",
+            "realAmount": 96055,
+            "preRealAmount": 96073
+        },
+        {
+            "rank": 900,
+            "userId": 4095303,
+            "userName": "x****18",
+            "realAmount": 95491,
+            "preRealAmount": 95498
+        },
+        {
+            "rank": 1000,
+            "userId": 4139160,
+            "userName": "x****75",
+            "realAmount": 94944,
+            "preRealAmount": 94949
+        },
+        {
+            "rank": 1100,
+            "userId": 4159445,
+            "userName": "x****60",
+            "realAmount": 94456,
+            "preRealAmount": 94460
+        },
+        {
+            "rank": 1200,
+            "userId": 4081471,
+            "userName": "x****86",
+            "realAmount": 94015,
+            "preRealAmount": 94028
+        },
+        {
+            "rank": 1300,
+            "userId": 4111475,
+            "userName": "x****90",
+            "realAmount": 93476,
+            "preRealAmount": 93477
+        },
+        {
+            "rank": 1400,
+            "userId": 4073393,
+            "userName": "x****08",
+            "realAmount": 93007,
+            "preRealAmount": 93007
+        },
+        {
+            "rank": 1500,
+            "userId": 4121410,
+            "userName": "x****25",
+            "realAmount": 92614,
+            "preRealAmount": 92624
+        },
+        {
+            "rank": 1600,
+            "userId": 4115578,
+            "userName": "x****93",
+            "realAmount": 92103,
+            "preRealAmount": 92105
+        },
+        {
+            "rank": 1700,
+            "userId": 4159178,
+            "userName": "x****93",
+            "realAmount": 91675,
+            "preRealAmount": 91684
+        },
+        {
+            "rank": 1800,
+            "userId": 4123618,
+            "userName": "x****33",
+            "realAmount": 91211,
+            "preRealAmount": 91212
+        },
+        {
+            "rank": 1900,
+            "userId": 4123369,
+            "userName": "x****84",
+            "realAmount": 90685,
+            "preRealAmount": 90694
+        },
+        {
+            "rank": 2000,
+            "userId": 4153141,
+            "userName": "x****56",
+            "realAmount": 90212,
+            "preRealAmount": 90213
+        },
+        {
+            "rank": 2100,
+            "userId": 4141365,
+            "userName": "x****80",
+            "realAmount": 89702,
+            "preRealAmount": 89706
+        },
+        {
+            "rank": 2200,
+            "userId": 4151448,
+            "userName": "x****63",
+            "realAmount": 89247,
+            "preRealAmount": 89248
+        },
+        {
+            "rank": 2300,
+            "userId": 4075344,
+            "userName": "x****59",
+            "realAmount": 88634,
+            "preRealAmount": 88636
+        },
+        {
+            "rank": 2400,
+            "userId": 4123499,
+            "userName": "x****14",
+            "realAmount": 87994,
+            "preRealAmount": 87996
+        },
+        {
+            "rank": 2500,
+            "userId": 4145182,
+            "userName": "x****97",
+            "realAmount": 87417,
+            "preRealAmount": 87418
+        },
+        {
+            "rank": 2600,
+            "userId": 4105347,
+            "userName": "x****62",
+            "realAmount": 86983,
+            "preRealAmount": 86989
+        },
+        {
+            "rank": 2700,
+            "userId": 4077350,
+            "userName": "x****65",
+            "realAmount": 86528,
+            "preRealAmount": 86528
+        },
+        {
+            "rank": 2800,
+            "userId": 4115179,
+            "userName": "x****94",
+            "realAmount": 86105,
+            "preRealAmount": 86111
+        },
+        {
+            "rank": 2900,
+            "userId": 4131329,
+            "userName": "x****44",
+            "realAmount": 85622,
+            "preRealAmount": 85627
+        },
+        {
+            "rank": 3000,
+            "userId": 4083298,
+            "userName": "x****13",
+            "realAmount": 85183,
+            "preRealAmount": 85189
+        },
+        {
+            "rank": 3100,
+            "userId": 4075482,
+            "userName": "x****97",
+            "realAmount": 84725,
+            "preRealAmount": 84728
+        },
+        {
+            "rank": 3200,
+            "userId": 4157187,
+            "userName": "x****02",
+            "realAmount": 84203,
+            "preRealAmount": 84204
+        },
+        {
+            "rank": 3300,
+            "userId": 4099305,
+            "userName": "x****20",
+            "realAmount": 83741,
+            "preRealAmount": 83746
+        },
+        {
+            "rank": 3400,
+            "userId": 4149395,
+            "userName": "x****10",
+            "realAmount": 83259,
+            "preRealAmount": 83272
+        },
+        {
+            "rank": 3500,
+            "userId": 4075399,
+            "userName": "x****14",
+            "realAmount": 82759,
+            "preRealAmount": 82763
+        },
+        {
+            "rank": 3600,
+            "userId": 4075087,
+            "userName": "x****02",
+            "realAmount": 82156,
+            "preRealAmount": 82158
+        },
+        {
+            "rank": 3700,
+            "userId": 4109467,
+            "userName": "x****82",
+            "realAmount": 81687,
+            "preRealAmount": 81707
+        },
+        {
+            "rank": 3800,
+            "userId": 4077470,
+            "userName": "x****85",
+            "realAmount": 81198,
+            "preRealAmount": 81199
+        },
+        {
+            "rank": 3900,
+            "userId": 4119124,
+            "userName": "x****39",
+            "realAmount": 80791,
+            "preRealAmount": 80800
+        },
+        {
+            "rank": 4000,
+            "userId": 4151572,
+            "userName": "x****87",
+            "realAmount": 80290,
+            "preRealAmount": 80293
+        },
+        {
+            "rank": 4100,
+            "userId": 4159215,
+            "userName": "x****30",
+            "realAmount": 79807,
+            "preRealAmount": 79814
+        },
+        {
+            "rank": 4200,
+            "userId": 4071553,
+            "userName": "x****68",
+            "realAmount": 79331,
+            "preRealAmount": 79339
+        },
+        {
+            "rank": 4300,
+            "userId": 4111418,
+            "userName": "x****33",
+            "realAmount": 78870,
+            "preRealAmount": 78879
+        },
+        {
+            "rank": 4400,
+            "userId": 4097408,
+            "userName": "x****23",
+            "realAmount": 78396,
+            "preRealAmount": 78403
+        },
+        {
+            "rank": 4500,
+            "userId": 4143372,
+            "userName": "x****87",
+            "realAmount": 77996,
+            "preRealAmount": 78004
+        },
+        {
+            "rank": 4600,
+            "userId": 4131515,
+            "userName": "x****30",
+            "realAmount": 77525,
+            "preRealAmount": 77531
+        },
+        {
+            "rank": 4700,
+            "userId": 4113520,
+            "userName": "x****35",
+            "realAmount": 77069,
+            "preRealAmount": 77073
+        },
+        {
+            "rank": 4800,
+            "userId": 4099513,
+            "userName": "x****28",
+            "realAmount": 76685,
+            "preRealAmount": 76688
+        },
+        {
+            "rank": 4900,
+            "userId": 4095447,
+            "userName": "x****62",
+            "realAmount": 76194,
+            "preRealAmount": 76195
+        },
+        {
+            "rank": 5000,
+            "userId": 4145177,
+            "userName": "x****92",
+            "realAmount": 75712,
+            "preRealAmount": 75736
+        },
+        {
+            "rank": 5100,
+            "userId": 4073303,
+            "userName": "x****18",
+            "realAmount": 75124,
+            "preRealAmount": 75128
+        },
+        {
+            "rank": 5200,
+            "userId": 4123544,
+            "userName": "x****59",
+            "realAmount": 74649,
+            "preRealAmount": 74650
+        },
+        {
+            "rank": 5300,
+            "userId": 4121104,
+            "userName": "x****19",
+            "realAmount": 74137,
+            "preRealAmount": 74140
+        },
+        {
+            "rank": 5400,
+            "userId": 4107472,
+            "userName": "x****87",
+            "realAmount": 73627,
+            "preRealAmount": 73641
+        },
+        {
+            "rank": 5500,
+            "userId": 4139524,
+            "userName": "x****39",
+            "realAmount": 73158,
+            "preRealAmount": 73178
+        },
+        {
+            "rank": 5600,
+            "userId": 4127573,
+            "userName": "x****88",
+            "realAmount": 72680,
+            "preRealAmount": 72683
+        },
+        {
+            "rank": 5700,
+            "userId": 4077475,
+            "userName": "x****90",
+            "realAmount": 72140,
+            "preRealAmount": 72145
+        },
+        {
+            "rank": 5800,
+            "userId": 4123181,
+            "userName": "x****96",
+            "realAmount": 71641,
+            "preRealAmount": 71642
+        },
+        {
+            "rank": 5900,
+            "userId": 4107482,
+            "userName": "x****97",
+            "realAmount": 71177,
+            "preRealAmount": 71179
+        },
+        {
+            "rank": 6000,
+            "userId": 4073125,
+            "userName": "x****40",
+            "realAmount": 70674,
+            "preRealAmount": 70714
+        },
+        {
+            "rank": 6100,
+            "userId": 4139151,
+            "userName": "x****66",
+            "realAmount": 70170,
+            "preRealAmount": 70171
+        },
+        {
+            "rank": 6200,
+            "userId": 4117103,
+            "userName": "x****18",
+            "realAmount": 69591,
+            "preRealAmount": 69593
+        },
+        {
+            "rank": 6300,
+            "userId": 4117551,
+            "userName": "x****66",
+            "realAmount": 69128,
+            "preRealAmount": 69131
+        },
+        {
+            "rank": 6400,
+            "userId": 4137650,
+            "userName": "x****65",
+            "realAmount": 68596,
+            "preRealAmount": 68605
+        },
+        {
+            "rank": 6500,
+            "userId": 4099434,
+            "userName": "x****49",
+            "realAmount": 68061,
+            "preRealAmount": 68070
+        },
+        {
+            "rank": 6600,
+            "userId": 4079081,
+            "userName": "x****96",
+            "realAmount": 67584,
+            "preRealAmount": 67591
+        },
+        {
+            "rank": 6700,
+            "userId": 4069359,
+            "userName": "x****74",
+            "realAmount": 67069,
+            "preRealAmount": 67073
+        },
+        {
+            "rank": 6800,
+            "userId": 4147513,
+            "userName": "x****28",
+            "realAmount": 66643,
+            "preRealAmount": 66647
+        },
+        {
+            "rank": 6900,
+            "userId": 4091185,
+            "userName": "x****00",
+            "realAmount": 66169,
+            "preRealAmount": 66171
+        },
+        {
+            "rank": 7000,
+            "userId": 4086866,
+            "userName": "x****81",
+            "realAmount": 65693,
+            "preRealAmount": 65700
+        },
+        {
+            "rank": 7100,
+            "userId": 4145386,
+            "userName": "x****01",
+            "realAmount": 65200,
+            "preRealAmount": 65200
+        },
+        {
+            "rank": 7200,
+            "userId": 4119602,
+            "userName": "x****17",
+            "realAmount": 64766,
+            "preRealAmount": 64771
+        },
+        {
+            "rank": 7300,
+            "userId": 4069431,
+            "userName": "x****46",
+            "realAmount": 64342,
+            "preRealAmount": 64356
+        },
+        {
+            "rank": 7400,
+            "userId": 4101309,
+            "userName": "x****24",
+            "realAmount": 63850,
+            "preRealAmount": 63851
+        },
+        {
+            "rank": 7500,
+            "userId": 4115139,
+            "userName": "x****54",
+            "realAmount": 63441,
+            "preRealAmount": 63443
+        },
+        {
+            "rank": 7600,
+            "userId": 4071058,
+            "userName": "x****73",
+            "realAmount": 62966,
+            "preRealAmount": 62971
+        },
+        {
+            "rank": 7700,
+            "userId": 4149144,
+            "userName": "x****59",
+            "realAmount": 62489,
+            "preRealAmount": 62493
+        },
+        {
+            "rank": 7800,
+            "userId": 4155589,
+            "userName": "x****04",
+            "realAmount": 62032,
+            "preRealAmount": 62033
+        },
+        {
+            "rank": 7900,
+            "userId": 4119531,
+            "userName": "x****46",
+            "realAmount": 61514,
+            "preRealAmount": 61515
+        },
+        {
+            "rank": 8000,
+            "userId": 4109116,
+            "userName": "x****31",
+            "realAmount": 61028,
+            "preRealAmount": 61030
+        },
+        {
+            "rank": 8100,
+            "userId": 4127330,
+            "userName": "x****45",
+            "realAmount": 60606,
+            "preRealAmount": 60612
+        },
+        {
+            "rank": 8200,
+            "userId": 4079162,
+            "userName": "x****77",
+            "realAmount": 60090,
+            "preRealAmount": 60127
+        },
+        {
+            "rank": 8300,
+            "userId": 4079382,
+            "userName": "x****97",
+            "realAmount": 59643,
+            "preRealAmount": 59646
+        },
+        {
+            "rank": 8400,
+            "userId": 4095590,
+            "userName": "x****05",
+            "realAmount": 59150,
+            "preRealAmount": 59158
+        },
+        {
+            "rank": 8500,
+            "userId": 4103564,
+            "userName": "x****79",
+            "realAmount": 58597,
+            "preRealAmount": 58614
+        },
+        {
+            "rank": 8600,
+            "userId": 4117127,
+            "userName": "x****42",
+            "realAmount": 58155,
+            "preRealAmount": 58165
+        },
+        {
+            "rank": 8700,
+            "userId": 4075320,
+            "userName": "x****35",
+            "realAmount": 57648,
+            "preRealAmount": 57649
+        },
+        {
+            "rank": 8800,
+            "userId": 4147427,
+            "userName": "x****42",
+            "realAmount": 57125,
+            "preRealAmount": 57127
+        },
+        {
+            "rank": 8900,
+            "userId": 4147537,
+            "userName": "x****52",
+            "realAmount": 56515,
+            "preRealAmount": 56528
+        },
+        {
+            "rank": 9000,
+            "userId": 4073610,
+            "userName": "x****25",
+            "realAmount": 56077,
+            "preRealAmount": 56088
+        },
+        {
+            "rank": 9100,
+            "userId": 4107401,
+            "userName": "x****16",
+            "realAmount": 55519,
+            "preRealAmount": 55529
+        },
+        {
+            "rank": 9200,
+            "userId": 4137558,
+            "userName": "x****73",
+            "realAmount": 55010,
+            "preRealAmount": 55015
+        },
+        {
+            "rank": 9300,
+            "userId": 4077525,
+            "userName": "x****40",
+            "realAmount": 54470,
+            "preRealAmount": 54474
+        },
+        {
+            "rank": 9400,
+            "userId": 4119095,
+            "userName": "x****10",
+            "realAmount": 53975,
+            "preRealAmount": 53979
+        },
+        {
+            "rank": 9500,
+            "userId": 4087176,
+            "userName": "x****91",
+            "realAmount": 53462,
+            "preRealAmount": 53473
+        },
+        {
+            "rank": 9600,
+            "userId": 4103581,
+            "userName": "x****96",
+            "realAmount": 52943,
+            "preRealAmount": 52952
+        },
+        {
+            "rank": 9700,
+            "userId": 4099556,
+            "userName": "x****71",
+            "realAmount": 52474,
+            "preRealAmount": 52474
+        },
+        {
+            "rank": 9800,
+            "userId": 4068044,
+            "userName": "x****59",
+            "realAmount": 52063,
+            "preRealAmount": 52065
+        },
+        {
+            "rank": 9900,
+            "userId": 4079541,
+            "userName": "x****56",
+            "realAmount": 51572,
+            "preRealAmount": 51584
+        },
+        {
+            "rank": 10000,
+            "userId": 4137535,
+            "userName": "x****50",
+            "realAmount": 51062,
+            "preRealAmount": 51065
+        }
+    ]
+}

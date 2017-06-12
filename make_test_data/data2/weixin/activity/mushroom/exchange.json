@@ -1,0 +1,12 @@
+{
+    "data": {
+        "mushroomCount": 1,
+        "mushroomCash": 1.8,
+        "flowerCount": 1,
+        "redPacketAmount": 1,
+        "status": 4
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

@@ -1,0 +1,20 @@
+{
+    "needSignCount": 0,
+    "ooh.token.name": "5868644bf424142ba83c391a",
+    "hasSigned": false,
+    "activityDetail": {
+        "id": 37,
+        "activityName": "迎元旦狂返现",
+        "activityCode": "new_year_2017",
+        "startDate": 1482890400000,
+        "endDate": 1483545599000,
+        "activityType": null,
+        "activityState": "in_progress"
+    },
+    "ooh.token.value": "2ZQWXUD4QBCEIZI8O6ZGY19BMHKAJFXE",
+    "logined": true,
+    "signRecords": [
+        "2016-12-28"
+    ],
+    "remainCount": 10
+}

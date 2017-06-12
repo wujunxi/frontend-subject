@@ -1,0 +1,69 @@
+{
+    "data": [
+        {
+            "repayDate": 1487433600000,
+            "principal": 1087,
+            "interest": 55.71,
+            "repayNumber": 1,
+            "repayAmount": 1142.71
+        },
+        {
+            "repayDate": 1494691200000,
+            "principal": 35600,
+            "interest": 4183,
+            "repayNumber": 1,
+            "repayAmount": 39783
+        },
+        {
+            "repayDate": 1495987200000,
+            "principal": 25376,
+            "interest": 2981.68,
+            "repayNumber": 1,
+            "repayAmount": 28357.68
+        },
+        {
+            "repayDate": 1496851200000,
+            "principal": 53400,
+            "interest": 6274.5,
+            "repayNumber": 1,
+            "repayAmount": 59674.5
+        },
+        {
+            "repayDate": 1498406400000,
+            "principal": 20128,
+            "interest": 2365.04,
+            "repayNumber": 1,
+            "repayAmount": 22493.04
+        },
+        {
+            "repayDate": 1503158400000,
+            "principal": 52103,
+            "interest": 6122.1,
+            "repayNumber": 1,
+            "repayAmount": 58225.1
+        },
+        {
+            "repayDate": 1518019200000,
+            "principal": 50000,
+            "interest": 12750,
+            "repayNumber": 1,
+            "repayAmount": 62750
+        },
+        {
+            "repayDate": 1525968000000,
+            "principal": 4400,
+            "interest": 1166,
+            "repayNumber": 1,
+            "repayAmount": 5566
+        },
+        {
+            "repayDate": 1536422400000,
+            "principal": 26100,
+            "interest": 6916.5,
+            "repayNumber": 1,
+            "repayAmount": 33016.5
+        }
+    ],
+    "totalRow": 9,
+    "totalAmount": 311008.53
+}

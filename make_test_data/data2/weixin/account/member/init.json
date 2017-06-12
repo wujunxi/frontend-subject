@@ -1,0 +1,119 @@
+{
+    "userName": "tankfool",
+    "ads": [
+        {
+            "id": 20,
+            "positionId": 2,
+            "sortBy": 0,
+            "updateTime": null,
+            "describe": "hy03",
+            "beginTime": 1480928460000,
+            "endTime": 1485507660000,
+            "creatDate": null,
+            "publishDate": null,
+            "imagePath": "http://image.xiaoniu88.com/image/image_upload/a0702399-7b09-42ed-9116-da6ee5f88344.png",
+            "titile": "22",
+            "href": "http://www.xiaoniu88.com/weixin/activity/membership/index",
+            "status": 1
+        }
+    ],
+    "memberBenefit": {
+        "memberLevelName": "钻石会员",
+        "memberLevelCode": "diamond_member",
+        "memberScore": 12746,
+        "nextCheckDate": 1496102400000,
+        "nextLevelRemark": "成长值越高可享受高端服务越多",
+        "memberBenefitInfoDTOs": [
+            {
+                "benefitName": "会员生日好礼",
+                "benefitCode": "birthday",
+                "benefitType": 1,
+                "remark": "1.0%增利劵+500积分",
+                "benefitCondition": "生日当天发放，有效期30天"
+            },
+            {
+                "benefitName": "专享定制标",
+                "benefitCode": "customized_bid",
+                "benefitType": 2,
+                "remark": "专享定制标",
+                "benefitCondition": null
+            },
+            {
+                "benefitName": "专属理财通道",
+                "benefitCode": "financial_channel",
+                "benefitType": 2,
+                "remark": "专属理财通道",
+                "benefitCondition": null
+            },
+            {
+                "benefitName": "免费提现",
+                "benefitCode": "free_withdraw",
+                "benefitType": 1,
+                "remark": "每月无限次免费提现",
+                "benefitCondition": "超出免费体现次数，1元/次"
+            },
+            {
+                "benefitName": "高端增值服务",
+                "benefitCode": "high_service",
+                "benefitType": 2,
+                "remark": "高端增值服务",
+                "benefitCondition": null
+            },
+            {
+                "benefitName": "增利劵",
+                "benefitCode": "interest_coupon",
+                "benefitType": 1,
+                "remark": "1.0%增利劵",
+                "benefitCondition": "每月16日发放，有效期15天"
+            },
+            {
+                "benefitName": "专享红包",
+                "benefitCode": "red_bag",
+                "benefitType": 1,
+                "remark": "388元红包",
+                "benefitCondition": "每月1日发放，有效期15天"
+            },
+            {
+                "benefitName": "贵宾节日礼包",
+                "benefitCode": "vip_package",
+                "benefitType": 2,
+                "remark": "贵宾节日礼包",
+                "benefitCondition": null
+            }
+        ]
+    },
+    "recommendTasks": [
+        {
+            "taskTypeName": "投资任务",
+            "taskType": 3,
+            "taskCode": "invest_level_1",
+            "taskName": "每月首笔投资以下任意产品≥5000元(省心理财、安E计划、月息牛)",
+            "taskScore": "60",
+            "isComplete": false
+        },
+        {
+            "taskTypeName": "投资任务",
+            "taskType": 3,
+            "taskCode": "invest_level_2",
+            "taskName": "每月首笔投资以下任意产品≥10000元(省心理财、安E计划、月息牛)",
+            "taskScore": "120",
+            "isComplete": false
+        },
+        {
+            "taskTypeName": "投资任务",
+            "taskType": 3,
+            "taskCode": "invest_level_3",
+            "taskName": "每月首笔投资以下任意产品≥30000元(省心理财、安E计划、月息牛)",
+            "taskScore": "400",
+            "isComplete": false
+        },
+        {
+            "taskTypeName": "投资任务",
+            "taskType": 3,
+            "taskCode": "invest_level_4",
+            "taskName": "每月首笔投资以下任意产品≥50000元(省心理财、安E计划、月息牛)",
+            "taskScore": "600",
+            "isComplete": false
+        }
+    ]
+}

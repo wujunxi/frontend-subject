@@ -1,0 +1,26 @@
+{
+    "activityDetail": {
+        "id": 44,
+        "activityName": "感恩季活动",
+        "activityCode": "thanks_giving_season",
+        "startDate": 1480384800000,
+        "endDate": 1480867199000,
+        "activityType": null,
+        "activityState": "not_started"
+    },
+    "logined": true,
+    "goodsStock": {
+        "105": 99,
+        "106": 99,
+        "107": 999999999,
+        "108": 99,
+        "109": 999999999,
+        "110": 99,
+        "111": 999999999,
+        "112": 999999999,
+        "113": 999999999,
+        "114": 999999999,
+        "115": 999999999,
+        "116": 999999999
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "ooh.token.name": "5862c036e314846c7de03e62",
+    "flexRamsom": {
+        "orderId": null,
+        "flexId": null,
+        "productId": 473596,
+        "productName": null,
+        "investId": 183,
+        "principal": 4000,
+        "interest": 3.33,
+        "newPrincipal": 0,
+        "amount": 4003.33,
+        "ransomAmount": null,
+        "status": null,
+        "createtime": null,
+        "planDate": 1483039542000,
+        "refundTime": null,
+        "drawDate": 2,
+        "drawQuota": null,
+        "surplusDrawQuota": null
+    },
+    "ooh.token.value": "BM77JVW1INY58AUVN5WGWTTH1QRGK9KH"
+}

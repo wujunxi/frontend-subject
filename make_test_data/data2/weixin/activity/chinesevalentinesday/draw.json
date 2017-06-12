@@ -1,0 +1,24 @@
+{
+    "data":[{
+        "awardType":74
+    }, {
+        "awardType":74
+    }, {
+        "awardType":66
+    }, {
+        "awardType":69
+    }, {
+        "awardType":70
+    }, {
+        "awardType":71
+    }, {
+        "awardType":72
+    }, {
+        "awardType":73
+    }, {
+        "awardType":74
+    }],
+    "status":1,
+    "errorCode":"wechat_activity_internal_error",
+    "errorDetails":null
+}

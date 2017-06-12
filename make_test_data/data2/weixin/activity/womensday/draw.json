@@ -1,0 +1,18 @@
+{
+    "data": {
+        "userId": 12987,
+        "recordId": 189,
+        "sendId": 139,
+        "rewardCategory": 2,
+        "rewardName": "电影票",
+        "rewardNum": 1,
+        "createTime": 1487732124521,
+        "origin": "女生节活动",
+        "logisticStatus": 0,
+        "recieveAddress": "asdfdddsdasd",
+        "rewardCode": "CARD09"
+    },
+    "status": 1,
+    "errorCode": null,
+    "errorDetails": null
+}

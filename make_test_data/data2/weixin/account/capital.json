@@ -1,0 +1,79 @@
+{
+    "totalAmount": 40836.73,
+    "userBalance": 10019.98,
+    "freezedAmount": 0,
+    "withdrawFrozenAmount": 0,
+    "autoInvestFrozenAmount": 0,
+    "totalInterests": 836.73,
+    "investInterests": 19.98,
+    "dueInterests": 816.75,
+    "fpEarnings": 0,
+    "activityRewards": 0,
+    "list": [
+        {
+            "type": "DURATION",
+            "typeText": "存续牛",
+            "amount": 100
+        },
+        {
+            "type": "CURRENT2",
+            "typeText": "天天牛",
+            "amount": 100
+        },
+        {
+            "type": "MMN",
+            "typeText": "月月牛",
+            "amount": 100
+        },
+        {
+            "type": "DMN",
+            "typeText": "双月计划",
+            "amount": 100
+        },
+        {
+            "type": "MRN",
+            "typeText": "月升计划",
+            "amount": 100
+        },
+        {
+            "type": "SSN",
+            "typeText": "季升计划",
+            "amount": 100
+        },
+        {
+            "type": "WWN",
+            "typeText": "周升计划",
+            "amount": 100
+        },
+        {
+            "type": "YYN",
+            "typeText": "年升计划",
+            "amount": 100
+        },
+        {
+            "type": "COMMON",
+            "typeText": "省心理财",
+            "amount": 100
+        },
+        {
+            "type": "COUPON",
+            "typeText": "理财体验标",
+            "amount": 100
+        },
+        {
+            "type": "MIN",
+            "typeText": "月息牛",
+            "amount": 100
+        },
+        {
+            "type": "AXN",
+            "typeText": "安E计划",
+            "amount": 100
+        },
+        {
+            "type": "LIFE",
+            "typeText": "富盈人生",
+            "amount": 100
+        }
+    ]
+  }

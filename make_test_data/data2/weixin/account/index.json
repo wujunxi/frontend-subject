@@ -1,0 +1,79 @@
+{
+    "data": {
+        "redbagCount": 0,
+        "couponAmount": 0,
+        "currentAccount": [
+            {
+                "currentDetail": {
+                    "currentId": 2,
+                    "investRatio": 200000,
+                    "loanRatio": null,
+                    "minTenderedSum": 1,
+                    "raise": 1,
+                    "annualRate": 7.5,
+                    "dailyEarnings": 2.08,
+                    "productId": 110028,
+                    "productName": "天天牛",
+                    "borrowStatus": 2,
+                    "redemptionAmount": 63965.12,
+                    "joinCount": 4,
+                    "borrowAmount": 1330500000,
+                    "hasInvestAmount": 1257981397.54,
+                    "quotaAmount": 200000,
+                    "surplusAmount": 72518602,
+                    "amountLimit": 90000000
+                },
+                "accountDetail": {
+                    "userId": 29283,
+                    "amount": 2250,
+                    "totalRevenue": 0,
+                    "yesterdayRevenue": null
+                }
+            }
+        ],
+        "account": {
+            "balance": 70050.14,
+            "freeze": -508,
+            "totalAmount": 71798.14,
+            "duePrincipal": 0,
+            "dueInterest": 0,
+            "earnInterest": null,
+            "dueCount": 0,
+            "dueInterestRatio": null,
+            "investInterest": null,
+            "investInterestRatio": null,
+            "bonusEarnings": null,
+            "bonusEarningsRatio": null,
+            "fpEarnings": null,
+            "fpEarningsRatio": null,
+            "totalEarnInterest": null,
+            "hqnAmount": 2256,
+            "hasHqn": true,
+            "isHqn": 0
+        },
+        "couponCount": 1,
+        "weChatIndexControl": "1",
+        "yynAccount": [
+            {
+                "holdingRecordNum": 4,
+                "wechatSmartAccountDTO": {
+                    "productId": 138754,
+                    "sumSmartAmount": 4000,
+                    "sumInterest": 0.42,
+                    "sumInterestYesterday": 0,
+                    "sumWithdrawAmount": null,
+                    "saInvestDTOs": null,
+                    "productName": null
+                }
+            }
+        ],
+        "nextTimeYield": {
+            "repayDate": null,
+            "num": null,
+            "income": null
+        }
+    },
+    "status": 0,
+    "errorCode": null,
+    "errorDetails": null
+}

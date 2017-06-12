@@ -4,12 +4,13 @@ const cheerio = require('cheerio');
 
 const FILE_PATH = {
     data: './data.xml',
-    projects: './project.json'
+    projects: './project.json',
+    config:'config.json'
 };
 
-// const PROJECT_ROOT = 'D:\\Work\\ue_weixin\\trunk';
-const PROJECT_ROOT = 'D:\\Work\\2017-06-10\\weixin';
-const TEST_DATA_ROOT = './test_data';
+const PROJECT_ROOT = 'D:\\Work\\ue_weixin\\trunk';
+// const PROJECT_ROOT = 'D:\\Work\\2017-06-10\\weixin';
+const TEST_DATA_ROOT = './data2';
 
 var projectList = [];
 
@@ -112,20 +113,25 @@ makeTestData(newProjectList,TEST_DATA_ROOT);
  * @param {any} dir 
  */
 function makeTestData(projectList,dir){
-    var count = 0;
+    var count = 0,
+        configs = [];
     eachRule(projectList,function(rule){
-        var _path = rule.match;
-        if(!/\.json$/.test(rule.match)){
-            _path = rule.match.replace(/\/$/,'') + '.json';
-        }
-        _path = path.join(dir,_path);
         var from = path.join(PROJECT_ROOT,rule.action);
+        var to = rule.match;
+        if(!/\.json$/.test(rule.match)){
+            to = rule.match.replace(/\/$/,'') + '.json';
+        }
+        to = path.join(dir,to);
         var fileStr = fs.readFileSync(from,{encoding:'utf-8'});
-        createFile(_path,fileStr)
-        console.log('save file : %s',_path);
+        createFile(to,fileStr)
+        console.log('save file : %s',to);
         count++;
+        configs.push({
+            reg:rule.match.replace(/\/$/,''),
+            local:to.replace(/\\/g,'/')
+        });
     });
-
+    createFile(FILE_PATH.config,JSON.stringify(configs));
     console.log('total:%d files',count);
 }
 

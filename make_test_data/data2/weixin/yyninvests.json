@@ -1,0 +1,20 @@
+{
+    "investRecords": {
+        "data": [{
+            "pageNum": 0,
+            "pageSize": 0,
+            "id": 1856585,
+            "productId": 147442,
+            "investAmount": 30000.0,
+            "userName": "x****hi",
+            "investTime": 1456280046000,
+            "investTimeString": "2016-02-24",
+            "investAmountCurrency": "30,000.00",
+            "memberLevel": 1,
+            "platform": 4,
+            "platformName": "微信"
+        }],
+        "totalRow": 7000
+    },
+    "topInvestors": null
+}

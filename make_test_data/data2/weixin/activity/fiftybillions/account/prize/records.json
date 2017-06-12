@@ -1,0 +1,105 @@
+{
+    "data": [
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "10元现金",
+            "time": "1/05 11:08",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "5元现金",
+            "time": "1/05 11:03",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "5元现金",
+            "time": "1/05 11:02",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "5元现金",
+            "time": "1/05 11:02",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "2元现金",
+            "time": "1/05 11:01",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "100元现金",
+            "time": "1/05 10:51",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "2元现金",
+            "time": "1/05 10:50",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "2元现金",
+            "time": "1/05 10:49",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "2元现金",
+            "time": "1/05 10:48",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        },
+        {
+            "id": null,
+            "sendId": null,
+            "userName": null,
+            "prize": "2元现金",
+            "time": "1/05 10:48",
+            "number": null,
+            "status": null,
+            "logisticsStatus": null
+        }
+    ],
+    "totalRow": 19
+}

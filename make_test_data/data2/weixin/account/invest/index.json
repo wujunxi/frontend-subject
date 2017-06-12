@@ -1,0 +1,80 @@
+[
+    {
+        "type": "DURATION",
+        "typeText": "存续牛",
+        "iconText": "续",
+        "collectAmount": 6280
+    },
+    {
+        "type": "AXN",
+        "typeText": "安E计划",
+        "iconText": "安",
+        "collectAmount": 0
+    },
+    {
+        "type": "COMMON",
+        "typeText": "省心理财",
+        "iconText": "省",
+        "collectAmount": 0
+    },
+    {
+        "type": "LIFE",
+        "typeText": "富盈人生",
+        "iconText": "富",
+        "collectAmount": 0
+    },
+    {
+        "type": "MIN",
+        "typeText": "月息牛",
+        "iconText": "息",
+        "collectAmount": 0
+    },
+    {
+        "type": "MMN",
+        "typeText": "月月牛",
+        "iconText": "月",
+        "collectAmount": 0
+    },
+    {
+        "type": "WWN",
+        "typeText": "周升计划",
+        "iconText": "周",
+        "collectAmount": 0
+    },
+    {
+        "type": "MRN",
+        "typeText": "月升计划",
+        "iconText": "升",
+        "collectAmount": 0
+    },
+    {
+        "type": "DMN",
+        "typeText": "双月计划",
+        "iconText": "双",
+        "collectAmount": 0
+    },
+    {
+        "type": "SSN",
+        "typeText": "季升计划",
+        "iconText": "季",
+        "collectAmount": 0
+    },
+    {
+        "type": "YYN",
+        "typeText": "年升计划",
+        "iconText": "年",
+        "collectAmount": 0
+    },
+    {
+        "type": "CURRENT2",
+        "typeText": "天天牛",
+        "iconText": "天",
+        "collectAmount": 0
+    },
+    {
+        "type": "COUPON",
+        "typeText": "理财体验标",
+        "iconText": "理",
+        "collectAmount": 0
+    }
+  ]

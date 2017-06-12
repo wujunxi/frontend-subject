@@ -1,0 +1,47 @@
+{
+	"isNewInvestor": null,
+	"userBalance": null,
+	"currentMaxBuyAmount": null,
+	"usableCouponCount": null,
+	"isRealNameAuthenticated": null,
+	"isAllowedBuyLimitedProduct": null,
+	"userAccountInfo": {
+		"username": "xnwm2272483",
+		"registerTime": "2016-02-18",
+		"registerDays": 1,
+		"securityLevel": 85,
+		"hasPassword": 1,
+		"mobile": "186****1101",
+		"email": "",
+		"refferee": null,
+		"hasRefferee": 0,
+		"realName": "睐**",
+		"idNo": "63**************66",
+		"isRealNameAuth": 1,
+		"hasPayCode": 1,
+		"emergencyName": null,
+		"emergencyMobile": null,
+		"emergencyRelation": null,
+		"cardNo": "6225********7225",
+		"cardStatus": 4,
+		"isCardAuth": 1,
+		"cjdOpenId": null,
+		"mobileChangeableFlag": 1,
+		"mobileChangeableTime": null,
+		"loginPwdEqualsPayCodeFlag": 0,
+		"hasBirthdayEntry": null,
+		"idType": null
+	},
+	"userMemberInfo": {
+		"memberName": "钻石会员",
+		"memberLevel": 4,
+		"expireTime": 1487437060000
+	},
+	"bankCards": [{
+		"userId": 2167968,
+		"bankType": "CMB",
+		"bankTypeName": "招商银行",
+		"bankCardNo": "6225********7225",
+		"status": 4
+	}]
+}
