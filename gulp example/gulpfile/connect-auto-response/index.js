@@ -19,6 +19,14 @@ const EXPRESS_HEAD_REG = {
     LOCAL: /^local:/,
     REDIRECT: /^redirect:/
 };
+const CONTENT_TYPE = {
+    '.json': 'application/json;charset=utf-8',
+    '.js': 'application/x-javascript',
+    '.css': 'text/css',
+    '.jpg': 'image/jpeg',
+    '.png': 'image/png',
+    '.gif': 'image/gif'
+};
 
 /**
  * 函数处理器 
@@ -69,12 +77,16 @@ function handleLocal(req, res, item, queryObj) {
         pathStr = url.replace(item.reg, express);
     }
     var fullPath = path.join(__dirname, pathStr);
+    // 请求文件后缀
+    var ext = path.extname(fullPath);
+    // 根据文件后缀处理contentType
+    var contentType = CONTENT_TYPE[ext];
     log.debug(__dirname, pathStr, fullPath);
     if (fs.existsSync(fullPath)) {
         log.info("local ", url, " -> ", fullPath);
         var stat = fs.statSync(fullPath);
         res.writeHead(200, {
-            'Content-Type': 'application/json;charset=utf-8',
+            'Content-Type': contentType,
             'Content-Length': stat.size
         });
 
@@ -135,7 +147,7 @@ function handleProxy(req, res, item, queryObj) {
             innerRes.on('data', function(data) {
                 // res.write(decoder.write(data));
                 res.writeHead(200, {
-                    "Content-Type":"application/json; charset="+charset
+                    "Content-Type": "application/json; charset=" + charset
                 })
                 res.write(data);
                 res.end();
