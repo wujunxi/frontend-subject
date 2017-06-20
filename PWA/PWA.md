@@ -6,6 +6,8 @@ PWA是一系列Web新技术的整合，由Google提出，主要包括**离线存
 
 ![demo](demo.gif)
 
+[更多Demo](https://pwa.rocks/)
+
 ## 渐进式
 
 >如果用户需要，网页可以渐进式地变成App，比如被添加到主屏幕、全屏方式运行、离线工作、推送通知消息等。但它仍是Web而非放到App Store里。
