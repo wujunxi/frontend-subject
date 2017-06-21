@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo for PWA</title>
     <link rel="manifest" href="/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(reg) {
+                    console.log('Service Worker Registered', reg);
+                })
+                .catch(function(err) {
+                    console.log('Error registering Service Worker',
+                        err);
+                });
+        }
+    </script>
 </head>
+
 <body>
     <h1>Demo</h1>
     <p>message from service:<span id="spInfo"></span></p>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
