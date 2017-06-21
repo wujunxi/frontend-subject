@@ -24,7 +24,14 @@ PWA的核心技术是离线存储，通过离线存储Web资源使得页面打�
 
 ![Service Workes](ServiceWork.jpg)
 
-除此之外，Service Worker还可以订阅服务，接收推送。通过调用操作系统消息接口，能实现Native App一致的消息提示。
+除此之外，Service Worker还可以接收服务器消息推送。通过调用操作系统消息接口，还能实现Native App一致的消息提示。
+
+> Service Worker特点
+> - 是基于事件驱动的Web Worker（独立的后台线程，不能访问DOM）
+> - 限制于指定域名和路径下
+> - 用于修改和拦截网页请求
+> - 异步设计，支持 XHR 和 LocalStorage
+> - 只支持HTTPS协议
 
 ## 安全
 
@@ -57,9 +64,11 @@ PWA的核心技术是离线存储，通过离线存储Web资源使得页面打�
 
 ## 兼容性
 
-除了IOS平台，其他主流浏览器都在跟进这项技术。这项技术和“热更新”差不多，所以苹果为了保护它的封闭生态，目前并没有明确表示支持。
+除了苹果，其他主流厂商都在跟进这项技术。据苹果对热更新的态度和封闭生态圈的考虑，目前只表示在五年计划内考虑。
 
 ![caniuse-wam](caniuse-wam.png)
+
+![caniuse-sw](caniuse-sw.png)
 
 参考：
 
