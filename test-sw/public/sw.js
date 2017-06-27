@@ -6,3 +6,10 @@ toolbox.router.get('data/test.json', function(request, values) {
     };
   return new Response(JSON.stringify(data));
 });
+
+toolbox.precache([
+    'lib/jquery-1.12.4.min.js',
+    'index.html',
+    'css/index.css',
+    'js/index.js'
+]);
