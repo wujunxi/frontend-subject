@@ -1,0 +1,105 @@
+google 官网 https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/
+
+MSD Service Worker说明 https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+
+w3c 关于 ServiceWorker的解释 https://github.com/w3c/ServiceWorker/blob/master/explainer.md
+
+w3c SW实现说明 https://w3c.github.io/ServiceWorke
+
+缓存方式
+https://jakearchibald.com/2014/offline-cookbook/
+
+浏览器新特新检测！！！https://whatwebcando.today
+腾讯X5 特性检测 https://x5.tencent.com/tbs/guide/h5_support/index.htm
+
+1. 目前IOS不支持
+2. 国产手机自定义ROM没有按标准实现，不能添加到主屏、独立运行
+3. Service Worker 浏览器兼容问题
+4. 无法使用Google的GCM推送
+5. 降级方案
+if (navigator.serviceWorker)
+navigator.serviceWorker.register(…)
+
+============================== Service Work ==============================
+应用场景
+（1）缓存。性能增强，比如预取并缓存用户可能需要的资源，比如页面中所需的静态资源文件
+（2）后台数据同步
+（3）后台服务钩子
+（4）响应来自其它源的资源请求
+（5）自定义模板用于特定URL模式
+（6）集中接收计算成本高的数据更新
+（7）在客户端进行模块编译和依赖管理
+
+腾讯QQ钱包 SONIC优化方案
+（1）页面缓存：sonic支持对h5页面级进行本地缓存，将返回的页面分别拆分成数据层以及模版层层分开来缓存，生成本地缓存文件，且缓存时长为永久缓存，如果页面是没有任何变化，这时候会完全显示缓存的数据
+（2）增量更新：对于页面更新的情况，sonic会去对比和计算客户端缓存中的页面的变更地方，封装成json数据结构返回给客户端进行页面更新以及缓存更新，这样可以大大减小了回包的大小，特别对于移动网络而言可以大幅度为用户节省了请求流量
+重点：动静分离、资源缓存、串行/并行、增量更新
+
+fetch(‘灰度/降级开关’)
+.then(() => {
+降级 ? 全部注销 : 注册
+})
+
+别忘了注销
+
+别把开关接口缓存了
+
+6. 监控系统
+
+self.addEventListener(‘error’, …)
+event.message
+event.filename
+event.lineno
+event.colno
+event.error.stack
+
+self.addEventListener('unhandledrejection', …)
+event.reason
+
+要在初始化时注册
+
+
+
+7. 数据统计
+
+访问量、单量、转化率……
+
+
+8. 紧急抢救
+在 SW 里注销自己
+self.registration.unregister()
+• 在 HTML 里强行注销 SW
+🙁navigator.serviceWorker.getRegistrations
+🙂navigator.serviceWorker.getRegistration
+• 清空 sw.js
+
+SW 库
+https://googlechrome.github.io/sw-toolbox/
+https://github.com/googlechrome/sw-precache
+https://github.com/goldhand/sw-precache-webpack-plugin
+
+使用 lighthouse 审查网络应用 https://developers.google.com/web/tools/lighthouse/
+
+9.PWA验证 https://developers.google.com/web/progressive-web-apps/checklist
+
+10. Bug
+• User Agent 在 worker 线程中不不正确
+• HTTP Header 导致跨域请求失败
+• UC 301 跳转问题
+
+=====================================================================
+
+Updating a service worker
+
+The lifecycle of a service worker is based on Chrome’s update model: do as much as possible in the background, don’t disrupt the user, complete the update when the current version closes.
+
+Whenever you navigate to a page within scope of your service worker, the browser checks for updates in the background. If the script is byte-different, it’s considered to be a new version, and installed (note: only the script is checked, not external importScripts). However, the old version remains in control over pages until all tabs using it are gone (unless .replace() is called during install). Then the old version is garbage collected and the new version takes over.
+
+
+service worker的生命周期是基于Chrome的更新模型：尽量再后台处理不去打扰用户，当当前版本示例关闭时再进行更新。
+
+当你浏览任意一个受service worker控制的页面，浏览器就会在后台自动检查该service worker的更新。只要脚本有一比特的更新，就会认为有一个新版本并启动安装。（注意：只有service worker的脚本会被检查，通过importScripts导入的脚本则不会）。但是此时老的版本仍然运行，直到所有标签页中受service worker控制的页面都已关闭，老的版本才会被垃圾回收（
+GC），新版本生效。
+
+=====================================================================
+
