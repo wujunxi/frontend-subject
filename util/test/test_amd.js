@@ -9,7 +9,7 @@ require(["../number_extend", "../string_extend", "../url_param", "../money"], fu
     console.log(number_extend.add(0.16, 0.3));
 
     console.log(0.1 - 0.01);
-    console.log(new Number(0.1).add(-0.1));
+    console.log(new Number(0.1).add(-0.01));
     console.log(number_extend.add(0.1, -0.1));
 
     console.log(0.47/100);
