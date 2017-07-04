@@ -17,8 +17,8 @@
 }(function(exports) {
 
     'use strict';
-    
-    exports.add = function(arg1, arg2) {
+
+    var add = exports.add = function(arg1, arg2) {
         var m = 0,
             temp, r1, r2,
             s1 = arg1.toString(),
@@ -28,14 +28,14 @@
         temp = s2.split(".");
         r2 = temp.length > 1 ? temp[1].length : 0;
         m = Math.pow(10, Math.max(r1, r2));
-        return (arg1 * m + arg2 * m) / m;
+        return (mul(arg1, m) + mul(arg2, m)) / m;
     };
 
     Number.prototype.add = function(arg) {
-        return exports.add(arg, this);
+        return add(arg, this);
     };
 
-    exports.mul = function(arg1, arg2) {
+    var mul = exports.mul = function(arg1, arg2) {
         var m = 0,
             temp,
             s1 = arg1.toString(),
@@ -48,10 +48,10 @@
     };
 
     Number.prototype.mul = function(arg) {
-        return exports.mul(arg, this);
+        return mul(arg, this);
     };
 
-    exports.div = function(arg1, arg2) {
+    var div = exports.div = function(arg1, arg2) {
         var t1 = 0,
             t2 = 0,
             s1 = arg1.toString(),
@@ -63,14 +63,14 @@
         t2 = temp.length > 1 ? temp[1].length : 0;
         r1 = Number(arg1.toString().replace(".", ""));
         r2 = Number(arg2.toString().replace(".", ""));
-        return (r1 / r2) * Math.pow(10, t2 - t1);
+        return mul((r1 / r2), Math.pow(10, t2 - t1));
     };
 
     Number.prototype.div = function(arg) {
-        return exports.div(arg, this);
+        return div(arg, this);
     };
 
     Number.prototype.divBy = function(arg) {
-        return exports.div(this, arg);
+        return div(this, arg);
     };
 }));
