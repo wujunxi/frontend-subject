@@ -1,3 +1,15 @@
+ppt
+
+1. PWA渐进式Web应用介绍
+
+2. 内容：（1）产生背景 （2）技术组成 （3）核心技术-Service Work （4）问题和解决方案
+
+3.互联网-移动互联网的挑战：
+	…… 
+	场景化，随时随地，方便快捷
+	网络复杂，
+
+
 google 官网 https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/
 
 MSD Service Worker说明 https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
@@ -69,8 +81,8 @@ event.reason
 在 SW 里注销自己
 self.registration.unregister()
 • 在 HTML 里强行注销 SW
-🙁navigator.serviceWorker.getRegistrations
-🙂navigator.serviceWorker.getRegistration
+navigator.serviceWorker.getRegistrations
+navigator.serviceWorker.getRegistration
 • 清空 sw.js
 
 SW 库
