@@ -1,0 +1,66 @@
+.sp-wrap {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+.sp-main {
+    float: left;
+    position: relative;
+    left: -50%;
+    font-size:12px;
+    color:#333;
+}
+
+.sp-info,
+.sp-btn,
+.sp-pages {
+    float: left;
+    height:30px;
+    line-height: 30px;
+}
+
+.sp-btn {
+    border: #c9c9c9 solid 1px;
+    color:#666;
+    cursor:pointer;
+    padding:0 10px;
+    margin:0 0 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sp-btn.fix {
+    width:40px;
+}
+
+.sp-btn:hover {
+    color:#fd7500;
+    text-decoration: none;
+}
+
+.sp-btn.off {
+    color:#bbb;
+    background: #eee;
+    cursor:default;
+}
+
+.sp-btn.active {
+    color:#fff;
+    background:#fd7500;
+    border:solid 1px #fd7500;
+    cursor: default;
+}
+
+.sp-input {
+    float:left;
+    outline: none;
+    margin:0 0 0 10px;
+    padding:0 10px;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    border: #c9c9c9 solid 1px;
+    color:#333;
+    text-align: center;
+}
