@@ -115,3 +115,13 @@ GC），新版本生效。
 
 =====================================================================
 
+遇到的问题：
+
+（1）sw不能跨域，静态资源不同域名的话没法管理
+
+（2）由于sw的有效管理域是它所处路径的子路径，所以sw要放在顶层路径（一般放网站根目录）
+
+    // Your service-worker.js *must* be located at the top-level directory relative to your site.
+    // It won't be able to control pages unless it's located at the same level or higher than them.
+    // *Don't* register service worker file in, e.g., a scripts/ sub-directory!
+    // See https://github.com/slightlyoff/ServiceWorker/issues/468
