@@ -46,6 +46,7 @@
         d = d || 1;
         var tranY = getTranY.call(this) + d;
         // print(tranY);
+        // to-do 滚动终止减速效果
         this.css("transform", "translateY(" + tranY + "px)");
     }
 
@@ -58,7 +59,7 @@
 
     function resetTo(tranY, callback) {
         // print(tranY);
-        // 可优化为css3动画
+        // to-do 可优化为css3动画
         this.animate({
             "transform": "translateY(" + tranY + "px)"
         }, 600, "ease", callback);
