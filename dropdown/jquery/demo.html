@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <style>
+        .content {
+            width: 980px;
+            margin: 50px auto 0 auto;
+        }
+        
+        h3 {
+            display: block;
+            font-size: 18px;
+            margin:50px 0 30px 0;
+        }
+
+        .part {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3>方式一</h3>
+        <div class="part">
+            <select>
+            <option>西瓜</option>
+            <option>苹果</option>
+            <option>雪梨</option>
+            <option>香蕉</option>
+            <option>茄子</option>
+        </select>
+            <select>
+            <option value="1">西瓜</option>
+            <option value="2">苹果</option>
+            <option value="3">雪梨</option>
+            <option value="4">香蕉</option>
+            <option value="5">茄子</option>
+        </select>
+
+        </div>
+        <h3>方式二</h3>
+        <div class="part">
+            <div id="test"></div>
+        </div>
+
+        <h3>联动</h3>
+        <div class="part">
+            <div id="test1"></div>
+            <div id="test2"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../scripts/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/dropdown.jquery.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+</body>
+
+</html>

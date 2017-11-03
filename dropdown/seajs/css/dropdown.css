@@ -1,0 +1,32 @@
+
+
+/*下拉框样式*/
+.dropdown {
+    float:left;
+    width:236px;
+    height:46px;
+    line-height: 46px;
+    border:solid 1px #999;
+    padding:0 32px 0 16px;
+    background:url(../img/dropdown.jpg) 262px 19px no-repeat;
+}
+
+.dropdown-option {
+    list-style: none;
+    margin:0;
+    padding:0;
+    border:solid 1px #999;
+    position:absolute;
+    background: #fff;
+}
+
+.dropdown-option li {
+    width:268px;
+    height:28px;
+    line-height: 28px;
+    padding:0 0 0 16px;
+}
+
+.dropdown-option li:hover {
+    background: #c6c6c6;
+}
