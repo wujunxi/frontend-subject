@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <video id="myVedio" controls></video>
+    <input type="file" id="myFile">
+    <h1>第一屏</h1>
+    <img src="" id="imgFirst">
+    <h1>随机截屏</h1>
+    <img src="" id="imgRandom">
+
+    <script>
+        (function() {
+            var myfile = document.getElementById('myFile');
+            var myVedio = document.getElementById('myVedio');
+            var imgFirst = document.getElementById('imgFirst');
+            var imgRandom = document.getElementById('imgRandom');
+
+            // 监听文件选择
+            myfile.addEventListener('change', function() {
+                var file = myfile.files[0];
+                var reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    var vsrc = 'data:video/mp4;base64,' + this.result.split(";base64,")[1];
+                    myVedio.src = vsrc;
+                    // video.play();
+                    console.log('上传文件路径已获取，并进行播放视频');
+                }
+                reader.onprogress = function() {
+                    console.log('视频正在加载');
+                }
+            });
+
+            myVedio.addEventListener('durationchange', function() {
+                console.log('1.durationchange');
+            });
+            
+            myVedio.addEventListener('loadedmetadata', function() {
+                console.log('2.loadedmetadata');
+                console.log('视频元数据载入完成,视频长度以秒计' + myVedio.duration);
+            });
+
+            // 监听首帧载入完成事件
+            myVedio.addEventListener('loadeddata', function() {
+                console.log('3.loadeddata');
+                console.log('视频首帧已加载完');
+                captrue(imgFirst);
+                console.log('首帧截图完成');
+                var t = Math.floor(Math.random() * myVedio.duration);
+                console.log('修改视频进度，随机时刻 ' + t);
+                myVedio.currentTime = t;
+            });
+
+            // 监听播放时间更新事件
+            // 参考 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+            myVedio.addEventListener('timeupdate', function() {
+                console.log('4.timeupdate');
+                captrue(imgRandom);
+                console.log('随机时刻截图完成');
+            });
+
+            // 截图当前视频，保存到 img
+            function captrue(img) {
+                var canvas = document.createElement('canvas');
+                canvas.width = myVedio.clientWidth;
+                canvas.height = myVedio.clientHeight;
+                var pan = canvas.getContext('2d');
+                pan.drawImage(myVedio, 0, 0, canvas.width, canvas.height);
+                try {
+                    var imgsrc = canvas.toDataURL('image/png', 1.0);
+                    img.src = imgsrc;
+                    // console.log('图片地址' + imgsrc);
+                } catch (err) {
+                    console.log("Error" + err);
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
